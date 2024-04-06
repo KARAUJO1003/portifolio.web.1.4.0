@@ -7,7 +7,12 @@ export const DescriptionTypography = ({
   children,
 }: ComponentPropsDefault) => {
   return (
-    <p className={cn('text-sm text-zinc-500 max-w-md text-center', className)}>
+    <p
+      className={cn(
+        'text-sm text-muted-foreground max-w-md text-center',
+        className,
+      )}
+    >
       {children}
     </p>
   )

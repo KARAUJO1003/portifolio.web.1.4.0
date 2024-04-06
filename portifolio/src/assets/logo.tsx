@@ -4,7 +4,7 @@ import React from 'react'
 
 export const Logo = ({ className }: ComponentPropsDefault) => {
   return (
-    <div>
+    <div className="flex items-center gap-5">
       <svg
         width="37"
         height="32"
@@ -18,6 +18,7 @@ export const Logo = ({ className }: ComponentPropsDefault) => {
           fill="white"
         />
       </svg>
+      <span className="capitalize">kaesyo felix</span>
     </div>
   )
 }

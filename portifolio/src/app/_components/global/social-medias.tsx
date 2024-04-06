@@ -1,4 +1,6 @@
 import { SocialMedias } from '@/lib/utilities'
+import { cn } from '@/lib/utils'
+import { ComponentPropsDefault } from '@/types/page-props-default'
 import Link from 'next/link'
 import React from 'react'
 
@@ -10,9 +12,10 @@ type SocialMediasContactProps = {
 export const SocialMediasContact = ({
   variant = 'full',
   border,
-}: SocialMediasContactProps) => {
+  className,
+}: ComponentPropsDefault<SocialMediasContactProps>) => {
   return (
-    <div className="flex gap-7">
+    <div className={cn(['flex gap-7 transition-all duration-200'], className)}>
       {SocialMedias.map((item) => (
         <Link
           target="_blank"
@@ -24,7 +27,7 @@ export const SocialMediasContact = ({
 
           {variant === 'icon' && (
             <span
-              className={`${border ? 'p-2 border border-muted-foreground/50 hover:bg-muted-foreground/10 transition-all duration-200 rounded-md' : ''}`}
+              className={`${border ? 'p-2 border border-muted-foreground/50 hover:bg-muted-foreground/10 transition-all duration-300 rounded-md' : ''}`}
             >
               {item.icon}
             </span>

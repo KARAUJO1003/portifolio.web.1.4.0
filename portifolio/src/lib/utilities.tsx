@@ -23,19 +23,19 @@ export const NavMenuItems = [
     label: 'Home',
   },
   {
-    url: '/about',
+    url: '/#about',
     label: 'About',
   },
   {
-    url: '/softskills',
+    url: '/#soft-skills-section',
     label: 'Soft Skills',
   },
   {
-    url: '/projects',
+    url: '/#projects-section',
     label: 'Projects',
   },
   {
-    url: '/contact',
+    url: '/#contacts-section',
     label: 'Contact',
   },
 ]

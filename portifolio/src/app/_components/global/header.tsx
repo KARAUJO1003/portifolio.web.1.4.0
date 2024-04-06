@@ -6,17 +6,15 @@ import { Logo } from '@/assets/logo'
 
 export const Header = ({ className }: ComponentPropsDefault) => {
   return (
-    <header className="w-full border-b sticky top-0 backdrop-blur-md z-50">
+    <header className="w-full border-b sticky top-0 backdrop-blur-md z-50 flex items-center px-40">
       <div
         className={cn(
-          [
-            'grid grid-cols-4 items-center justify-between max-w-4xl mx-auto py-4   ',
-          ],
+          ['flex items-center justify-between mx-auto py-4 gap-8 min-w-full'],
           className,
         )}
       >
         <Logo className="size-7" />
-        <NavMenu className="col-span-2" />
+        <NavMenu />
         <ButtonBorderGradient>trabalhe comigo</ButtonBorderGradient>
       </div>
     </header>

@@ -9,7 +9,7 @@ import { SocialMediasContact } from '../../global/social-medias'
 export const AboutSection = ({ className }: ComponentPropsDefault) => {
   return (
     <section
-      id="#about-section"
+      id="about"
       className={cn(
         [
           'flex flex-col w-full min-h-screen items-center justify-start gap-10 pt-20',
@@ -38,7 +38,15 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
             Contrary to popular belief, latin literature from 45 BC, making it
             over 2000 years old. It has roots in a piece of classical Latin
             literature from 45 BC, making it over 2000 years old.
+            <br />
+            <br />
+            Latin literature from 45 BC, making it over 2000 years old. It has
+            roots in a piece of classical Latin literature from 45 BC, making it
+            over 2000 years old.
           </DescriptionTypography>
+        </div>
+        <div className="flex flex-col items-center gap-5">
+          <div className="border p-40 rounded"></div>
 
           <div className="relative inline-flex  overflow-hidden rounded-md p-[1px] focus:outline-none focus:ring-1 focus:ring-zinc-400/20 focus:ring-offset-1 focus:ring-offset-zinc-50/20 w-min">
             <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#263193_0%,#D22A67_50%,#263193_100%)]" />
@@ -54,7 +62,6 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
             </span>
           </div>
         </div>
-        <div className="border p-40 rounded"></div>
       </div>
     </section>
   )

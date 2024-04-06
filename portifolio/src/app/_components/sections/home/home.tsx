@@ -10,7 +10,7 @@ import { ChevronRightIcon } from '@radix-ui/react-icons'
 export const HomeSection = ({ className }: ComponentPropsDefault) => {
   return (
     <section
-      id="#home-section"
+      id="#/"
       className={cn(
         [
           'flex flex-col w-full min-h-screen items-center justify-start gap-10 pt-20',
@@ -35,7 +35,10 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
           over 2000 years old.
         </DescriptionTypography>
 
-        <ButtonBorderGradient variant="secondary" className="px-20 gap-2 ">
+        <ButtonBorderGradient
+          variant="secondary"
+          className="px-20 gap-2 flex items-center"
+        >
           <span>Continuar</span>
           <ChevronRightIcon />
         </ButtonBorderGradient>
