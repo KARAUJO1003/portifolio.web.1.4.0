@@ -6,7 +6,7 @@ import { Logo } from '@/assets/logo'
 
 export const Header = ({ className }: ComponentPropsDefault) => {
   return (
-    <header className="w-full border-b sticky top-0 backdrop-blur-md">
+    <header className="w-full border-b sticky top-0 backdrop-blur-md z-50">
       <div
         className={cn(
           [

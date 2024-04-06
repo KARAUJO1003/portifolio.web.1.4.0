@@ -4,21 +4,32 @@ import React from 'react'
 
 type SocialMediasContactProps = {
   variant?: 'icon' | 'label' | 'full'
+  border?: boolean
 }
 
 export const SocialMediasContact = ({
   variant = 'full',
+  border,
 }: SocialMediasContactProps) => {
   return (
-    <div className="flex gap-5">
+    <div className="flex gap-7">
       {SocialMedias.map((item) => (
         <Link
+          target="_blank"
           key={item.url}
           href={item.url}
           className="uppercase text-xs text-muted-foreground hover:text-foreground flex gap-2 items-center"
         >
-          {variant === 'icon' && <span>{item.icon}</span>}{' '}
           {variant === 'label' && <span>{item.label}</span>}
+
+          {variant === 'icon' && (
+            <span
+              className={`${border ? 'p-2 border border-muted-foreground/50 hover:bg-muted-foreground/10 transition-all duration-200 rounded-md' : ''}`}
+            >
+              {item.icon}
+            </span>
+          )}
+
           {variant === 'full' && (
             <>
               <span>{item.icon}</span>

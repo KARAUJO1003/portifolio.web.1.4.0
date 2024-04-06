@@ -3,7 +3,7 @@ import { ComponentPropsDefault } from '@/types/page-props-default'
 import React from 'react'
 
 type sizeProps = {
-  size?: 'text-2xl' | 'text-8xl'
+  size?: 'text-4xl' | 'text-8xl'
   fontWeight?: 'font-bold' | 'font-black'
 }
 
