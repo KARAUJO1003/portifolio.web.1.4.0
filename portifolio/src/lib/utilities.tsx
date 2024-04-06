@@ -1,18 +1,20 @@
+import { Github, Instagram, Linkedin } from 'lucide-react'
+
 export const SocialMedias = [
   {
     url: 'https://www.instagram.com/kaesyofelix/',
     label: 'Instagram',
-    icon: 'fab fa-instagram',
+    icon: <Instagram size={16} />,
   },
   {
     url: 'https://www.instagram.com/kaesyofelix/',
     label: 'Github',
-    icon: 'fab fa-instagram',
+    icon: <Github size={16} />,
   },
   {
     url: 'https://www.instagram.com/kaesyofelix/',
     label: 'Linkedin',
-    icon: 'fab fa-instagram',
+    icon: <Linkedin size={16} />,
   },
 ]
 export const NavMenuItems = [

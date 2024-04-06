@@ -7,7 +7,7 @@ type sizeProps = {
   fontWeight?: 'font-bold' | 'font-black'
 }
 
-export const Title = ({
+export const TitleTypography = ({
   className,
   children,
   size = 'text-8xl',
