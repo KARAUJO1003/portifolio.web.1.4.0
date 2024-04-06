@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { ThemeProvider } from './providers/theme-provider'
+import { ThemeProvider } from '@/app/providers/theme-provider'
+import { Header } from './_components/global/header'
+import { Footer } from './_components/global/footer'
+import { cn } from '@/lib/utils'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,14 +20,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ptbr">
-      <body className={inter.className}>
+      <body className={cn(['relative'], inter.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Header />
+          <main>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

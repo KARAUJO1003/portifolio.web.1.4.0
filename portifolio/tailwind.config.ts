@@ -17,11 +17,10 @@ const config = {
         '2xl': '1400px',
       },
     },
-    colors: {
-      pinkgrad: '#D22A67',
-    },
     extend: {
       colors: {
+        principalPink: '#D22A67',
+        principalBlue: '#263193',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
