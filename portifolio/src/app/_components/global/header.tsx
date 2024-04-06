@@ -9,7 +9,9 @@ export const Header = ({ className }: ComponentPropsDefault) => {
     <header className="w-full border-b sticky top-0 backdrop-blur-md z-50 flex items-center px-40">
       <div
         className={cn(
-          ['flex items-center justify-between mx-auto py-4 gap-8 min-w-full'],
+          [
+            'flex items-center justify-between mx-auto py-4 gap-8 min-w-[896px] ',
+          ],
           className,
         )}
       >
