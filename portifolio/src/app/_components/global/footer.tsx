@@ -5,7 +5,7 @@ import { DescriptionTypography } from './typography/description'
 
 export const Footer = () => {
   return (
-    <footer className="p-20 z-10 flex flex-col items-center justify-between gap-9 bg-gradient-to-bl to-principalPink from-principalBlue">
+    <footer className="p-20 z-10 flex flex-col items-center justify-between gap-9 bg-gradient-to-bl to-principalPink via-violet-900 from-principalBlue">
       <NavMenu />
       <SocialMediasContact variant="icon" border />
       <DescriptionTypography className="text-muted-foreground">

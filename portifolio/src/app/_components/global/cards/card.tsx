@@ -20,7 +20,7 @@ const Header = ({
   ...props
 }: ComponentPropsDefault<ComponentProps<'div'>>) => {
   return (
-    <div {...props} className={cn(['p-4'], className)}>
+    <div {...props} className={cn(['p-4 flex flex-col gap-2'], className)}>
       {children}
     </div>
   )
@@ -44,7 +44,10 @@ const Footer = ({
   ...props
 }: ComponentPropsDefault<ComponentProps<'div'>>) => {
   return (
-    <div {...props} className={cn(['p-4 border-t flex flex-col '], className)}>
+    <div
+      {...props}
+      className={cn(['p-4 border-t flex flex-col gap-3'], className)}
+    >
       {children}
     </div>
   )

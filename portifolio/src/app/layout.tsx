@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { ThemeProvider } from '@/app/providers/theme-provider'
+import { ThemeProvider } from '@/providers/theme-provider'
 import { Header } from './_components/global/header'
 import { Footer } from './_components/global/footer'
 import { cn } from '@/lib/utils'

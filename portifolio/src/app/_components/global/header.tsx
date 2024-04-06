@@ -3,6 +3,7 @@ import { ButtonBorderGradient } from './buttons/gradient-border-button'
 import { ComponentPropsDefault } from '@/types/page-props-default'
 import { cn } from '@/lib/utils'
 import { Logo } from '@/assets/logo'
+import Link from 'next/link'
 
 export const Header = ({ className }: ComponentPropsDefault) => {
   return (
@@ -17,7 +18,9 @@ export const Header = ({ className }: ComponentPropsDefault) => {
       >
         <Logo className="size-7" />
         <NavMenu />
-        <ButtonBorderGradient>trabalhe comigo</ButtonBorderGradient>
+        <ButtonBorderGradient>
+          <Link href={'/#contacts-section'}>trabalhe comigo</Link>
+        </ButtonBorderGradient>
       </div>
     </header>
   )

@@ -7,6 +7,12 @@ import { Badge } from '@/components/ui/badge'
 import { ComponentPropsDefault } from '@/types/page-props-default'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 
 type CardProjectProps = {
   id: string
@@ -14,6 +20,7 @@ type CardProjectProps = {
   description: string
   srcImage: string
   altImage: string
+  urlDetails: string
 }
 
 export const CardProject = ({
@@ -22,6 +29,7 @@ export const CardProject = ({
   altImage,
   title,
   description,
+  urlDetails,
   className,
 }: ComponentPropsDefault<CardProjectProps>) => {
   return (
@@ -37,19 +45,37 @@ export const CardProject = ({
       >
         <Card.Body className="bg-gradient-to-tl to-zinc-800 via-zinc-850 from-black relative overflow-hidden">
           <Link
-            href="/"
+            href={urlDetails}
             className="absolute top-4 right-4 z-40 p-1 rounded-md backdrop-blur-md border"
           >
             <ExternalLink className="size-3" />
           </Link>
-          <Image objectFit="cover" fill src={srcImage} alt={altImage} />
+          <Image
+            style={{ objectFit: 'cover' }}
+            fill
+            src={srcImage}
+            alt={altImage}
+            className="hover:scale-110 transition-all duration-500"
+          />
         </Card.Body>
 
         <Card.Footer className="space-y-2">
-          <Link href={'/'} className="flex items-center gap-3">
-            <LinkIcon className="size-3" />
-            <strong>{title}</strong>
-          </Link>
+          <TooltipProvider>
+            <Tooltip delayDuration={100}>
+              <TooltipTrigger asChild>
+                <Link href={urlDetails} className="flex items-center gap-3">
+                  <LinkIcon className="size-3" />
+                  <strong>{title}</strong>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent
+                align="start"
+                className="backdrop-blur-md bg-transparent border text-muted-foreground"
+              >
+                <p>Clique para visualizar detlhaes do projeto</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
 
           <DescriptionTypography className="text-left text-muted-foreground line-clamp-2">
             {description}
