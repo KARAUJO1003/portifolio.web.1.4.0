@@ -42,8 +42,8 @@ export const CarrousselProjects = ({ id }: CarrousselProjectsProps) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="left-8" variant="secondary" />
-      <CarouselNext className="right-8" variant="secondary" />
+      <CarouselPrevious className="left-8 max-sm:left-4" variant="secondary" />
+      <CarouselNext className="right-8 max-sm:right-4" variant="secondary" />
     </Carousel>
   )
 }
