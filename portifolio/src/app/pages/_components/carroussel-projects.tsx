@@ -32,6 +32,7 @@ export const CarrousselProjects = ({ id }: CarrousselProjectsProps) => {
               fill
               sizes="(max-width: 1024px) 100vw"
               priority
+              quality={100}
             />
 
             <div className="absolute bottom-5 right-5 flex items-center gap-3 z-40">
