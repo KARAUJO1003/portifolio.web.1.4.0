@@ -23,10 +23,10 @@ export default function Page({ params }: { params: { id: string } }) {
   }
 
   return (
-    <main className="max-w-4xl min-h-screen mx-auto pb-20">
+    <main className="max-w-4xl min-h-screen mx-auto pb-20 max-lg:w-full">
       <CarrousselProjects id={id} />
 
-      <div className="grid grid-cols-5 gap-14">
+      <div className="grid grid-cols-5 gap-14 max-lg:grid-cols-1">
         <div className="col-span-4 space-y-4">
           <TitleTypography className="text-2xl">
             {project.title}
@@ -60,54 +60,56 @@ export default function Page({ params }: { params: { id: string } }) {
           </Accordion>
         </div>
 
-        <div className="col-span-1 flex flex-col gap-8">
-          <div>
-            <strong>Tecnologias</strong>
-            <div className="flex flex-wrap gap-2 mt-4">
-              <Badge
-                variant={'outline'}
-                className="text-nowrap text-muted-foreground"
-              >
-                next.js
-              </Badge>
-              <Badge
-                variant={'outline'}
-                className="text-nowrap text-muted-foreground"
-              >
-                react.js
-              </Badge>
-              <Badge
-                variant={'outline'}
-                className="text-nowrap text-muted-foreground"
-              >
-                tailwind css
-              </Badge>
-              <Badge
-                variant={'outline'}
-                className="text-nowrap text-muted-foreground"
-              >
-                node.js
-              </Badge>
-              <Badge
-                variant={'outline'}
-                className="text-nowrap text-muted-foreground"
-              >
-                java
-              </Badge>
-              <Badge
-                variant={'outline'}
-                className="text-nowrap text-muted-foreground"
-              >
-                c#
-              </Badge>
+        <div className="col-span-1">
+          <div className="flex flex-col gap-8">
+            <div>
+              <strong>Tecnologias</strong>
+              <div className="flex flex-wrap gap-2 mt-4">
+                <Badge
+                  variant={'outline'}
+                  className="text-nowrap text-muted-foreground"
+                >
+                  next.js
+                </Badge>
+                <Badge
+                  variant={'outline'}
+                  className="text-nowrap text-muted-foreground"
+                >
+                  react.js
+                </Badge>
+                <Badge
+                  variant={'outline'}
+                  className="text-nowrap text-muted-foreground"
+                >
+                  tailwind css
+                </Badge>
+                <Badge
+                  variant={'outline'}
+                  className="text-nowrap text-muted-foreground"
+                >
+                  node.js
+                </Badge>
+                <Badge
+                  variant={'outline'}
+                  className="text-nowrap text-muted-foreground"
+                >
+                  java
+                </Badge>
+                <Badge
+                  variant={'outline'}
+                  className="text-nowrap text-muted-foreground"
+                >
+                  c#
+                </Badge>
+              </div>
             </div>
-          </div>
-          <div>
-            <strong>Links extras</strong>
-            <SocialMediasContact
-              variant="full"
-              className="flex flex-col gap-3 mt-4"
-            />
+            <div>
+              <strong>Links extras</strong>
+              <SocialMediasContact
+                variant="full"
+                className="flex flex-col gap-3 mt-4"
+              />
+            </div>
           </div>
         </div>
       </div>

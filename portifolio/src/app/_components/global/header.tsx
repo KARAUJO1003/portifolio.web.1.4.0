@@ -11,7 +11,7 @@ export const Header = ({ className }: ComponentPropsDefault) => {
       <div
         className={cn(
           [
-            'flex items-center justify-between mx-auto py-4  gap-8 min-w-[896px] max-[1240px]:px-20 max-[1240px]:mx-0 max-lg:min-w-full max-sm:px-8',
+            'flex items-center justify-between mx-auto py-4  gap-8 min-w-[896px] max-[1240px]:px-20 max-[1240px]:mx-0 max-[1240px]:w-full max-lg:min-w-full max-sm:px-8',
           ],
           className,
         )}
@@ -19,7 +19,7 @@ export const Header = ({ className }: ComponentPropsDefault) => {
         <Logo className="size-5" />
         <NavMenu className="max-lg:hidden" />
         <ButtonBorderGradient>
-          <Link href={'/#contacts-section'}>trabalhe comigo</Link>
+          <Link href={'/#contacts-section'}>orçamento</Link>
         </ButtonBorderGradient>
       </div>
     </header>

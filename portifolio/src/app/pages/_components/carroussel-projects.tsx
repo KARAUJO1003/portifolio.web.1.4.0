@@ -23,7 +23,7 @@ export const CarrousselProjects = ({ id }: CarrousselProjectsProps) => {
         {project?.images.map((img) => (
           <CarouselItem
             key={img.src}
-            className="h-full aspect-video flex items-center justify-center"
+            className="w-full aspect-video flex items-center justify-center"
           >
             <Image
               src={img.src}

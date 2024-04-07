@@ -31,7 +31,7 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
-          <div className="hidden fixed items-center justify-center w-full bottom-0 left-0 right-0 backdrop-blur-lg border-t  max-sm:block py-5">
+          <div className="hidden fixed items-center justify-center w-full bottom-0 left-0 right-0 backdrop-blur-lg border-t  max-lg:block py-5">
             <NavMenu className="flex items-center justify-between w-full px-3 gap-0 max-w-[440px] mx-auto" />
           </div>
         </ThemeProvider>
