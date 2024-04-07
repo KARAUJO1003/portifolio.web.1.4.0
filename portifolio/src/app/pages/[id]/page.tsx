@@ -39,8 +39,26 @@ export default function Page({ params }: { params: { id: string } }) {
             <AccordionItem value="req-fun">
               <AccordionTrigger>Requisitos Funcionais</AccordionTrigger>
               <AccordionContent>
-                O usuário não pode editar registro O usuário não pode excluir
-                registro
+                <ul className="space-y-3 ml-4 text-xs pr-4">
+                  <li className="flex flex-col gap-2">
+                    <strong>Tecnologias de ponta:</strong>
+                    <span className="text-muted-foreground">
+                      Utilizando as mais recentes tecnologias e bibliotecas,
+                      este projeto explora o potencial do Next.js 14,
+                      incorporando server actions e route handlers para uma
+                      experiência de backend eficiente e dinâmica.
+                    </span>
+                  </li>
+                  <li className="flex flex-col gap-2">
+                    <strong>Interface Cativante:</strong>{' '}
+                    <span className="text-muted-foreground">
+                      Com uma estética dark mode aprimorada por tons de azul
+                      vibrante, a interface é tanto funcional quanto
+                      esteticamente agradável, proporcionando uma experiência de
+                      usuário imersiva.
+                    </span>
+                  </li>
+                </ul>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="req-no-fun">
@@ -53,8 +71,35 @@ export default function Page({ params }: { params: { id: string } }) {
             <AccordionItem value="reg">
               <AccordionTrigger>Regras de Negócio</AccordionTrigger>
               <AccordionContent>
-                O usuário não pode editar registro O usuário não pode excluir
-                registro
+                <ul className="space-y-3 ml-4 text-xs pr-4">
+                  <li className="flex flex-col gap-2">
+                    <strong>Gestão Financeira Simplificada:</strong>
+                    <span className="text-muted-foreground">
+                      Projetado para simplificar a gestão de finanças pessoais,
+                      o aplicativo oferece recursos abrangentes, desde o
+                      acompanhamento de despesas até a geração de relatórios
+                      visuais detalhados.
+                    </span>
+                  </li>
+                  <li className="flex flex-col gap-2">
+                    <strong>Validação de Dados Robusta:</strong>
+                    <span className="text-muted-foreground">
+                      Incorporando o poderoso Zod para validação de dados, o
+                      aplicativo garante a integridade dos dados em cada
+                      interação do usuário, mantendo a segurança e a precisão
+                      dos registros financeiros.
+                    </span>
+                  </li>
+                  <li className="flex flex-col gap-2">
+                    <strong>Integração de Dados Eficiente:</strong>
+                    <span className="text-muted-foreground">
+                      A integração perfeita com MongoDB e Prisma como ORM,
+                      juntamente com o uso eficaz de Axios, garante uma
+                      manipulação eficiente e segura dos dados, proporcionando
+                      uma experiência fluida e sem interrupções.
+                    </span>
+                  </li>
+                </ul>
               </AccordionContent>
             </AccordionItem>
           </Accordion>

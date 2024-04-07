@@ -19,7 +19,7 @@ export const Header = ({ className }: ComponentPropsDefault) => {
         <Logo className="size-5" />
         <NavMenu className="max-lg:hidden" />
         <ButtonBorderGradient>
-          <Link href={'/#contacts-section'}>orçamento</Link>
+          <Link href={'/#projects-section'}>projetos</Link>
         </ButtonBorderGradient>
       </div>
     </header>

@@ -23,9 +23,7 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
     <SectionContainer
       id="home"
       className={cn(
-        [
-          'flex flex-col w-full items-center justify-start gap-10 min-h-[610px]',
-        ],
+        'flex flex-col w-full items-center justify-start gap-10 min-h-[610px]',
         className,
       )}
     >
@@ -40,10 +38,11 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
         </TitleTypography>
 
         <DescriptionTypography className="max-sm:w-4/5">
-          Contrary to popular belief, latin literature from 45 BC, making it
-          over 2000 years old.
+          <strong>Welcome to the Dark Side of Coding!</strong> celebrating the
+          elegance of dark mode where innovation thrives.
         </DescriptionTypography>
       </div>
+
       <ButtonBorderGradient className="px-20" variant="secondary">
         <Link href={'/#about'} className="flex items-center gap-2">
           <span className="text-primary"> CONTINUAR</span>

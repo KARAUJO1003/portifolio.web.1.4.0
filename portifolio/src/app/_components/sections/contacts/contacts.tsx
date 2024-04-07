@@ -13,29 +13,32 @@ export const ContactsSection = () => {
       className="min-h-[810px] flex justify-center gap-40 items-center max-lg:gap-20 max-md:flex-col max-md:justify-start"
     >
       <div>
-        <TitleTypography size="lg"> Contacts</TitleTypography>
+        <TitleTypography size="lg"> Contato</TitleTypography>
         <DescriptionTypography className="text-left mt-5 max-w-80">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old.
+          <strong>
+            Pronto para desbloquear o potencial do seu próximo projeto?
+          </strong>{' '}
+          Vamos nos conectar e dar vida à sua visão. Quer você seja um
+          recrutador em busca de talentos ou um cliente ávido por inovação,
+          <strong> juntos criaremos algo extraordinário</strong>.
         </DescriptionTypography>
-        <SocialMediasContact className="flex flex-col gap-3 mt-10" />
+        <SocialMediasContact className="flex flex-col gap-3 mt-10 " />
       </div>
       <div>
         <Card.Container className=" max-w-80">
           <Card.Header>
-            <strong className="text-sm">Vamos trabalhar juntos.</strong>
+            <strong className="text-sm">Vamos fazer um orçamento</strong>
             <span className="text-xs text-muted-foreground font-normal">
-              Será um grande prazer, fazer parte dessa jornada
+              Me chama no whatsapp +55 (94) 9****-**** ou se preferir deixe seu
+              endereço de e-mail logo abaixo.
             </span>
           </Card.Header>
           <Card.Body className="aspect-auto">
             <Card.Container className="mx-4 flex gap-4 items-center p-4">
               <Rocket size={18} />
               <div>
-                <strong className="text-sm">Vantagens</strong>
                 <DescriptionTypography className="text-left text-muted-foreground max-w-60">
-                  Consectetur adipisicing elit.
+                  Preencha seu e-mail para eu entrar em contato com você.
                 </DescriptionTypography>
               </div>
             </Card.Container>
@@ -48,7 +51,7 @@ export const ContactsSection = () => {
           </Card.Body>
           <Card.Footer>
             <ButtonBorderGradient variant="secondary">
-              Send
+              Enviar
             </ButtonBorderGradient>
           </Card.Footer>
         </Card.Container>

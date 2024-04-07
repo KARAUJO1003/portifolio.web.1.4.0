@@ -10,7 +10,7 @@ export const ProjectsSection = () => {
       className="flex flex-col items-center justify-center min-h-[810px] mb-20 max-sm:mb-0"
     >
       <TitleTypography size="lg" className="mb-14">
-        Projects
+        Projetos
       </TitleTypography>
       <div className="grid grid-cols-2 gap-5 w-full max-[1240px]:grid-cols-1 max-[1240px]:px-5 max-w-5xl">
         {Projects.map((project) => {

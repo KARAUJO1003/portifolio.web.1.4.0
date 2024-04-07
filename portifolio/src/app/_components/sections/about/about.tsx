@@ -5,27 +5,17 @@ import { DescriptionTypography } from '../../global/typography/description'
 import { SocialMediasContact } from '../../global/social-medias'
 import developerPhoto from '../../../../../public/developer-photo.png'
 import Image from 'next/image'
-// import bgImage from '@/assets/logo-backgrund.png'
 
 export const AboutSection = ({ className }: ComponentPropsDefault) => {
   return (
     <section
       id="about"
       className={cn(
-        [
-          'flex flex-col w-full min-h-[810px] items-center justify-center gap-10 pt-20',
-        ],
+        'flex flex-col w-full min-h-[810px] items-center justify-center gap-10 pt-20',
         className,
       )}
     >
-      {/* <Image
-        src={bgImage}
-        objectFit="cover"
-        fill
-        className="-translate-x-20"
-        alt="Imagem de background"
-      /> */}
-      <div className="space-y-5 flex items-start  justify-between gap-5 w-full max-[1240px]:flex-col max-[1240px]:items-center">
+      <div className="space-y-5 flex items-center  justify-between gap-5 w-full max-[1240px]:flex-col max-[1240px]:items-center">
         <TitleTypography
           size="lg"
           fontWeight="font-bold"
@@ -33,6 +23,7 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
         >
           Conheça um pouco mais sobre mim.
         </TitleTypography>
+
         <div>
           <div className="relative inline-flex  overflow-hidden rounded-md p-[1px] focus:outline-none focus:ring-1 focus:ring-zinc-400/20 focus:ring-offset-1 focus:ring-offset-zinc-50/20 w-min">
             <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#263193_0%,#D22A67_50%,#263193_100%)]" />
@@ -75,14 +66,24 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
           </TitleTypography>
 
           <DescriptionTypography className="text-start ">
-            Contrary to popular belief, latin literature from 45 BC, making it
-            over 2000 years old. It has roots in a piece of classical Latin
-            literature from 45 BC, making it over 2000 years old.
+            Olá, sou <strong>Kaésyo</strong>, desenvolvedor de software,
+            atualmente estudando <strong>Engenharia de Software</strong> há
+            cerca de 1 ano. Com uma mente inquisitiva e um amor pelo desafio,
+            estou disponível para oportunidades de freelance ou propostas que me
+            permitam expandir meu horizonte de habilidades e colaborar em
+            projetos inovadores. <br />
             <br />
+            Possuo conhecimentos com as principais ferramentas do
+            desenvolvimento WEB como{' '}
+            <strong>
+              HTML, CSS, JavaScript, React, Next, Node, ShadcnUi, Tailwind,
+              MongoDb, Postgresql
+            </strong>
+            , entre outras... <br />
             <br />
-            Latin literature from 45 BC, making it over 2000 years old. It has
-            roots in a piece of classical Latin literature from 45 BC, making it
-            over 2000 years old.
+            Se você se identifica e se interessou em conhecer mais sobre quem
+            sou eu, entra em contato comigo para conversarmos, será um grande
+            prazer trocar experiência com você.
           </DescriptionTypography>
         </article>
       </div>

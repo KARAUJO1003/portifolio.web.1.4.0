@@ -41,23 +41,23 @@ export const SocialMedias = [
 export const NavMenuItems = [
   {
     url: '/',
-    label: 'Home',
+    label: 'Inicio',
   },
   {
     url: '/#about',
-    label: 'About',
+    label: 'Sobre',
   },
   {
     url: '/#soft-skills-section',
-    label: 'Skills',
+    label: 'Habilidades',
   },
   {
     url: '/#projects-section',
-    label: 'Projects',
+    label: 'Projetos',
   },
   {
     url: '/#contacts-section',
-    label: 'Contact',
+    label: 'Contato',
   },
 ]
 export const Projects: ProjectProps[] = [
@@ -65,7 +65,7 @@ export const Projects: ProjectProps[] = [
     id: '1',
     title: 'Finance Fire',
     description:
-      'Contrary to popular belief, Lorem Ipsum is not simply random text.s It has roots in a piece of classical Latin literature from 45 BC,making it over 2000 years old.',
+      'Este projeto pessoal fullstack, representa a culminação de habilidades e paixões em desenvolvimento de software. Desenvolvido com Next.js, MongoDB, TailwindCSS, Shadcn UI, GSAP, Recharts, TypeScript, Zod para validação de dados e React Hook Form com componentes Shadcn UI, este aplicativo foi concebido para ser uma experiência de gestão financeira intuitiva e visualmente estimulante.',
     urlDeploy: 'https://portifolio.kaesyofelix.com.br/',
     urlRepository: 'https://portifolio.kaesyofelix.com.br/',
     images: [
@@ -95,7 +95,7 @@ export const Projects: ProjectProps[] = [
     id: '2',
     title: 'Conversor para extenso.',
     description:
-      'Conversor de números por estenso responsivo. Aplicativo web responsivo, para gestão de finanças pessoais',
+      'Este projeto ReactJS apresenta uma única tela com um design intuitivo, elegante e simplificado, criado para oferecer uma experiência de usuário fluida e eficiente. O foco principal é um conversor de números por extenso, com a capacidade de mascarar inputs nos formatos monetario e normal, além de permitir que o usuário escolha entre diferentes formatos de resultado.',
     urlDeploy: 'https://portifolio.kaesyofelix.com.br/',
     urlRepository: 'https://portifolio.kaesyofelix.com.br/',
     images: [

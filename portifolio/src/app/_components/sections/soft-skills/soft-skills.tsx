@@ -8,7 +8,9 @@ export const SoftSkillsSection = () => {
       id="soft-skills-section"
       className="flex flex-col items-center pt-24"
     >
-      <TitleTypography size="lg">Soft Skills</TitleTypography>
+      <TitleTypography size="lg" className="normal-case">
+        Habilidades
+      </TitleTypography>
       <TimelineContainer />
     </SectionContainer>
   )

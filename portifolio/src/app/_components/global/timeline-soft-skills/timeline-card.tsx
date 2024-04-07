@@ -1,7 +1,18 @@
 import { Check } from 'lucide-react'
-import { HTMLAttributes } from 'react'
+import { ComponentProps } from 'react'
 
-export const TimelineCard = ({ ...props }: HTMLAttributes<HTMLDivElement>) => {
+type TimelineCardProps<T = unknown> = {
+  title: string
+  date: string
+  description: string
+} & T
+
+export const TimelineCard = ({
+  title,
+  date,
+  description,
+  ...props
+}: TimelineCardProps<ComponentProps<'div'>>) => {
   return (
     <div
       className="relative flex items-center justify-between md:justify-normal lg:odd:flex-row-reverse group is-active "
@@ -13,15 +24,12 @@ export const TimelineCard = ({ ...props }: HTMLAttributes<HTMLDivElement>) => {
 
       <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]  p-4 rounded space-y-2 shadow">
         <div className="flex items-center justify-between  space-x-2 mb-1">
-          <div className="font-bold text-zinc-300">Order Placed</div>
+          <div className="font-bold text-zinc-300">{title}</div>
           <time className="font-caveat font-medium text-zinc-500 text-xs">
-            08/06/2023
+            {date}
           </time>
         </div>
-        <div className="text-zinc-400 text-xs">
-          Pretium lectus quam id leo. Urna et pharetra aliquam vestibulum morbi
-          blandit cursus risus.
-        </div>
+        <div className="text-zinc-400 text-xs">{description}</div>
       </div>
     </div>
   )

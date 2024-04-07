@@ -9,7 +9,7 @@ export const Footer = () => {
       <NavMenu className="max-sm:flex-col" />
       <SocialMediasContact variant="icon" border />
       <DescriptionTypography className="text-muted-foreground">
-        © 2024 kaesyo felix policy
+        © 2024 todos os direitos reservados.
       </DescriptionTypography>
     </footer>
   )
