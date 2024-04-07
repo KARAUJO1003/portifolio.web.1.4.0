@@ -23,7 +23,7 @@ export default function Page({ params }: { params: { id: string } }) {
   }
 
   return (
-    <main className="max-w-4xl min-h-screen mx-auto pb-20 max-lg:w-full">
+    <main className="max-w-4xl min-h-screen mx-auto pb-20 max-lg:w-full max-lg:px-8">
       <CarrousselProjects id={id} />
 
       <div className="grid grid-cols-5 gap-14 max-lg:grid-cols-1">

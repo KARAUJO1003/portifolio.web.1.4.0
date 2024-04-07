@@ -19,7 +19,7 @@ export const CarrousselProjects = ({ id }: CarrousselProjectsProps) => {
 
   return (
     <Carousel>
-      <CarouselContent className=" border rounded-lg overflow-hidden mt-4 mb-8 mx-2">
+      <CarouselContent className=" border rounded-lg overflow-hidden mt-4 mb-8 mx-0">
         {project?.images.map((img) => (
           <CarouselItem
             key={img.src}
@@ -42,8 +42,8 @@ export const CarrousselProjects = ({ id }: CarrousselProjectsProps) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="left-8" variant="secondary" />
+      <CarouselNext className="right-8" variant="secondary" />
     </Carousel>
   )
 }
