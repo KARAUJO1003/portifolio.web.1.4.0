@@ -16,10 +16,10 @@ export const SocialMediasContact = ({
 }: ComponentPropsDefault<SocialMediasContactProps>) => {
   return (
     <div className={cn(['flex gap-7 transition-all duration-200'], className)}>
-      {SocialMedias.map((item) => (
+      {SocialMedias.map((item, index) => (
         <Link
           target="_blank"
-          key={item.url}
+          key={index}
           href={item.url}
           className="uppercase text-xs text-muted-foreground hover:text-foreground flex gap-2 items-center"
         >

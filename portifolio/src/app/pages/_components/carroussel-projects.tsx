@@ -23,14 +23,15 @@ export const CarrousselProjects = ({ id }: CarrousselProjectsProps) => {
         {project?.images.map((img) => (
           <CarouselItem
             key={img.src}
-            className="w-full aspect-video flex items-center justify-center"
+            className="w-full relative aspect-video flex items-center justify-center"
           >
             <Image
               src={img.src}
               alt={img.alt}
               style={{ objectFit: 'cover' }}
               fill
-              quality={100}
+              sizes="(max-width: 1024px) 100vw"
+              priority
             />
 
             <div className="absolute bottom-5 right-5 flex items-center gap-3 z-40">

@@ -56,6 +56,8 @@ export const CardProject = ({
             fill
             src={srcImage}
             alt={altImage}
+            sizes="(max-width: 1024px) 100vw"
+            priority
             className="hover:scale-110 transition-all duration-500"
           />
         </Card.Body>
