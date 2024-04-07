@@ -23,7 +23,9 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
     <SectionContainer
       id="home"
       className={cn(
-        ['flex flex-col w-full mb-5 items-center justify-start gap-10 '],
+        [
+          'flex flex-col w-full items-center justify-start gap-10 min-h-[610px]',
+        ],
         className,
       )}
     >
