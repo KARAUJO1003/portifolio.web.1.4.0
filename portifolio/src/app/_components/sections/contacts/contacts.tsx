@@ -1,3 +1,4 @@
+'use client'
 import { Rocket } from 'lucide-react'
 import Card from '../../global/cards/card'
 import { SectionContainer } from '../../global/sections/sections-container'
@@ -5,6 +6,7 @@ import { SocialMediasContact } from '../../global/social-medias'
 import { DescriptionTypography } from '../../global/typography/description'
 import { TitleTypography } from '../../global/typography/title'
 import { ButtonBorderGradient } from '../../global/buttons/gradient-border-button'
+import { toast } from 'sonner'
 
 export const ContactsSection = () => {
   return (
@@ -27,7 +29,7 @@ export const ContactsSection = () => {
       <div>
         <Card.Container className=" max-w-80">
           <Card.Header>
-            <strong className="text-sm">Vamos fazer um orçamento</strong>
+            <strong className="text-sm">Vamos fazer um orçamento?</strong>
             <span className="text-xs text-muted-foreground font-normal">
               Me chama no whatsapp +55 (94) 9****-**** ou se preferir deixe seu
               endereço de e-mail logo abaixo.
@@ -50,7 +52,10 @@ export const ContactsSection = () => {
             </div>
           </Card.Body>
           <Card.Footer>
-            <ButtonBorderGradient variant="secondary">
+            <ButtonBorderGradient
+              onClick={() => toast.success('E-mail enviado com sucesso!')}
+              variant="secondary"
+            >
               Enviar
             </ButtonBorderGradient>
           </Card.Footer>

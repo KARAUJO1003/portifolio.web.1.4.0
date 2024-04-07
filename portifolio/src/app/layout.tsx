@@ -6,6 +6,7 @@ import { Header } from './_components/global/header'
 import { Footer } from './_components/global/footer'
 import { cn } from '@/lib/utils'
 import { NavMenu } from './_components/global/nav-menu/nav-menu'
+import { Toaster } from 'sonner'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,6 +29,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Toaster />
           <Header />
           <main>{children}</main>
           <Footer />

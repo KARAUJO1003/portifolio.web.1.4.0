@@ -66,12 +66,11 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
           </TitleTypography>
 
           <DescriptionTypography className="text-start ">
-            Olá, sou <strong>Kaésyo</strong>, desenvolvedor de software,
-            atualmente estudando <strong>Engenharia de Software</strong> há
-            cerca de 1 ano. Com uma mente inquisitiva e um amor pelo desafio,
-            estou disponível para oportunidades de freelance ou propostas que me
-            permitam expandir meu horizonte de habilidades e colaborar em
-            projetos inovadores. <br />
+            Olá, sou <strong>Kaésyo</strong>, estudante de{' '}
+            <strong>Engenharia de Software</strong> há cerca de 1 ano. Com uma
+            mente inquisitiva e um amor pelo desafio, estou disponível para
+            oportunidades de freelance ou propostas que me permitam expandir meu
+            horizonte de habilidades e colaborar em projetos inovadores. <br />
             <br />
             Possuo conhecimentos com as principais ferramentas do
             desenvolvimento WEB como{' '}
@@ -81,9 +80,9 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
             </strong>
             , entre outras... <br />
             <br />
-            Se você se identifica e se interessou em conhecer mais sobre quem
-            sou eu, entra em contato comigo para conversarmos, será um grande
-            prazer trocar experiência com você.
+            Se você se interessou em conhecer mais sobre meu trabaho, entre em
+            contato comigo para conversarmos, será um grande prazer trocar
+            experiências com você.
           </DescriptionTypography>
         </article>
       </div>
