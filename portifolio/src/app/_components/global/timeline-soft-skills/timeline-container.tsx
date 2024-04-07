@@ -5,9 +5,9 @@ export const TimelineContainer = () => {
   return (
     <article
       className="w-full p-20 pattern-boxes pattern-blue-500 pattern-bg-white 
-    pattern-size-6 pattern-opacity-20"
+    pattern-size-6 pattern-opacity-20 max-[1240px]:flex max-[1240px]:flex-col max-[1240px]:justify-center max-[1240px]:items-center"
     >
-      <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-muted before:to-transparent">
+      <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-muted before:to-transparent ">
         <TimelineCard />
         <TimelineCard />
         <TimelineCard />

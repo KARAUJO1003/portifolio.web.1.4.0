@@ -49,7 +49,7 @@ export const NavMenuItems = [
   },
   {
     url: '/#soft-skills-section',
-    label: 'Soft Skills',
+    label: 'Skills',
   },
   {
     url: '/#projects-section',

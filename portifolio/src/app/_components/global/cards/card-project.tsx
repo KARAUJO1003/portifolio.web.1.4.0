@@ -82,7 +82,7 @@ export const CardProject = ({
               {description}
             </DescriptionTypography>
           </div>
-          <div className="flex items-center justify-between gap-2 py-2">
+          <div className="flex items-center justify-between gap-2 py-2 max-sm:flex-col max-sm:items-start">
             <div className="flex items-center gap-2 py-2">
               <Badge variant={'outline'} className="text-muted-foreground">
                 next.js

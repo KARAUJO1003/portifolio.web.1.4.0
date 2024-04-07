@@ -25,7 +25,14 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
         className="-translate-x-20"
         alt="Imagem de background"
       /> */}
-      <div className="space-y-5 flex items-start  justify-between gap-5 w-full">
+      <div className="space-y-5 flex items-start  justify-between gap-5 w-full max-[1240px]:flex-col max-[1240px]:items-center">
+        <TitleTypography
+          size="lg"
+          fontWeight="font-bold"
+          className="text-center max-[1240px]:block  max-[1240px]:max-w-[360px] min-[1240px]:hidden"
+        >
+          Conheça um pouco mais sobre mim.
+        </TitleTypography>
         <div>
           <div className="relative inline-flex  overflow-hidden rounded-md p-[1px] focus:outline-none focus:ring-1 focus:ring-zinc-400/20 focus:ring-offset-1 focus:ring-offset-zinc-50/20 w-min">
             <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#263193_0%,#D22A67_50%,#263193_100%)]" />
@@ -56,16 +63,16 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
           </div>
         </div>
 
-        <article className="flex flex-col max-w-lg gap-5 mt-2">
+        <article className="flex flex-col max-w-lg gap-5 mt-2 max-[1240px]:max-w-80">
           <TitleTypography
             size="lg"
             fontWeight="font-bold"
-            className="text-start"
+            className="text-start max-[1240px]:hidden"
           >
             Conheça um pouco mais sobre mim.
           </TitleTypography>
 
-          <DescriptionTypography className="text-start">
+          <DescriptionTypography className="text-start ">
             Contrary to popular belief, latin literature from 45 BC, making it
             over 2000 years old. It has roots in a piece of classical Latin
             literature from 45 BC, making it over 2000 years old.

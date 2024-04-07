@@ -17,11 +17,15 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
       )}
     >
       <div className="space-y-5 flex flex-col items-center ">
-        <TitleTypography fontWeight="font-black" className="text-center">
-          developer fullstack
+        <TitleTypography
+          fontWeight="font-black"
+          className="text-center max-md:text-6xl"
+        >
+          developer <br />
+          fullstack
         </TitleTypography>
 
-        <DescriptionTypography>
+        <DescriptionTypography className="max-sm:w-4/5">
           Contrary to popular belief, latin literature from 45 BC, making it
           over 2000 years old.
         </DescriptionTypography>

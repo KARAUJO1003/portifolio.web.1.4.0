@@ -7,17 +7,17 @@ import Link from 'next/link'
 
 export const Header = ({ className }: ComponentPropsDefault) => {
   return (
-    <header className="w-full border-b sticky top-0 backdrop-blur-md z-50 flex items-center px-40">
+    <header className="w-full border-b sticky top-0 backdrop-blur-md z-50 flex items-center  ">
       <div
         className={cn(
           [
-            'flex items-center justify-between mx-auto py-4 gap-8 min-w-[896px] ',
+            'flex items-center justify-between mx-auto py-4  gap-8 min-w-[896px] max-[1240px]:px-20 max-[1240px]:mx-0 max-lg:min-w-full max-sm:px-8',
           ],
           className,
         )}
       >
         <Logo className="size-5" />
-        <NavMenu />
+        <NavMenu className="max-lg:hidden" />
         <ButtonBorderGradient>
           <Link href={'/#contacts-section'}>trabalhe comigo</Link>
         </ButtonBorderGradient>

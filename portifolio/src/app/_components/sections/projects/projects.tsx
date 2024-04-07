@@ -7,12 +7,12 @@ export const ProjectsSection = () => {
   return (
     <SectionContainer
       id="projects-section"
-      className="flex flex-col items-center min-h-[810px] mb-20"
+      className="flex flex-col items-center justify-center min-h-[810px] mb-20 max-sm:mb-0"
     >
       <TitleTypography size="lg" className="mb-14">
         Projects
       </TitleTypography>
-      <div className="grid grid-cols-2 gap-5 w-full">
+      <div className="grid grid-cols-2 gap-5 w-full max-[1240px]:grid-cols-1 max-[1240px]:px-5 max-w-5xl">
         {Projects.map((project) => {
           const firstImage = project.images.find((_, index) => index === 0)
           const src = firstImage?.src || '' // Defina um valor padrão caso src seja undefined

@@ -10,7 +10,7 @@ export const ContactsSection = () => {
   return (
     <SectionContainer
       id="contacts-section"
-      className="min-h-[810px] flex justify-between"
+      className="min-h-[810px] flex justify-center gap-40 items-center max-lg:gap-20 max-md:flex-col max-md:justify-start"
     >
       <div>
         <TitleTypography size="lg"> Contacts</TitleTypography>
@@ -22,14 +22,14 @@ export const ContactsSection = () => {
         <SocialMediasContact className="flex flex-col gap-3 mt-10" />
       </div>
       <div>
-        <Card.Container className="">
+        <Card.Container className=" max-w-80">
           <Card.Header>
             <strong className="text-sm">Vamos trabalhar juntos.</strong>
             <span className="text-xs text-muted-foreground font-normal">
               Será um grande prazer, fazer parte dessa jornada
             </span>
           </Card.Header>
-          <Card.Body>
+          <Card.Body className="aspect-auto">
             <Card.Container className="mx-4 flex gap-4 items-center p-4">
               <Rocket size={18} />
               <div>
@@ -39,34 +39,14 @@ export const ContactsSection = () => {
                 </DescriptionTypography>
               </div>
             </Card.Container>
-            <div className=" flex gap-4 items-center p-4">
-              <span className="size-2 bg-emerald-500 rounded-full" />
-              <div>
-                <strong className="text-sm">
-                  Your call has been confirmed.
-                </strong>
-                <DescriptionTypography className="text-left text-muted-foreground max-w-60">
-                  1 hour ago
-                </DescriptionTypography>
-              </div>
-            </div>
-            <div className=" flex gap-4 items-center p-4">
-              <span className="size-2 bg-emerald-500 rounded-full" />
-              <div>
-                <strong className="text-sm">
-                  Your call has been confirmed.
-                </strong>
-                <DescriptionTypography className="text-left text-muted-foreground max-w-60">
-                  1 hour ago
-                </DescriptionTypography>
-              </div>
+            <div className="flex w-full p-4">
+              <input
+                placeholder="Digite seu email"
+                className="outline-none w-full h-9 text-xs rounded bg-transparent border border-input px-2"
+              />
             </div>
           </Card.Body>
           <Card.Footer>
-            <input
-              placeholder="Digite seu email"
-              className="outline-none h-9 text-xs rounded bg-transparent border border-input px-2"
-            />
             <ButtonBorderGradient variant="secondary">
               Send
             </ButtonBorderGradient>
