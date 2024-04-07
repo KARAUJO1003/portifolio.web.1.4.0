@@ -24,7 +24,7 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
       id="home"
       className={cn(
         [
-          'flex flex-col w-full items-center justify-start gap-10 min-h-[610px]',
+          'flex flex-col w-full items-center justify-center gap-10 min-h-[510px]',
         ],
         className,
       )}
