@@ -47,7 +47,7 @@ export const CardProject = ({
         <Card.Body className="bg-gradient-to-tl to-zinc-800 via-zinc-850 from-black relative overflow-hidden">
           <Link
             href={urlDetails}
-            className="absolute top-4 right-4 z-40 p-1 rounded-md backdrop-blur-md border"
+            className="absolute top-4 right-4 z-40 p-1 rounded-md backdrop-blur-md"
           >
             <ExternalLink className="size-3" />
           </Link>

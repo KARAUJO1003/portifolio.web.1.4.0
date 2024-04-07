@@ -16,7 +16,7 @@ export const Header = ({ className }: ComponentPropsDefault) => {
           className,
         )}
       >
-        <Logo className="size-7" />
+        <Logo className="size-5" />
         <NavMenu />
         <ButtonBorderGradient>
           <Link href={'/#contacts-section'}>trabalhe comigo</Link>

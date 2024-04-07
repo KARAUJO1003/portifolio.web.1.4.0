@@ -5,7 +5,7 @@ import React from 'react'
 
 export const Logo = ({ className }: ComponentPropsDefault) => {
   return (
-    <Link href="/" className="flex items-center gap-5">
+    <Link href="/" className="flex items-center gap-3">
       <svg
         width="37"
         height="32"
@@ -20,7 +20,7 @@ export const Logo = ({ className }: ComponentPropsDefault) => {
           className="fill-muted-foreground"
         />
       </svg>
-      <span className="uppercase text-sm font-extralight tracking-widest ">
+      <span className="uppercase text-lg font-light tracking-widest ">
         kaesyo felix
       </span>
     </Link>
