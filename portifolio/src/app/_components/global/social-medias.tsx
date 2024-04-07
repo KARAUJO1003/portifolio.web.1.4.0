@@ -23,7 +23,7 @@ export const SocialMediasContact = ({
           href={item.url}
           className="uppercase text-xs text-muted-foreground hover:text-foreground flex gap-2 items-center"
         >
-          {variant === 'label' && <span>{item.label}</span>}
+          {variant === 'label' && <span className="text-xs">{item.label}</span>}
 
           {variant === 'icon' && (
             <span
@@ -36,7 +36,7 @@ export const SocialMediasContact = ({
           {variant === 'full' && (
             <>
               <span>{item.icon}</span>
-              <span>{item.label}</span>
+              <span className="text-xs">{item.label}</span>
             </>
           )}
         </Link>

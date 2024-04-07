@@ -1,4 +1,3 @@
-import { randomUUID } from 'crypto'
 import { Github, Instagram, Linkedin } from 'lucide-react'
 import financeFire01 from '../../public/finance-fire01.png'
 import financeFire02 from '../../public/finance-fire02.png'
@@ -63,10 +62,10 @@ export const NavMenuItems = [
 ]
 export const Projects: ProjectProps[] = [
   {
-    id: randomUUID(),
+    id: '1',
     title: 'Finance Fire',
     description:
-      'Aplicativo web responsivo, para gestão de finanças pessoais. Aplicativo web responsivo, para gestão de finanças pessoaisAplicativo web responsivo, para gestão de finanças pessoais',
+      'Contrary to popular belief, Lorem Ipsum is not simply random text.s It has roots in a piece of classical Latin literature from 45 BC,making it over 2000 years old.',
     urlDeploy: 'https://portifolio.kaesyofelix.com.br/',
     urlRepository: 'https://portifolio.kaesyofelix.com.br/',
     images: [
@@ -93,7 +92,7 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    id: randomUUID(),
+    id: '2',
     title: 'Conversor para extenso.',
     description:
       'Conversor de números por estenso responsivo. Aplicativo web responsivo, para gestão de finanças pessoais',
@@ -111,7 +110,7 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    id: randomUUID(),
+    id: '3',
     title: 'lista de tarefas simples',
     description:
       'Todo list responsivo, com modos dark e light, construido com HTML, CSS, e JavaScript.',

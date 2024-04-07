@@ -13,6 +13,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
+import { ButtonBorderGradient } from '../buttons/gradient-border-button'
 
 type CardProjectProps = {
   id: string
@@ -59,31 +60,45 @@ export const CardProject = ({
           />
         </Card.Body>
 
-        <Card.Footer className="space-y-2">
-          <TooltipProvider>
-            <Tooltip delayDuration={100}>
-              <TooltipTrigger asChild>
-                <Link href={urlDetails} className="flex items-center gap-3">
-                  <LinkIcon className="size-3" />
-                  <strong>{title}</strong>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent
-                align="start"
-                className="backdrop-blur-md bg-transparent border text-muted-foreground"
-              >
-                <p>Clique para visualizar detlhaes do projeto</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-
-          <DescriptionTypography className="text-left text-muted-foreground line-clamp-2">
-            {description}
-          </DescriptionTypography>
-          <div className="flex items-center gap-2 py-2">
-            <Badge variant={'outline'}>next.js</Badge>
-            <Badge variant={'outline'}>node.js</Badge>
-            <Badge variant={'outline'}>tailwind.css</Badge>
+        <Card.Footer>
+          <div className="space-y-2">
+            <TooltipProvider>
+              <Tooltip delayDuration={100}>
+                <TooltipTrigger asChild>
+                  <Link href={urlDetails} className="flex items-center gap-3">
+                    <LinkIcon className="size-3" />
+                    <strong className="capitalize">{title}</strong>
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent
+                  align="center"
+                  className="backdrop-blur-md bg-transparent border text-muted-foreground"
+                >
+                  <p>Clique para visualizar detalhes do projeto</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <DescriptionTypography className="text-left text-muted-foreground line-clamp-2 ">
+              {description}
+            </DescriptionTypography>
+          </div>
+          <div className="flex items-center justify-between gap-2 py-2">
+            <div className="flex items-center gap-2 py-2">
+              <Badge variant={'outline'} className="text-muted-foreground">
+                next.js
+              </Badge>
+              <Badge variant={'outline'} className="text-muted-foreground">
+                node.js
+              </Badge>
+              <Badge variant={'outline'} className="text-muted-foreground">
+                tailwind.css
+              </Badge>
+            </div>
+            <Link href={urlDetails} className="flex items-center gap-3">
+              <ButtonBorderGradient variant="secondary">
+                ver projeto
+              </ButtonBorderGradient>
+            </Link>
           </div>
         </Card.Footer>
       </Card.Container>

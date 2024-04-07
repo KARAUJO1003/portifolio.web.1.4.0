@@ -1,3 +1,5 @@
+'use client'
+
 import { ButtonBorderGradient } from '@/app/_components/global/buttons/gradient-border-button'
 import { SocialMediasContact } from '@/app/_components/global/social-medias'
 import { DescriptionTypography } from '@/app/_components/global/typography/description'
@@ -9,15 +11,33 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { Badge } from '@/components/ui/badge'
+import { Projects } from '@/lib/utilities'
+import Image from 'next/image'
 
 export default function Page({ params }: { params: { id: string } }) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  console.log(Projects.length)
   const id = params.id
+  const project = Projects.find((project) => project.id === id)
+
+  if (!project) {
+    return <div>Projeto não encontrado</div>
+  }
+  const firstImage = project.images.find((_, index) => index === 1)
+  const src = firstImage?.src || '' // Defina um valor padrão caso src seja undefined
+  const alt = firstImage?.alt || ''
   return (
     <main className="max-w-4xl min-h-screen mx-auto pb-20">
-      <div className="w-full aspect-video border rounded-lg my-8 relative">
-        <div className="absolute bottom-5 right-5 flex items-center gap-3">
-          <button className="border rounded-md h-9 px-6 hover:bg-secondary/20 text-xs uppercase text-muted-foreground hover:text-primary transition-all">
+      <div className="w-full aspect-video border rounded-lg my-8 relative overflow-hidden">
+        <Image
+          src={src}
+          alt={alt}
+          style={{ objectFit: 'cover' }}
+          fill
+          quality={100}
+          className="shadow-inner shadow-red-800"
+        />
+        <div className="absolute bottom-5 right-5 flex items-center gap-3 z-40">
+          <button className="border bg-zinc-950/90 backdrop-blur-lg rounded-md h-9 px-6 hover:bg-bg-zinc-900 text-xs uppercase text-muted-foreground hover:text-primary transition-all">
             Repositorio
           </button>
           <ButtonBorderGradient variant="secondary">
@@ -29,12 +49,10 @@ export default function Page({ params }: { params: { id: string } }) {
       <div className="grid grid-cols-5 gap-14">
         <div className="col-span-4 space-y-4">
           <TitleTypography className="text-2xl">
-            Contrary to popular belief
+            {project.title}
           </TitleTypography>
           <DescriptionTypography className="text-left mb-8">
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old.
+            {project.description}
           </DescriptionTypography>
 
           <Accordion type="multiple">
@@ -46,14 +64,14 @@ export default function Page({ params }: { params: { id: string } }) {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="req-no-fun">
-              <AccordionTrigger>Requisitos Funcionais</AccordionTrigger>
+              <AccordionTrigger>Requisitos Não Funcionais</AccordionTrigger>
               <AccordionContent>
                 O usuário não pode editar registro O usuário não pode excluir
                 registro
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="reg">
-              <AccordionTrigger>Requisitos Funcionais</AccordionTrigger>
+              <AccordionTrigger>Regras de Negócio</AccordionTrigger>
               <AccordionContent>
                 O usuário não pode editar registro O usuário não pode excluir
                 registro

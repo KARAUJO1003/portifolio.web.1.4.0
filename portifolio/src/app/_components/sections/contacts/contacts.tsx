@@ -4,16 +4,16 @@ import { SectionContainer } from '../../global/sections/sections-container'
 import { SocialMediasContact } from '../../global/social-medias'
 import { DescriptionTypography } from '../../global/typography/description'
 import { TitleTypography } from '../../global/typography/title'
-import { ButtonPrimaryGradient } from '../../global/buttons/button-primary-gradient'
+import { ButtonBorderGradient } from '../../global/buttons/gradient-border-button'
 
 export const ContactsSection = () => {
   return (
     <SectionContainer
       id="contacts-section"
-      className="min-h-screen flex justify-between"
+      className="min-h-[810px] flex justify-between"
     >
       <div>
-        <TitleTypography size="text-4xl"> Contacts</TitleTypography>
+        <TitleTypography size="lg"> Contacts</TitleTypography>
         <DescriptionTypography className="text-left mt-5 max-w-80">
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Latin literature from 45 BC, making
@@ -67,7 +67,9 @@ export const ContactsSection = () => {
               placeholder="Digite seu email"
               className="outline-none h-9 text-xs rounded bg-transparent border border-input px-2"
             />
-            <ButtonPrimaryGradient>Send</ButtonPrimaryGradient>
+            <ButtonBorderGradient variant="secondary">
+              Send
+            </ButtonBorderGradient>
           </Card.Footer>
         </Card.Container>
       </div>

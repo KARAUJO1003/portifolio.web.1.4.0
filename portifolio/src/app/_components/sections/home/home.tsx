@@ -3,18 +3,16 @@ import { ComponentPropsDefault } from '@/types/page-props-default'
 import { TitleTypography } from '@/app/_components/global/typography/title'
 import { DescriptionTypography } from '../../global/typography/description'
 import { SectionContainer } from '../../global/sections/sections-container'
-import { ButtonPrimaryGradient } from '../../global/buttons/button-primary-gradient'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import { ButtonBorderGradient } from '../../global/buttons/gradient-border-button'
 
 export const HomeSection = ({ className }: ComponentPropsDefault) => {
   return (
     <SectionContainer
       id="home"
       className={cn(
-        [
-          'flex flex-col w-full min-h-screen items-center justify-start gap-10 ',
-        ],
+        ['flex flex-col w-full mb-5 items-center justify-start gap-10 '],
         className,
       )}
     >
@@ -28,12 +26,12 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
           over 2000 years old.
         </DescriptionTypography>
       </div>
-      <ButtonPrimaryGradient className="px-20">
+      <ButtonBorderGradient className="px-20" variant="secondary">
         <Link href={'/#about'} className="flex items-center gap-2">
-          <span> CONTINUAR</span>
+          <span className="text-primary"> CONTINUAR</span>
           <ArrowRight className="size-4" />
         </Link>
-      </ButtonPrimaryGradient>
+      </ButtonBorderGradient>
     </SectionContainer>
   )
 }

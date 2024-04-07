@@ -7,9 +7,9 @@ export const ProjectsSection = () => {
   return (
     <SectionContainer
       id="projects-section"
-      className="flex flex-col items-center min-h-screen"
+      className="flex flex-col items-center min-h-[810px] mb-20"
     >
-      <TitleTypography size="text-4xl" className="mb-14">
+      <TitleTypography size="lg" className="mb-14">
         Projects
       </TitleTypography>
       <div className="grid grid-cols-2 gap-5 w-full">
