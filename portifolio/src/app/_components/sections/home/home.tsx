@@ -6,6 +6,17 @@ import { SectionContainer } from '../../global/sections/sections-container'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { ButtonBorderGradient } from '../../global/buttons/gradient-border-button'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
+
+gsap.registerPlugin(useGSAP)
+
+gsap.config({
+  autoSleep: 60,
+  force3D: false,
+  nullTargetWarn: false,
+  units: { left: '%', top: '%', rotation: 'rad' },
+})
 
 export const HomeSection = ({ className }: ComponentPropsDefault) => {
   return (
@@ -21,8 +32,9 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
           fontWeight="font-black"
           className="text-center max-md:text-6xl"
         >
-          developer <br />
-          fullstack
+          software
+          <br />
+          developer
         </TitleTypography>
 
         <DescriptionTypography className="max-sm:w-4/5">
