@@ -3,7 +3,6 @@ import Card from './card'
 import Link from 'next/link'
 import { ExternalLink, LinkIcon } from 'lucide-react'
 import { DescriptionTypography } from '../typography/description'
-import { Badge } from '@/components/ui/badge'
 import { ComponentPropsDefault } from '@/types/page-props-default'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
@@ -32,6 +31,7 @@ export const CardProject = ({
   description,
   urlDetails,
   className,
+  children,
 }: ComponentPropsDefault<CardProjectProps>) => {
   return (
     <>
@@ -85,16 +85,8 @@ export const CardProject = ({
             </DescriptionTypography>
           </div>
           <div className="flex items-center justify-between gap-2 py-2 max-sm:flex-col max-sm:items-start">
-            <div className="flex items-center gap-2 py-2">
-              <Badge variant={'outline'} className="text-muted-foreground">
-                next.js
-              </Badge>
-              <Badge variant={'outline'} className="text-muted-foreground">
-                node.js
-              </Badge>
-              <Badge variant={'outline'} className="text-muted-foreground">
-                tailwind.css
-              </Badge>
+            <div className="flex items-center gap-2 py-2 w-2/5 overflow-ellipsis">
+              {children}
             </div>
             <Link href={urlDetails} className="flex items-center gap-3">
               <ButtonBorderGradient variant="secondary">

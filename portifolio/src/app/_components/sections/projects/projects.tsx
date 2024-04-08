@@ -2,6 +2,7 @@ import { SectionContainer } from '../../global/sections/sections-container'
 import { TitleTypography } from '../../global/typography/title'
 import { CardProject } from '../../global/cards/card-project'
 import { Projects } from '@/lib/utilities'
+import { Badge } from '@/components/ui/badge'
 
 export const ProjectsSection = () => {
   return (
@@ -17,6 +18,9 @@ export const ProjectsSection = () => {
           const firstImage = project.images.find((_, index) => index === 0)
           const src = firstImage?.src || '' // Defina um valor padrão caso src seja undefined
           const alt = firstImage?.alt || ''
+
+          const first3tags = project.tags.slice(0, 2)
+
           return (
             <CardProject
               title={project.title}
@@ -26,7 +30,17 @@ export const ProjectsSection = () => {
               urlDetails={`/project/${project.id}`}
               id={project.id}
               key={project.id}
-            />
+            >
+              {first3tags.map((tag, index) => (
+                <Badge
+                  key={index}
+                  variant={'outline'}
+                  className="text-muted-foreground text-nowrap"
+                >
+                  {tag.label}
+                </Badge>
+              ))}
+            </CardProject>
           )
         })}
       </div>
