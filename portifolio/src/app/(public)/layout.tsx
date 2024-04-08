@@ -31,7 +31,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Toaster />
+          <Toaster position="top-right" theme="dark" richColors />
           <Header>
             <NavMenu className="max-lg:hidden" />
             <Link href={'/#projects-section'}>

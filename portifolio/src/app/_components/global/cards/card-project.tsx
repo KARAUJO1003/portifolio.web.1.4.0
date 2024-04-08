@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Card from './card'
 import Link from 'next/link'
@@ -13,6 +14,7 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 import { ButtonBorderGradient } from '../buttons/gradient-border-button'
+import { toast } from 'sonner'
 
 type CardProjectProps = {
   id: string
@@ -52,6 +54,7 @@ export const CardProject = ({
             <ExternalLink className="size-3" />
           </Link>
           <Image
+            onClick={() => toast.info('Clique em Ver Projeto')}
             style={{ objectFit: 'cover' }}
             fill
             src={srcImage}
