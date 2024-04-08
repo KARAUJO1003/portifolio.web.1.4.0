@@ -8,6 +8,7 @@ import conversorApp02 from '../../public/conversor-app01.png'
 import conversorApp01 from '../../public/conversor-app02.png'
 import orion01 from '../../public/orion-tasks01.png'
 import orion02 from '../../public/orion-tasks02.png'
+import banner02 from '../../public/banner02.jpg'
 
 interface ProjectPropsRequiriment {
   title: string
@@ -116,6 +117,7 @@ export const Projects: ProjectProps[] = [
       { label: 'tailwind.css' },
       { label: 'typescript' },
       { label: 'shadcn-ui' },
+      { label: 'gsap' },
     ],
     requiriments: {
       functionaisRequiriments: [
@@ -254,6 +256,47 @@ export const Projects: ProjectProps[] = [
       {
         src: orion02.src,
         alt: 'Imagem de projeto ConversorApp',
+      },
+    ],
+  },
+
+  {
+    id: '4',
+    title: 'Portifolio 1.4.0',
+    description:
+      'Essa é a versão mais recente do meu portifolio, site desenvolvido com ituito de mostrar um pouco sobre mim, minhas habilidades e principalmente os projetos que desenvolvi até então.',
+    urlDeploy: 'https://port-web-1-4-0-me9l.vercel.app/',
+    urlRepository: 'https://github.com/KARAUJO1003/port.web.1.4.0',
+    tags: [
+      { label: 'next.js' },
+      { label: 'tailwind.css' },
+      { label: 'shadcn-ui' },
+      { label: 'gsap' },
+    ],
+    requiriments: {
+      functionaisRequiriments: [
+        {
+          title: 'Projeto componentizado',
+          description: 'Essa é a descrição explicando o motivo',
+        },
+      ],
+      noFunctionalRequiriments: [
+        {
+          title: 'Cliente não pode abrir a tela de produtos',
+          description: 'Essa é a descrição explicando o motivo',
+        },
+      ],
+      businessRule: [
+        {
+          title: 'Cliente não pode abrir a tela de produtos',
+          description: 'Essa é a descrição explicando o motivo',
+        },
+      ],
+    },
+    images: [
+      {
+        src: banner02.src,
+        alt: 'Imagem de projeto Portifolio',
       },
     ],
   },
