@@ -1,11 +1,8 @@
-import { NavMenu } from './nav-menu/nav-menu'
-import { ButtonBorderGradient } from './buttons/gradient-border-button'
 import { ComponentPropsDefault } from '@/types/page-props-default'
 import { cn } from '@/lib/utils'
 import { Logo } from '@/assets/logo'
-import Link from 'next/link'
 
-export const Header = ({ className }: ComponentPropsDefault) => {
+export const Header = ({ className, children }: ComponentPropsDefault) => {
   return (
     <header className="w-full border-b sticky top-0 backdrop-blur-md z-50 flex items-center  ">
       <div
@@ -17,10 +14,7 @@ export const Header = ({ className }: ComponentPropsDefault) => {
         )}
       >
         <Logo className="size-5" />
-        <NavMenu className="max-lg:hidden" />
-        <ButtonBorderGradient>
-          <Link href={'/#projects-section'}>projetos</Link>
-        </ButtonBorderGradient>
+        {children}
       </div>
     </header>
   )
