@@ -9,17 +9,59 @@ import conversorApp01 from '../../public/conversor-app02.png'
 import orion01 from '../../public/orion-tasks01.png'
 import orion02 from '../../public/orion-tasks02.png'
 
+interface ProjectPropsRequiriment {
+  title: string
+  description: string
+}
+
 interface ProjectProps {
   id: string
   title: string
   description: string
   urlDeploy: string
   urlRepository: string
+  tags: Array<{ label: string }>
+  requiriments: {
+    functionaisRequiriments: ProjectPropsRequiriment[]
+    noFunctionalRequiriments: ProjectPropsRequiriment[]
+    businessRule: ProjectPropsRequiriment[]
+  }
   images: Array<{
     src: string
     alt: string
   }>
 }
+
+interface SkillsProps {
+  id: string
+  title: string
+  description: string
+  date: string
+}
+
+export const Skills: SkillsProps[] = [
+  {
+    id: '1',
+    title: 'Desenvolvimento web avançado no piloto automático. Com Next.js',
+    description:
+      'Posso criar aplicativos web poderosos e dinâmicos com facilidade, oferecendo uma experiência de usuário incomparável.',
+    date: '21/03/2023',
+  },
+  {
+    id: '2',
+    title: 'Tailwind CSS: Estilo sem esforço.',
+    description:
+      'Com Tailwind CSS, posso estilizar meus projetos de forma rápida e eficiente, garantindo uma aparência elegante e consistente em todos os dispositivos.',
+    date: '12/05/2023',
+  },
+  {
+    id: '3',
+    title: 'Shadcn/UI/GSAP',
+    description:
+      'Detalhes que fazem a diferença. Com Shadcn, UI e GSAP, posso adicionar toques finais e animações deslumbrantes que elevam a experiência do usuário a novos patamares.',
+    date: '31/07/2023',
+  },
+]
 
 export const SocialMedias = [
   {
@@ -68,6 +110,36 @@ export const Projects: ProjectProps[] = [
       'Este projeto pessoal fullstack, representa a culminação de habilidades e paixões em desenvolvimento de software. Desenvolvido com Next.js, MongoDB, TailwindCSS, Shadcn UI, GSAP, Recharts, TypeScript, Zod para validação de dados e React Hook Form com componentes Shadcn UI, este aplicativo foi concebido para ser uma experiência de gestão financeira intuitiva e visualmente estimulante.',
     urlDeploy: 'https://finance-fire.vercel.app/',
     urlRepository: 'https://github.com/KARAUJO1003/finance-fire',
+    tags: [
+      { label: 'next.js' },
+      { label: 'server actions' },
+      { label: 'tailwind.css' },
+      { label: 'typescript' },
+      { label: 'shadcn-ui' },
+    ],
+    requiriments: {
+      functionaisRequiriments: [
+        {
+          title: 'Tecnologias de ponta',
+          description:
+            'Utilizando as mais recentes tecnologias e bibliotecas, este projeto explora o potencial do Next.js 14, incorporando server actions e route handlers para uma experiência de backend eficiente e dinâmica.',
+        },
+      ],
+      noFunctionalRequiriments: [
+        {
+          title: 'Interface Cativante:',
+          description:
+            'Com uma estética dark mode aprimorada por tons de azul vibrante, a interface é tanto funcional quanto esteticamente agradável, proporcionando uma experiência de usuário imersiva.',
+        },
+      ],
+      businessRule: [
+        {
+          title: 'Gestão Financeira Simplificada:',
+          description:
+            'Projetado para simplificar a gestão de finanças pessoais, o aplicativo oferece recursos abrangentes, desde o acompanhamento de despesas até a geração de relatórios visuais detalhados.',
+        },
+      ],
+    },
     images: [
       {
         src: financeFire01.src,
@@ -91,6 +163,7 @@ export const Projects: ProjectProps[] = [
       },
     ],
   },
+
   {
     id: '2',
     title: 'Conversor para extenso.',
@@ -98,6 +171,36 @@ export const Projects: ProjectProps[] = [
       'Este projeto ReactJS apresenta uma única tela com um design intuitivo, elegante e simplificado, criado para oferecer uma experiência de usuário fluida e eficiente. O foco principal é um conversor de números por extenso, com a capacidade de mascarar inputs nos formatos monetario e normal, além de permitir que o usuário escolha entre diferentes formatos de resultado.',
     urlDeploy: 'https://conversor-app.vercel.app/',
     urlRepository: 'https://github.com/KARAUJO1003/conversor-app',
+    tags: [
+      { label: 'react.js' },
+      { label: 'mascaras de input' },
+      { label: 'tailwind.css' },
+      { label: 'java script' },
+      { label: 'shadcn-ui' },
+    ],
+    requiriments: {
+      functionaisRequiriments: [
+        {
+          title: 'Tecnologias de ponta',
+          description:
+            'Utilizando as mais recentes tecnologias e bibliotecas, este projeto explora o potencial do Next.js 14, incorporando server actions e route handlers para uma experiência de backend eficiente e dinâmica.',
+        },
+      ],
+      noFunctionalRequiriments: [
+        {
+          title: 'Interface Cativante:',
+          description:
+            'Com uma estética dark mode aprimorada por tons de azul vibrante, a interface é tanto funcional quanto esteticamente agradável, proporcionando uma experiência de usuário imersiva.',
+        },
+      ],
+      businessRule: [
+        {
+          title: 'Gestão Financeira Simplificada:',
+          description:
+            'Projetado para simplificar a gestão de finanças pessoais, o aplicativo oferece recursos abrangentes, desde o acompanhamento de despesas até a geração de relatórios visuais detalhados.',
+        },
+      ],
+    },
     images: [
       {
         src: conversorApp01.src,
@@ -109,6 +212,7 @@ export const Projects: ProjectProps[] = [
       },
     ],
   },
+
   {
     id: '3',
     title: 'lista de tarefas simples',
@@ -116,6 +220,32 @@ export const Projects: ProjectProps[] = [
       'Todo list responsivo, com modos dark e light, construido com HTML, CSS, e JavaScript.',
     urlDeploy: 'https://karaujo1003.github.io/todolist-web/',
     urlRepository: 'https://github.com/KARAUJO1003/todolist-web',
+    tags: [
+      { label: 'html' },
+      { label: 'css' },
+      { label: 'java script' },
+      { label: 'local storage' },
+    ],
+    requiriments: {
+      functionaisRequiriments: [
+        {
+          title: 'Lista de tarefas Cliente não pode abrir a tela de produtos',
+          description: 'Essa é a descrição explicando o motivo',
+        },
+      ],
+      noFunctionalRequiriments: [
+        {
+          title: 'Cliente não pode abrir a tela de produtos',
+          description: 'Essa é a descrição explicando o motivo',
+        },
+      ],
+      businessRule: [
+        {
+          title: 'Cliente não pode abrir a tela de produtos',
+          description: 'Essa é a descrição explicando o motivo',
+        },
+      ],
+    },
     images: [
       {
         src: orion01.src,

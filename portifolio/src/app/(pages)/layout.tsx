@@ -6,7 +6,7 @@ import { Footer } from '../_components/global/footer'
 import { cn } from '@/lib/utils'
 import { NavMenu } from '../_components/global/nav-menu/nav-menu'
 import { Toaster } from 'sonner'
-import { HeaderProjectPage } from './pages/_components/header-details'
+import { HeaderProjectPage } from './project/_components/header-details'
 
 const inter = Inter({ subsets: ['latin'] })
 

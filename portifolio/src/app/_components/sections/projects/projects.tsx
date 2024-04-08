@@ -23,7 +23,7 @@ export const ProjectsSection = () => {
               srcImage={src}
               altImage={alt}
               description={project.description}
-              urlDetails={`/pages/${project.id}`}
+              urlDetails={`/project/${project.id}`}
               id={project.id}
               key={project.id}
             />
