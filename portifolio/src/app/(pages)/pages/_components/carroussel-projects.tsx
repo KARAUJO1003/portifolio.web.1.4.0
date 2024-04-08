@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/carousel'
 import { Projects } from '@/lib/utilities'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 type CarrousselProjectsProps = {
@@ -56,9 +57,15 @@ export const CarrousselProjects = ({ id }: CarrousselProjectsProps) => {
 
                 <div className="absolute bottom-5 right-5 flex items-center gap-3 z-40">
                   <button className="border bg-zinc-950/90 backdrop-blur-lg rounded-md h-9 px-6 hover:bg-bg-zinc-900 text-xs uppercase text-muted-foreground hover:text-primary transition-all">
-                    Repositorio
+                    <Link target="_blank" href={project.urlRepository}>
+                      Repositorio
+                    </Link>
                   </button>
-                  <ButtonBorderGradient>Deploy</ButtonBorderGradient>
+                  <ButtonBorderGradient>
+                    <Link target="_blank" href={project.urlDeploy}>
+                      Deploy
+                    </Link>
+                  </ButtonBorderGradient>
                 </div>
               </CarouselItem>
             )

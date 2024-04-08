@@ -1,11 +1,11 @@
 import { Github, Instagram, Linkedin } from 'lucide-react'
-import financeFire01 from '../../public/finance-fire01.png'
-import financeFire02 from '../../public/finance-fire02.png'
+import financeFire02 from '../../public/finance-fire01.png'
+import financeFire01 from '../../public/finance-fire02.png'
 import financeFire03 from '../../public/finance-fire03.png'
 import financeFire04 from '../../public/finance-fire04.png'
 import financeFire05 from '../../public/finance-fire05.png'
-import conversorApp01 from '../../public/conversor-app01.png'
-import conversorApp02 from '../../public/conversor-app02.png'
+import conversorApp02 from '../../public/conversor-app01.png'
+import conversorApp01 from '../../public/conversor-app02.png'
 import orion01 from '../../public/orion-tasks01.png'
 import orion02 from '../../public/orion-tasks02.png'
 
@@ -23,17 +23,17 @@ interface ProjectProps {
 
 export const SocialMedias = [
   {
-    url: 'https://www.instagram.com/kaesyofelix/',
+    url: 'https://www.instagram.com/kaesyo_/',
     label: 'Instagram',
     icon: <Instagram size={16} />,
   },
   {
-    url: 'https://www.instagram.com/kaesyofelix/',
+    url: 'https://github.com/KARAUJO1003',
     label: 'Github',
     icon: <Github size={16} />,
   },
   {
-    url: 'https://www.instagram.com/kaesyofelix/',
+    url: 'https://www.linkedin.com/in/ka%C3%A9syo-f%C3%A9lix-837345271/',
     label: 'Linkedin',
     icon: <Linkedin size={16} />,
   },
@@ -66,8 +66,8 @@ export const Projects: ProjectProps[] = [
     title: 'Finance Fire',
     description:
       'Este projeto pessoal fullstack, representa a culminação de habilidades e paixões em desenvolvimento de software. Desenvolvido com Next.js, MongoDB, TailwindCSS, Shadcn UI, GSAP, Recharts, TypeScript, Zod para validação de dados e React Hook Form com componentes Shadcn UI, este aplicativo foi concebido para ser uma experiência de gestão financeira intuitiva e visualmente estimulante.',
-    urlDeploy: 'https://portifolio.kaesyofelix.com.br/',
-    urlRepository: 'https://portifolio.kaesyofelix.com.br/',
+    urlDeploy: 'https://finance-fire.vercel.app/',
+    urlRepository: 'https://github.com/KARAUJO1003/finance-fire',
     images: [
       {
         src: financeFire01.src,
@@ -96,8 +96,8 @@ export const Projects: ProjectProps[] = [
     title: 'Conversor para extenso.',
     description:
       'Este projeto ReactJS apresenta uma única tela com um design intuitivo, elegante e simplificado, criado para oferecer uma experiência de usuário fluida e eficiente. O foco principal é um conversor de números por extenso, com a capacidade de mascarar inputs nos formatos monetario e normal, além de permitir que o usuário escolha entre diferentes formatos de resultado.',
-    urlDeploy: 'https://portifolio.kaesyofelix.com.br/',
-    urlRepository: 'https://portifolio.kaesyofelix.com.br/',
+    urlDeploy: 'https://conversor-app.vercel.app/',
+    urlRepository: 'https://github.com/KARAUJO1003/conversor-app',
     images: [
       {
         src: conversorApp01.src,
@@ -114,8 +114,8 @@ export const Projects: ProjectProps[] = [
     title: 'lista de tarefas simples',
     description:
       'Todo list responsivo, com modos dark e light, construido com HTML, CSS, e JavaScript.',
-    urlDeploy: 'https://portifolio.kaesyofelix.com.br/',
-    urlRepository: 'https://portifolio.kaesyofelix.com.br/',
+    urlDeploy: 'https://karaujo1003.github.io/todolist-web/',
+    urlRepository: 'https://github.com/KARAUJO1003/todolist-web',
     images: [
       {
         src: orion01.src,
