@@ -13,7 +13,7 @@ import { ButtonBorderGradient } from '../_components/global/buttons/gradient-bor
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Kaesyo Felix',
+  title: 'Kaesyo Felix - Portifolio 1.4.0',
   description: 'Portifolio web',
 }
 

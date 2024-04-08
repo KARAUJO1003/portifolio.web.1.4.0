@@ -43,12 +43,12 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
         </DescriptionTypography>
       </div>
 
-      <ButtonBorderGradient className="px-20" variant="secondary">
-        <Link href={'/#about'} className="flex items-center gap-2">
+      <Link href={'/#about'} className="flex items-center gap-2">
+        <ButtonBorderGradient className="px-20" variant="secondary">
           <span className="text-primary"> CONTINUAR</span>
           <ArrowRight className="size-4" />
-        </Link>
-      </ButtonBorderGradient>
+        </ButtonBorderGradient>
+      </Link>
     </SectionContainer>
   )
 }
