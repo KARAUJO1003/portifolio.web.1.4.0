@@ -34,9 +34,9 @@ export default function RootLayout({
           <Toaster />
           <Header>
             <NavMenu className="max-lg:hidden" />
-            <ButtonBorderGradient>
-              <Link href={'/#projects-section'}>projetos</Link>
-            </ButtonBorderGradient>
+            <Link href={'/#projects-section'}>
+              <ButtonBorderGradient>projetos</ButtonBorderGradient>
+            </Link>
           </Header>
           <main>{children}</main>
           <Footer />
