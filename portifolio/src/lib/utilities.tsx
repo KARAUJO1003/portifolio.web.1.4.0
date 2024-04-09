@@ -10,6 +10,7 @@ import orion01 from '../../public/orion-tasks01.png'
 import orion02 from '../../public/orion-tasks02.png'
 import banner02 from '../../public/banner02.jpg'
 import bannerBuzzy from '../../public/buzzy/banner-buzzy.jpg'
+import bannerDark from '../../public/rename-files/bannerDark.jpeg'
 
 interface ProjectPropsRequiriment {
   title: string
@@ -344,6 +345,46 @@ export const Projects: ProjectProps[] = [
       {
         src: orion02.src,
         alt: 'Imagem de projeto ConversorApp',
+      },
+    ],
+  },
+
+  {
+    id: '6',
+    title: 'Gerador de nomenclarturas',
+    description:
+      'Esse site foi desenvolvido com um unico intuito, bem específico para resolver um problema na empresa que trabalho, ele facilita renomear arquivos seguindo um padrão estabelecido e valida os dados o máximo possivel, ituito é trazer agilidade, pois precisavamos renomear váaaaarios arquivos. ',
+    urlDeploy: 'https://rename-contracts.vercel.app/',
+    urlRepository: 'https://vercel.com/karaujo1003s-projects/rename-contracts',
+    tags: [
+      { label: 'tailwind-css' },
+      { label: 'shadcn-ui' },
+      { label: 'next-js' },
+    ],
+    requiriments: {
+      functionaisRequiriments: [
+        {
+          title: 'Lista de tarefas Cliente não pode abrir a tela de produtos',
+          description: 'Essa é a descrição explicando o motivo',
+        },
+      ],
+      noFunctionalRequiriments: [
+        {
+          title: 'Cliente não pode abrir a tela de produtos',
+          description: 'Essa é a descrição explicando o motivo',
+        },
+      ],
+      businessRule: [
+        {
+          title: 'Cliente não pode abrir a tela de produtos',
+          description: 'Essa é a descrição explicando o motivo',
+        },
+      ],
+    },
+    images: [
+      {
+        src: bannerDark.src,
+        alt: 'Imagem de projeto Renomeador de arquivos',
       },
     ],
   },
