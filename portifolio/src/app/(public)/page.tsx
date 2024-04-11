@@ -6,7 +6,7 @@ import { SoftSkillsSection } from '../_components/sections/soft-skills/soft-skil
 
 export default function Home() {
   return (
-    <div className="max-w-4xl mx-auto min-h-screen max-[1240px]:min-w-full max-[1240px]:mx-0">
+    <div className="max-w-4xl mx-auto min-h-screen max-[1240px]:min-w-full max-[1240px]:mx-0 scroll-smooth">
       <HomeSection />
       <AboutSection />
       <SoftSkillsSection />

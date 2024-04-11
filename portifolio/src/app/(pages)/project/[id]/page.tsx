@@ -35,13 +35,21 @@ export default function Page({ params }: { params: { id: string } }) {
             {project.description}
           </DescriptionTypography>
 
-          <Accordion type="multiple">
-            <AccordionItem value="req-fun">
-              <AccordionTrigger>Requisitos Funcionais</AccordionTrigger>
-              <AccordionContent>
-                <ul className="space-y-3 ml-4 text-xs pr-4">
-                  {project.requiriments.functionaisRequiriments.map(
-                    (item, index) => {
+          <Accordion type="single">
+            {project.requiriments.businessRule && (
+              <AccordionItem value="reg">
+                <AccordionTrigger>Regras de Negócio</AccordionTrigger>
+                <AccordionContent>
+                  {project.requiriments.businessRule.length === 0 && (
+                    <div className="text-center">
+                      <span className="text-muted-foreground text-xs">
+                        Ainda não há registros...
+                      </span>
+                    </div>
+                  )}
+
+                  <ul className="space-y-3 ml-4 text-xs pr-4">
+                    {project.requiriments.businessRule.map((item, index) => {
                       return (
                         <li key={index} className="flex flex-col gap-2">
                           <strong>{item.title}</strong>
@@ -50,47 +58,72 @@ export default function Page({ params }: { params: { id: string } }) {
                           </span>
                         </li>
                       )
-                    },
+                    })}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            )}
+
+            {project.requiriments.functionaisRequiriments && (
+              <AccordionItem value="req-fun">
+                <AccordionTrigger>Requisitos Funcionais</AccordionTrigger>
+                <AccordionContent>
+                  {project.requiriments.functionaisRequiriments.length ===
+                    0 && (
+                    <div className="text-center">
+                      <span className="text-muted-foreground text-xs">
+                        Ainda não há registros...
+                      </span>
+                    </div>
                   )}
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="req-no-fun">
-              <AccordionTrigger>Requisitos Não Funcionais</AccordionTrigger>
-              <AccordionContent>
-                <ul className="space-y-3 ml-4 text-xs pr-4">
-                  {project.requiriments.noFunctionalRequiriments.map(
-                    (item, index) => {
-                      return (
-                        <li key={index} className="flex flex-col gap-2">
-                          <strong>{item.title}</strong>
-                          <span className="text-muted-foreground">
-                            {item.description}
-                          </span>
-                        </li>
-                      )
-                    },
+                  <ul className="space-y-3 ml-4 text-xs pr-4">
+                    {project.requiriments.functionaisRequiriments.map(
+                      (item, index) => {
+                        return (
+                          <li key={index} className="flex flex-col gap-2">
+                            <strong>{item.title}</strong>
+                            <span className="text-muted-foreground">
+                              {item.description}
+                            </span>
+                          </li>
+                        )
+                      },
+                    )}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            )}
+
+            {project.requiriments.noFunctionalRequiriments && (
+              <AccordionItem value="req-no-fun">
+                <AccordionTrigger>Requisitos Não Funcionais</AccordionTrigger>
+                <AccordionContent>
+                  {project.requiriments.noFunctionalRequiriments.length ===
+                    0 && (
+                    <div className="text-center">
+                      <span className="text-muted-foreground text-xs">
+                        Ainda não há registros...
+                      </span>
+                    </div>
                   )}
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="reg">
-              <AccordionTrigger>Regras de Negócio</AccordionTrigger>
-              <AccordionContent>
-                <ul className="space-y-3 ml-4 text-xs pr-4">
-                  {project.requiriments.businessRule.map((item, index) => {
-                    return (
-                      <li key={index} className="flex flex-col gap-2">
-                        <strong>{item.title}</strong>
-                        <span className="text-muted-foreground">
-                          {item.description}
-                        </span>
-                      </li>
-                    )
-                  })}
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
+
+                  <ul className="space-y-3 ml-4 text-xs pr-4">
+                    {project.requiriments.noFunctionalRequiriments.map(
+                      (item, index) => {
+                        return (
+                          <li key={index} className="flex flex-col gap-2">
+                            <strong>{item.title}</strong>
+                            <span className="text-muted-foreground">
+                              {item.description}
+                            </span>
+                          </li>
+                        )
+                      },
+                    )}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            )}
           </Accordion>
         </div>
 

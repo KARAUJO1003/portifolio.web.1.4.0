@@ -1,3 +1,5 @@
+'use client'
+
 import { cn } from '@/lib/utils'
 import { ComponentPropsDefault } from '@/types/page-props-default'
 import { TitleTypography } from '@/app/_components/global/typography/title'
@@ -9,35 +11,45 @@ import { ButtonBorderGradient } from '../../global/buttons/gradient-border-butto
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-gsap.registerPlugin(useGSAP)
-
-gsap.config({
-  autoSleep: 60,
-  force3D: false,
-  nullTargetWarn: false,
-  units: { left: '%', top: '%', rotation: 'rad' },
-})
-
 export const HomeSection = ({ className }: ComponentPropsDefault) => {
+  useGSAP(() => {
+    gsap.fromTo(
+      '#title',
+      {
+        autoAlpha: 0,
+        y: 100,
+        duration: 2,
+        ease: 'power2.out',
+      },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 2,
+        ease: 'power2.out',
+      },
+    )
+  })
+
   return (
     <SectionContainer
       id="home"
       className={cn(
-        'flex flex-col w-full items-center justify-center gap-10 min-h-[610px]',
+        'flex flex-col w-full items-center justify-center gap-10 min-h-[510px]',
         className,
       )}
     >
       <div className="space-y-5 flex flex-col items-center ">
         <TitleTypography
+          id="title"
           fontWeight="font-black"
-          className="text-center max-md:text-6xl"
+          className="text-center max-md:text-6xl normal-case font-mono"
         >
           software
           <br />
           developer
         </TitleTypography>
 
-        <DescriptionTypography className="max-sm:w-4/5">
+        <DescriptionTypography id="descripiton" className="max-sm:w-4/5">
           <strong>Welcome to the Dark Side of Coding!</strong> celebrating the
           elegance of dark mode where innovation thrives.
         </DescriptionTypography>

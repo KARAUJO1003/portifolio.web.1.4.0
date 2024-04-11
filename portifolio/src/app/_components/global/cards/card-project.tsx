@@ -14,7 +14,6 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 import { ButtonBorderGradient } from '../buttons/gradient-border-button'
-import { toast } from 'sonner'
 
 type CardProjectProps = {
   id: string
@@ -47,22 +46,18 @@ export const CardProject = ({
         )}
       >
         <Card.Body className="bg-gradient-to-tl to-zinc-800 via-zinc-850 from-black relative overflow-hidden">
-          <Link
-            href={urlDetails}
-            className="absolute top-4 right-4 z-40 p-1 rounded-md backdrop-blur-md"
-          >
-            <ExternalLink className="size-3" />
+          <Link href={urlDetails}>
+            <ExternalLink className="size-5 absolute top-4 right-4 z-40 p-1 rounded-md backdrop-blur-md" />
+            <Image
+              style={{ objectFit: 'cover' }}
+              fill
+              src={srcImage}
+              alt={altImage}
+              sizes="(max-width: 1024px) 100vw"
+              priority
+              className="hover:scale-110 transition-all duration-500"
+            />
           </Link>
-          <Image
-            onClick={() => toast.info('Clique em Ver Projeto')}
-            style={{ objectFit: 'cover' }}
-            fill
-            src={srcImage}
-            alt={altImage}
-            sizes="(max-width: 1024px) 100vw"
-            priority
-            className="hover:scale-110 transition-all duration-500"
-          />
         </Card.Body>
 
         <Card.Footer>

@@ -10,7 +10,7 @@ import orion01 from '../../public/orion-tasks01.png'
 import orion02 from '../../public/orion-tasks02.png'
 import banner02 from '../../public/banner02.jpg'
 import bannerBuzzy from '../../public/buzzy/banner-buzzy.jpg'
-import bannerDark from '../../public/rename-files/bannerDark.jpeg'
+import bannerDark from '../../public/rename-files/bannerLight2.jpeg.png'
 
 interface ProjectPropsRequiriment {
   title: string
@@ -193,18 +193,8 @@ export const Projects: ProjectProps[] = [
           description: 'Essa é a descrição explicando o motivo',
         },
       ],
-      noFunctionalRequiriments: [
-        {
-          title: 'Cliente não pode abrir a tela de produtos',
-          description: 'Essa é a descrição explicando o motivo',
-        },
-      ],
-      businessRule: [
-        {
-          title: 'Cliente não pode abrir a tela de produtos',
-          description: 'Essa é a descrição explicando o motivo',
-        },
-      ],
+      noFunctionalRequiriments: [],
+      businessRule: [],
     },
     images: [
       {
@@ -283,18 +273,8 @@ export const Projects: ProjectProps[] = [
           description: 'Essa é a descrição explicando o motivo',
         },
       ],
-      noFunctionalRequiriments: [
-        {
-          title: 'Cliente não pode abrir a tela de produtos',
-          description: 'Essa é a descrição explicando o motivo',
-        },
-      ],
-      businessRule: [
-        {
-          title: 'Cliente não pode abrir a tela de produtos',
-          description: 'Essa é a descrição explicando o motivo',
-        },
-      ],
+      noFunctionalRequiriments: [],
+      businessRule: [],
     },
     images: [
       {
@@ -324,18 +304,8 @@ export const Projects: ProjectProps[] = [
           description: 'Essa é a descrição explicando o motivo',
         },
       ],
-      noFunctionalRequiriments: [
-        {
-          title: 'Cliente não pode abrir a tela de produtos',
-          description: 'Essa é a descrição explicando o motivo',
-        },
-      ],
-      businessRule: [
-        {
-          title: 'Cliente não pode abrir a tela de produtos',
-          description: 'Essa é a descrição explicando o motivo',
-        },
-      ],
+      noFunctionalRequiriments: [],
+      businessRule: [],
     },
     images: [
       {
@@ -351,9 +321,9 @@ export const Projects: ProjectProps[] = [
 
   {
     id: '6',
-    title: 'Gerador de nomenclarturas',
+    title: 'Formatar nome de arquivos',
     description:
-      'Esse site foi desenvolvido com um unico intuito, bem específico para resolver um problema na empresa que trabalho, ele facilita renomear arquivos seguindo um padrão estabelecido e valida os dados o máximo possivel, ituito é trazer agilidade, pois precisavamos renomear váaaaarios arquivos. ',
+      'Esse projeto foi desenvolvido intuito bem específico para resolver um problema na empresa que trabalho, ele facilita manter a nomenclatura em todos os arquivos, seguindo um padrão estabelecido e validado entre a equipe. Os dados possuem diversas validações, uma interface simples intuitiva e funcional, deixando dicas de uso para os usuários conseguirem agilidade.',
     urlDeploy: 'https://rename-contracts.vercel.app/',
     urlRepository: 'https://vercel.com/karaujo1003s-projects/rename-contracts',
     tags: [
@@ -362,22 +332,23 @@ export const Projects: ProjectProps[] = [
       { label: 'next-js' },
     ],
     requiriments: {
-      functionaisRequiriments: [
-        {
-          title: 'Lista de tarefas Cliente não pode abrir a tela de produtos',
-          description: 'Essa é a descrição explicando o motivo',
-        },
-      ],
-      noFunctionalRequiriments: [
-        {
-          title: 'Cliente não pode abrir a tela de produtos',
-          description: 'Essa é a descrição explicando o motivo',
-        },
-      ],
+      functionaisRequiriments: [],
+      noFunctionalRequiriments: [],
       businessRule: [
         {
-          title: 'Cliente não pode abrir a tela de produtos',
-          description: 'Essa é a descrição explicando o motivo',
+          title: 'Padrão de nomenclaturas',
+          description:
+            'O projeto precisa conter algumas validações simples nos campos a serem preenchidos para estarem conforme o padrão a ser seguido.',
+        },
+        {
+          title: 'Simplicidade',
+          description:
+            'O projeto precisa de uma interface simples e intuitiva, o foco é manter somente no lado client',
+        },
+        {
+          title: 'Praticidade',
+          description:
+            'Com intenção de torna-lo fácil de usar e proporcionar agilidade, foram adicionadas algumas regras para acessibilidade e dicas através de Tooltips deixando o usuário bem informado de como obter melhor proveito possivel da aplicação.',
         },
       ],
     },
