@@ -45,8 +45,8 @@ export const CardProject = ({
           className,
         )}
       >
-        <Card.Body className="bg-gradient-to-tl to-zinc-800 via-zinc-850 from-black relative overflow-hidden">
-          <Link href={urlDetails}>
+        <Link href={urlDetails}>
+          <Card.Body className="bg-gradient-to-tl to-zinc-800 via-zinc-850 from-black relative overflow-hidden">
             <ExternalLink className="size-5 absolute top-4 right-4 z-40 p-1 rounded-md backdrop-blur-md" />
             <Image
               style={{ objectFit: 'cover' }}
@@ -57,8 +57,8 @@ export const CardProject = ({
               priority
               className="hover:scale-110 transition-all duration-500"
             />
-          </Link>
-        </Card.Body>
+          </Card.Body>
+        </Link>
 
         <Card.Footer>
           <div className="space-y-2">

@@ -26,37 +26,36 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
         duration: 2,
         ease: 'power2.out',
       },
+    ).fromTo(
+      '#descripiton',
+      {
+        autoAlpha: 0,
+        y: 100,
+        duration: 2,
+        ease: 'power2.out',
+      },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 2,
+        ease: 'power2.out',
+      },
+      '-=1',
     )
-      .fromTo(
-        '#descripiton',
-        {
-          autoAlpha: 0,
-          y: 100,
-          duration: 2,
-          ease: 'power2.out',
-        },
-        {
-          autoAlpha: 1,
-          y: 0,
-          duration: 2,
-          ease: 'power2.out',
-        },
-        '-=1',
-      )
-      .fromTo(
-        '#button',
-        {
-          autoAlpha: 0,
-          duration: 2,
-          ease: 'power2.out',
-        },
-        {
-          autoAlpha: 1,
-          duration: 2,
-          ease: 'power2.out',
-        },
-        '-=1',
-      )
+    // .fromTo(
+    //   '#button',
+    //   {
+    //     autoAlpha: 0,
+    //     duration: 2,
+    //     ease: 'power2.out',
+    //   },
+    //   {
+    //     autoAlpha: 1,
+    //     duration: 2,
+    //     ease: 'power2.out',
+    //   },
+    //   '-=1',
+    // )
   })
 
   return (
