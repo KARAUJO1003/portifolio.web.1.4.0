@@ -8,7 +8,7 @@ export const SectionContainer = ({
   ...rest
 }: ComponentPropsDefault<ComponentProps<'section'>>) => {
   return (
-    <section {...rest} className={cn(['pt-24'], className)}>
+    <section {...rest} className={cn(['section-container pt-24 '], className)}>
       {children}
     </section>
   )

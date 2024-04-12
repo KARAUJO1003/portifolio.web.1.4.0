@@ -16,21 +16,21 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
   const tl = gsap.timeline()
 
   useGSAP(() => {
-    tl.from('.titleAbout', {
+    tl.from('.boxTexts', {
       y: 500,
       opacity: 0,
       scrollTrigger: {
-        trigger: '.titleAbout',
-        start: 'top 1100px',
+        trigger: '.boxTexts',
+        start: 'top 1500px',
         end: 'bottom 1300px',
         scrub: 1,
       },
     }).from('.imagem', {
-      x: -500,
-      y: 300,
+      x: -1300,
+      opacity: 0,
       scrollTrigger: {
         trigger: '.imagem',
-        start: 'top 900px',
+        start: 'top 900',
         end: 'bottom 900px',
         scrub: 1,
       },
@@ -87,7 +87,7 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
           </div>
         </div>
 
-        <article className="flex flex-col max-w-lg gap-5 mt-2 max-[1240px]:max-w-80 titleAbout">
+        <article className="flex flex-col max-w-lg gap-5 mt-2 max-[1240px]:max-w-80 boxTexts">
           <TitleTypography
             size="lg"
             fontWeight="font-bold"

@@ -1,8 +1,29 @@
+'use client'
 import React from 'react'
 import { TimelineCard } from './timeline-card'
 import { Skills } from '@/lib/utilities'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import gsap from 'gsap'
 
 export const TimelineContainer = () => {
+  gsap.registerPlugin(ScrollTrigger)
+
+  const tl = gsap.timeline()
+
+  useGSAP(() => {
+    tl.from('#timelineCard', {
+      y: 500,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '#timelineCard',
+        start: 'bottom 1200px',
+        end: 'top 1200px',
+        scrub: 2,
+      },
+    })
+  }, [])
+
   return (
     <article
       className="w-full p-20 max-sm:px-4 pattern-boxes pattern-blue-500 pattern-bg-white 
@@ -13,6 +34,7 @@ export const TimelineContainer = () => {
           {Skills.map((item) => {
             return (
               <TimelineCard
+                id="timelineCard"
                 key={item.id}
                 title={item.title}
                 date={item.date}
