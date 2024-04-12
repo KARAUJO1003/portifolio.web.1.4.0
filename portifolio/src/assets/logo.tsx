@@ -20,7 +20,7 @@ export const Logo = ({ className }: ComponentPropsDefault) => {
           className="fill-muted-foreground"
         />
       </svg>
-      <span className="uppercase text-lg font-light tracking-widest max-sm:hidden">
+      <span className="uppercase text-muted-foreground text-md font-medium tracking-[0.2em] max-sm:hidden">
         kaesyo felix
       </span>
     </Link>

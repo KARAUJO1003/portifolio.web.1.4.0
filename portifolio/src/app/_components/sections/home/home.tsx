@@ -5,11 +5,8 @@ import { ComponentPropsDefault } from '@/types/page-props-default'
 import { TitleTypography } from '@/app/_components/global/typography/title'
 import { DescriptionTypography } from '../../global/typography/description'
 import { SectionContainer } from '../../global/sections/sections-container'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { Button } from '@/components/ui/button'
 
 export const HomeSection = ({ className }: ComponentPropsDefault) => {
   const tl = gsap.timeline()
@@ -90,12 +87,12 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
         </DescriptionTypography>
       </div>
 
-      <Link href={'/#about'} id="button" className="flex items-center gap-3">
+      {/* <Link href={'/#about'} id="button" className="flex items-center gap-3">
         <Button className="px-10 gap-2" variant="outline">
           <span className="text-primary"> CONTINUAR</span>
           <ArrowRight className="size-4" />
         </Button>
-      </Link>
+      </Link> */}
     </SectionContainer>
   )
 }

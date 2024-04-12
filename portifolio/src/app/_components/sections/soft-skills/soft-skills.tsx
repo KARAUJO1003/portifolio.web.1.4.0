@@ -18,8 +18,8 @@ export const SoftSkillsSection = () => {
       opacity: 0,
       scrollTrigger: {
         trigger: '#principle-title',
-        start: 'top 1300px',
-        end: 'bottom 900',
+        start: 'top 900',
+        end: 'bottom 900px',
         scrub: 1,
       },
     })
