@@ -21,7 +21,6 @@ export const SoftSkillsSection = () => {
         start: 'top 1300px',
         end: 'bottom 900',
         scrub: 1,
-        markers: true,
       },
     })
   }, [])
