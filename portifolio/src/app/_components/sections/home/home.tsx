@@ -66,11 +66,11 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
     <SectionContainer
       id="home"
       className={cn(
-        'flex flex-col w-full items-center justify-center gap-10 md:min-h-[510px] max-sm:min-h-[680px]',
+        'flex flex-col w-full items-center md:justify-center gap-10 md:min-h-[510px] max-sm:min-h-[680px]',
         className,
       )}
     >
-      <div className="space-y-5 flex flex-col items-center ">
+      <div className="space-y-5 flex flex-col items-center max-sm:mt-20">
         <TitleTypography
           id="title"
           fontWeight="font-black"
