@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        mono: ['JetBrains Mono'],
+      },
       colors: {
         principalPink: '#D22A67',
         principalBlue: '#263193',

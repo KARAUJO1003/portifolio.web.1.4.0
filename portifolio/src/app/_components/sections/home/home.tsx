@@ -7,13 +7,15 @@ import { DescriptionTypography } from '../../global/typography/description'
 import { SectionContainer } from '../../global/sections/sections-container'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import { ButtonBorderGradient } from '../../global/buttons/gradient-border-button'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { Button } from '@/components/ui/button'
 
 export const HomeSection = ({ className }: ComponentPropsDefault) => {
+  const tl = gsap.timeline()
+
   useGSAP(() => {
-    gsap.fromTo(
+    tl.fromTo(
       '#title',
       {
         autoAlpha: 0,
@@ -28,13 +30,43 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
         ease: 'power2.out',
       },
     )
+      .fromTo(
+        '#descripiton',
+        {
+          autoAlpha: 0,
+          y: 100,
+          duration: 2,
+          ease: 'power2.out',
+        },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 2,
+          ease: 'power2.out',
+        },
+        '-=1',
+      )
+      .fromTo(
+        '#button',
+        {
+          autoAlpha: 0,
+          duration: 2,
+          ease: 'power2.out',
+        },
+        {
+          autoAlpha: 1,
+          duration: 2,
+          ease: 'power2.out',
+        },
+        '-=1',
+      )
   })
 
   return (
     <SectionContainer
       id="home"
       className={cn(
-        'flex flex-col w-full items-center justify-center gap-10 min-h-[510px]',
+        'flex flex-col w-full items-center justify-center gap-10 md:min-h-[510px] max-sm:min-h-[680px]',
         className,
       )}
     >
@@ -42,24 +74,27 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
         <TitleTypography
           id="title"
           fontWeight="font-black"
-          className="text-center max-md:text-6xl normal-case font-mono"
+          className="text-center text-6xl normal-case font-mono"
         >
           software
           <br />
           developer
         </TitleTypography>
 
-        <DescriptionTypography id="descripiton" className="max-sm:w-4/5">
+        <DescriptionTypography
+          id="descripiton"
+          className="w-fit max-w-80 line-clamp-2"
+        >
           <strong>Welcome to the Dark Side of Coding!</strong> celebrating the
-          elegance of dark mode where innovation thrives.
+          elegance of dark mode.
         </DescriptionTypography>
       </div>
 
-      <Link href={'/#about'} className="flex items-center gap-2">
-        <ButtonBorderGradient className="px-20" variant="secondary">
+      <Link href={'/#about'} id="button" className="flex items-center gap-3">
+        <Button className="px-10 gap-2" variant="outline">
           <span className="text-primary"> CONTINUAR</span>
           <ArrowRight className="size-4" />
-        </ButtonBorderGradient>
+        </Button>
       </Link>
     </SectionContainer>
   )
