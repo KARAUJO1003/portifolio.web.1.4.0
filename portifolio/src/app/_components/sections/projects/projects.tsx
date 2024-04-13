@@ -19,7 +19,7 @@ export const ProjectsSection = () => {
       scrollTrigger: {
         trigger: '.card-project',
         start: 'top 900px',
-        end: '200 500px',
+        end: '200 700px',
         scrub: 1,
       },
       stagger: 0.1,

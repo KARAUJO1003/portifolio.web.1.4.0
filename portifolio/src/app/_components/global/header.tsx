@@ -8,7 +8,7 @@ export const Header = ({ className, children }: ComponentPropsDefault) => {
       <div
         className={cn(
           [
-            'flex items-center justify-between mx-auto py-4  gap-8 min-w-[896px] max-[1240px]:px-20 max-[1240px]:mx-0 max-[1240px]:w-full max-lg:min-w-full max-sm:px-8',
+            'flex items-center justify-between mx-auto py-4  gap-8 min-w-full px-20 max-[1240px]:px-20 max-[1240px]:mx-0 max-[1240px]:w-full max-lg:min-w-full max-sm:px-8',
           ],
           className,
         )}

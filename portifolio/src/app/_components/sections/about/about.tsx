@@ -19,7 +19,7 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
     tl.fromTo(
       '.boxTexts',
       {
-        x: 500,
+        y: 500,
         opacity: 0,
         scrollTrigger: {
           trigger: '.boxTexts',
@@ -30,12 +30,12 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
         ease: 'back.in',
       },
       {
-        x: 0,
+        y: 0,
         opacity: 1,
         scrollTrigger: {
           trigger: '.boxTexts',
-          start: 'bottom 900',
-          end: 'bottom 800',
+          start: 'top 800',
+          end: 'top 900',
           scrub: 1,
         },
         ease: 'back.in',
@@ -50,7 +50,7 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
         scrub: 1,
       },
     })
-  }, [])
+  })
 
   return (
     <section
@@ -70,7 +70,7 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
           Conheça um pouco mais sobre mim.
         </TitleTypography>
 
-        <div className="imagem">
+        <div className="imagem ">
           <div className=" relative inline-flex  overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-1 focus:ring-zinc-400/20 focus:ring-offset-1 focus:ring-offset-zinc-50/20 w-min">
             <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#263193_0%,#D22A67_50%,#263193_100%)]" />
             <div className="flex flex-col items-center gap-5 border rounded-xl">

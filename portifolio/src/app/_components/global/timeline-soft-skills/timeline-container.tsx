@@ -15,7 +15,7 @@ export const TimelineContainer = () => {
     tl.fromTo(
       '.odd-item1',
       {
-        x: -500,
+        y: 500,
         opacity: 0,
         scrollTrigger: {
           trigger: '.odd-item1',
@@ -23,15 +23,16 @@ export const TimelineContainer = () => {
           end: '100 600px',
           scrub: 1,
         },
-        stagger: 0.2,
+        stagger: 0.1,
       },
       {
-        x: 0,
+        y: 0,
         opacity: 1,
         scrollTrigger: {
           trigger: '.odd-item1',
-          start: 'bottom 700px',
-          end: '100 600px',
+          start: 'top 900px',
+          end: '300 900px',
+          markers: true,
           scrub: 1,
         },
         stagger: 0.2,
@@ -39,7 +40,7 @@ export const TimelineContainer = () => {
     ).fromTo(
       '.odd-item2',
       {
-        x: 500,
+        y: 500,
         opacity: 0,
         scrollTrigger: {
           trigger: '.odd-item2',
@@ -49,12 +50,12 @@ export const TimelineContainer = () => {
         },
       },
       {
-        x: 0,
+        y: 0,
         opacity: 1,
         scrollTrigger: {
           trigger: '.odd-item2',
-          start: 'bottom 700px',
-          end: '100 600px',
+          start: 'top 1100px',
+          end: 'top 900px',
           scrub: 2,
         },
       },
