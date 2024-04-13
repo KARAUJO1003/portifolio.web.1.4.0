@@ -21,13 +21,6 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
       {
         y: 500,
         opacity: 0,
-        scrollTrigger: {
-          trigger: '.boxTexts',
-          start: 'bottom 900',
-          end: 'bottom 800',
-          scrub: 1,
-        },
-        ease: 'back.in',
       },
       {
         y: 0,
@@ -38,7 +31,6 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
           end: 'top 900',
           scrub: 1,
         },
-        ease: 'back.in',
       },
     ).from('.imagem', {
       opacity: 0,

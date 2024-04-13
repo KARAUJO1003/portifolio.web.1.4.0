@@ -21,13 +21,13 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
         autoAlpha: 0,
         y: 100,
         duration: 2,
-        ease: 'power2.out',
+        ease: 'back.inOut',
       },
       {
         autoAlpha: 1,
         y: 0,
         duration: 2,
-        ease: 'power2.out',
+        ease: 'back.inOut',
       },
     )
       .fromTo(
@@ -36,13 +36,13 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
           autoAlpha: 0,
           y: 100,
           duration: 2,
-          ease: 'power2.out',
+          ease: 'back.inOut',
         },
         {
           autoAlpha: 1,
           y: 0,
           duration: 2,
-          ease: 'power2.out',
+          ease: 'back.inOut',
         },
         '-=1',
       )
@@ -51,12 +51,12 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
         {
           autoAlpha: 0,
           duration: 2,
-          ease: 'power2.out',
+          ease: 'back.inOut',
         },
         {
           autoAlpha: 1,
           duration: 2,
-          ease: 'power2.out',
+          ease: 'back.inOut',
         },
         '-=1',
       )
