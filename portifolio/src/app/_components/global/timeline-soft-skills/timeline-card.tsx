@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import { Check } from 'lucide-react'
 import { ComponentProps } from 'react'
 
@@ -11,11 +12,17 @@ export const TimelineCard = ({
   title,
   date,
   description,
+  className,
   ...props
 }: TimelineCardProps<ComponentProps<'div'>>) => {
   return (
     <div
-      className="relative flex items-center justify-between md:justify-normal lg:odd:flex-row-reverse group is-active "
+      className={cn(
+        [
+          'relative flex items-center justify-between md:justify-normal lg:odd:flex-row-reverse group is-active',
+        ],
+        className,
+      )}
       {...props}
     >
       <div className="flex items-center justify-center w-10 h-10 rounded-full   text-zinc-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">

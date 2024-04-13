@@ -1,10 +1,32 @@
+'use client'
 import { SectionContainer } from '../../global/sections/sections-container'
 import { TitleTypography } from '../../global/typography/title'
 import { CardProject } from '../../global/cards/card-project'
 import { Projects } from '@/lib/utilities'
 import { Badge } from '@/components/ui/badge'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
 
 export const ProjectsSection = () => {
+  gsap.registerPlugin(ScrollTrigger)
+  const tl = gsap.timeline({ delay: 1 })
+
+  useGSAP(() => {
+    Projects.map((item) => {
+      return tl.from(`item${item.id}`, {
+        y: 500,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: `item${item.id}`,
+          start: 'bottom 700px',
+          end: '100 600px',
+          scrub: 2,
+        },
+      })
+    })
+  }, {})
+
   return (
     <SectionContainer
       id="projects-section"

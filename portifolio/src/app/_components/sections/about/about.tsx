@@ -18,10 +18,11 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
   useGSAP(() => {
     tl.from('#boxTexts', {
       y: 500,
+      opacity: 0,
       scrollTrigger: {
         trigger: '#boxTexts',
-        start: 'top 1500px',
-        end: 'bottom 1300px',
+        start: 'top 1000px',
+        end: 'bottom 1100px',
         scrub: 1,
       },
     }).from('.imagem', {
@@ -29,8 +30,8 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
       opacity: 0,
       scrollTrigger: {
         trigger: '.imagem',
-        start: 'top 900',
-        end: 'bottom 900px',
+        start: '100 900',
+        end: 'bottom 900',
         scrub: 1,
       },
     })
@@ -62,7 +63,7 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
                 <span
                   className={cn(
                     [
-                      'bg-zinc-950/90 hover:bg-zinc-950 inline-flex h-full w-full relative items-center justify-center rounded-xl transition-all duration-200 px-6 py-2 text-xs uppercase font-medium text-muted-foreground hover:text-zinc-50 backdrop-blur-3xl',
+                      'bg-zinc-950 hover:bg-zinc-950/90 inline-flex h-full w-full relative items-center justify-center rounded-xl transition-all duration-200 px-6 py-2 text-xs uppercase font-medium text-muted-foreground hover:text-zinc-50 backdrop-blur-3xl',
                     ],
                     className,
                   )}

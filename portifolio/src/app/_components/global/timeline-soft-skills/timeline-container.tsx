@@ -12,16 +12,29 @@ export const TimelineContainer = () => {
   const tl = gsap.timeline()
 
   useGSAP(() => {
-    tl.from('#timelineCard', {
-      y: 500,
-      opacity: 0,
+    tl.to('.odd-item1', {
+      x: 0,
+      opacity: 1,
       scrollTrigger: {
-        trigger: '#timelineCard',
-        start: 'bottom 1200px',
-        end: 'top 1200px',
+        trigger: '.odd-item1',
+        start: 'bottom 700px',
+        end: '100 600px',
         scrub: 2,
       },
-    })
+    }).to(
+      '.odd-item2',
+      {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: '.odd-item2',
+          start: 'bottom 700px',
+          end: '100 600px',
+          scrub: 2,
+        },
+      },
+      '-=1',
+    )
   }, [])
 
   return (
@@ -31,9 +44,10 @@ export const TimelineContainer = () => {
     >
       <div>
         <div className=" space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-[1px] before:bg-gradient-to-b before:from-transparent before:via-pink-900 before:to-transparent before:max-lg:bg-transparent">
-          {Skills.map((item) => {
+          {Skills.map((item, index) => {
             return (
               <TimelineCard
+                className={`${index % 2 === 0 ? 'odd-item1  -translate-x-80' : 'odd-item2 translate-x-80'} opacity-0`}
                 id="timelineCard"
                 key={item.id}
                 title={item.title}

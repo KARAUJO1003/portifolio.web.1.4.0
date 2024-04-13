@@ -1,10 +1,9 @@
 'use client'
-import React from 'react'
+import React, { ComponentProps } from 'react'
 import Card from './card'
 import Link from 'next/link'
 import { ExternalLink, LinkIcon } from 'lucide-react'
 import { DescriptionTypography } from '../typography/description'
-import { ComponentPropsDefault } from '@/types/page-props-default'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import {
@@ -15,14 +14,14 @@ import {
 } from '@/components/ui/tooltip'
 import { ButtonBorderGradient } from '../buttons/gradient-border-button'
 
-type CardProjectProps = {
+type CardProjectProps<T = unknown> = {
   id: string
   title: string
   description: string
   srcImage: string
   altImage: string
   urlDetails: string
-}
+} & T
 
 export const CardProject = ({
   id,
@@ -33,7 +32,8 @@ export const CardProject = ({
   urlDetails,
   className,
   children,
-}: ComponentPropsDefault<CardProjectProps>) => {
+  ...props
+}: CardProjectProps<ComponentProps<'div'>>) => {
   return (
     <>
       <Card.Container
@@ -44,6 +44,7 @@ export const CardProject = ({
           ],
           className,
         )}
+        {...props}
       >
         <Link href={urlDetails}>
           <Card.Body className="bg-gradient-to-tl to-zinc-800 via-zinc-850 from-black relative overflow-hidden">
