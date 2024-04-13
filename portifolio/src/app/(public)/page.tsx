@@ -1,5 +1,5 @@
 import { AboutSection } from '../_components/sections/about/about'
-import { ContactsSection } from '../_components/sections/contacts/contacts'
+import { ContactsSection } from '../_components/sections/contact/contacts'
 import { HomeSection } from '../_components/sections/home/home'
 import { ProjectsSection } from '../_components/sections/projects/projects'
 import { SoftSkillsSection } from '../_components/sections/soft-skills/soft-skills'

@@ -13,17 +13,16 @@ export const ProjectsSection = () => {
   const tl = gsap.timeline({ delay: 1 })
 
   useGSAP(() => {
-    Projects.map((item) => {
-      return tl.from(`item${item.id}`, {
-        y: 500,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: `item${item.id}`,
-          start: 'bottom 700px',
-          end: '100 600px',
-          scrub: 2,
-        },
-      })
+    tl.from('.card-project', {
+      y: 500,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '.card-project',
+        start: 'top 900px',
+        end: '200 500px',
+        scrub: 1,
+      },
+      stagger: 0.1,
     })
   }, {})
 
@@ -45,6 +44,7 @@ export const ProjectsSection = () => {
 
           return (
             <CardProject
+              className="card-project"
               title={project.title}
               srcImage={src}
               altImage={alt}

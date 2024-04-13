@@ -14,9 +14,9 @@ export const ContactsSection = () => {
       id="contacts-section"
       className="min-h-[810px] flex justify-center gap-40 items-center max-lg:gap-20 max-md:flex-col max-md:justify-start"
     >
-      <div>
+      <div className="contact-section">
         <TitleTypography size="lg"> Contato</TitleTypography>
-        <DescriptionTypography className="text-left mt-5 max-w-80">
+        <DescriptionTypography className="text-left mt-5 max-w-80 boxTexts">
           <strong>
             Pronto para desbloquear o potencial do seu próximo projeto?
           </strong>{' '}
@@ -26,7 +26,7 @@ export const ContactsSection = () => {
         </DescriptionTypography>
         <SocialMediasContact className="flex flex-col gap-3 mt-10 " />
       </div>
-      <div>
+      <div className="contact-section">
         <Card.Container className=" max-w-80">
           <Card.Header>
             <strong className="text-sm">Vamos fazer um orçamento?</strong>
