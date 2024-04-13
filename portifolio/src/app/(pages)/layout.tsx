@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ptbr">
-      <body className={cn(['relative'], inter.className)}>
+      <body className={cn(['relative dark'], inter.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

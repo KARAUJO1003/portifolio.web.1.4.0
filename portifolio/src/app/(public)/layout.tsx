@@ -9,6 +9,7 @@ import { NavMenu } from '../_components/global/nav-menu/nav-menu'
 import { Toaster } from 'sonner'
 import Link from 'next/link'
 import { ButtonBorderGradient } from '../_components/global/buttons/gradient-border-button'
+import { CheckCircle } from 'lucide-react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,7 +32,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Toaster position="top-right" theme="dark" />
+          <Toaster
+            position="top-right"
+            theme="dark"
+            icons={{
+              success: <CheckCircle className="size-5 text-violet-500" />,
+            }}
+          />
           <Header>
             <NavMenu className="max-lg:hidden" />
             <Link href={'/#projects-section'}>

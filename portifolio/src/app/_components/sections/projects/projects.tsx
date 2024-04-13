@@ -23,6 +23,7 @@ export const ProjectsSection = () => {
         scrub: 1,
       },
       stagger: 0.1,
+      delay: 2,
     })
   }, {})
 

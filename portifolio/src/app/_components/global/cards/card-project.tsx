@@ -40,7 +40,7 @@ export const CardProject = ({
         key={id}
         className={cn(
           [
-            'relative hover:border-muted-foreground/40 hover:shadow-xl overflow-hidden',
+            'relative hover:border-muted-foreground/40 hover:border-2 hover:shadow-xl overflow-hidden',
           ],
           className,
         )}
