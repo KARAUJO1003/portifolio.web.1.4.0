@@ -32,7 +32,6 @@ export const TimelineContainer = () => {
           trigger: '.odd-item1',
           start: 'top 900px',
           end: '300 900px',
-          markers: true,
           scrub: 1,
         },
         stagger: 0.2,
