@@ -29,7 +29,6 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
           trigger: '.boxTexts',
           start: '-200 bottom',
           end: 'top bottom',
-          markers: true,
           scrub: 1,
         },
       },
