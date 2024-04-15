@@ -75,7 +75,7 @@ export const Skills: SkillsProps[] = [
     id: '5',
     title: 'React Js',
     description:
-      'Ultilizando o conceito de componentes reutilizáveis que o react proporciona, conseigo criar interfaces com facilidade.',
+      'Ultilizando o conceito de componentes reutilizáveis que o react proporciona, consigo criar interfaces com facilidade.',
     date: '31/02/2023',
   },
   {
@@ -314,7 +314,7 @@ export const Projects: ProjectProps[] = [
 
   {
     id: '3',
-    title: 'lista de tarefas simples',
+    title: 'lista de tarefas',
     description:
       'Todo list responsivo, com modos dark e light, construido com HTML, CSS, e JavaScript.',
     urlDeploy: 'https://karaujo1003.github.io/todolist-web/',
