@@ -27,8 +27,9 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
         opacity: 1,
         scrollTrigger: {
           trigger: '.boxTexts',
-          start: 'top 800',
-          end: 'top 900',
+          start: '-200 bottom',
+          end: 'top bottom',
+          markers: true,
           scrub: 1,
         },
       },

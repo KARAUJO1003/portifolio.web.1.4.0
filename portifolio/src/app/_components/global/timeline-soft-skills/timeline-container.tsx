@@ -19,8 +19,9 @@ export const TimelineContainer = () => {
         opacity: 0,
         scrollTrigger: {
           trigger: '.odd-item1',
-          start: 'bottom 700px',
-          end: '100 600px',
+          start: 'top bottom',
+          end: 'bottom bottom',
+          // markers: true,
           scrub: 1,
         },
         stagger: 0.1,
@@ -31,7 +32,7 @@ export const TimelineContainer = () => {
         scrollTrigger: {
           trigger: '.odd-item1',
           start: 'top 900px',
-          end: '300 900px',
+          end: 'top 900px',
           scrub: 1,
         },
         stagger: 0.2,

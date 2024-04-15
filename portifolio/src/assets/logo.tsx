@@ -21,7 +21,7 @@ export const Logo = ({ className }: ComponentPropsDefault) => {
         />
       </svg>
       <span className="uppercase text-muted-foreground text-md font-medium tracking-[0.2em] max-sm:hidden">
-        kaesyo felix
+        kaesyo
       </span>
     </Link>
   )
