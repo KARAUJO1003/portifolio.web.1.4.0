@@ -7,6 +7,7 @@ import { DescriptionTypography } from '../../global/typography/description'
 import { TitleTypography } from '../../global/typography/title'
 import { ButtonBorderGradient } from '../../global/buttons/gradient-border-button'
 import { toast } from 'sonner'
+import Link from 'next/link'
 
 export const ContactsSection = () => {
   return (
@@ -29,10 +30,17 @@ export const ContactsSection = () => {
       <div className="contact-section">
         <Card.Container className=" max-w-80">
           <Card.Header>
-            <strong className="text-sm">Vamos fazer um orçamento?</strong>
+            <strong className="text-sm">Vamos nos conhecer?</strong>
             <span className="text-xs text-muted-foreground font-normal">
-              Me chama no whatsapp +55 (94) 9****-**** ou se preferir deixe seu
-              endereço de e-mail logo abaixo.
+              Me chama no{' '}
+              <Link
+                className="text-violet-400 hover:underline transition-all"
+                href="https://wa.me/qr/IEHEHAUSLZHRG1"
+                target="_blank"
+              >
+                whatsapp
+              </Link>{' '}
+              ou se preferir deixe seu endereço de e-mail logo abaixo.
             </span>
           </Card.Header>
           <Card.Body className="aspect-auto">

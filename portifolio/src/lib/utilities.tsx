@@ -282,6 +282,47 @@ export const Projects: ProjectProps[] = [
   },
 
   {
+    id: '6',
+    title: 'Formatar nome de arquivos',
+    description:
+      'Esse projeto foi desenvolvido intuito bem específico para resolver um problema na empresa que trabalho, ele facilita manter a nomenclatura em todos os arquivos, seguindo um padrão estabelecido e validado entre a equipe. Os dados possuem diversas validações, uma interface simples intuitiva e funcional, deixando dicas de uso para os usuários conseguirem agilidade.',
+    urlDeploy: 'https://rename-contracts.vercel.app/',
+    urlRepository: 'https://vercel.com/karaujo1003s-projects/rename-contracts',
+    tags: [
+      { label: 'tailwind-css' },
+      { label: 'shadcn-ui' },
+      { label: 'next-js' },
+    ],
+    requiriments: {
+      functionaisRequiriments: [],
+      noFunctionalRequiriments: [],
+      businessRule: [
+        {
+          title: 'Padrão de nomenclaturas',
+          description:
+            'O projeto precisa conter algumas validações simples nos campos a serem preenchidos para estarem conforme o padrão a ser seguido.',
+        },
+        {
+          title: 'Simplicidade',
+          description:
+            'O projeto precisa de uma interface simples e intuitiva, o foco é manter somente no lado client',
+        },
+        {
+          title: 'Praticidade',
+          description:
+            'Com intenção de torna-lo fácil de usar e proporcionar agilidade, foram adicionadas algumas regras para acessibilidade e dicas através de Tooltips deixando o usuário bem informado de como obter melhor proveito possivel da aplicação.',
+        },
+      ],
+    },
+    images: [
+      {
+        src: bannerDark.src,
+        alt: 'Imagem de projeto Renomeador de arquivos',
+      },
+    ],
+  },
+
+  {
     id: '4',
     title: 'Portifolio 1.4.0',
     description:
@@ -343,47 +384,6 @@ export const Projects: ProjectProps[] = [
       {
         src: orion02.src,
         alt: 'Imagem de projeto ConversorApp',
-      },
-    ],
-  },
-
-  {
-    id: '6',
-    title: 'Formatar nome de arquivos',
-    description:
-      'Esse projeto foi desenvolvido intuito bem específico para resolver um problema na empresa que trabalho, ele facilita manter a nomenclatura em todos os arquivos, seguindo um padrão estabelecido e validado entre a equipe. Os dados possuem diversas validações, uma interface simples intuitiva e funcional, deixando dicas de uso para os usuários conseguirem agilidade.',
-    urlDeploy: 'https://rename-contracts.vercel.app/',
-    urlRepository: 'https://vercel.com/karaujo1003s-projects/rename-contracts',
-    tags: [
-      { label: 'tailwind-css' },
-      { label: 'shadcn-ui' },
-      { label: 'next-js' },
-    ],
-    requiriments: {
-      functionaisRequiriments: [],
-      noFunctionalRequiriments: [],
-      businessRule: [
-        {
-          title: 'Padrão de nomenclaturas',
-          description:
-            'O projeto precisa conter algumas validações simples nos campos a serem preenchidos para estarem conforme o padrão a ser seguido.',
-        },
-        {
-          title: 'Simplicidade',
-          description:
-            'O projeto precisa de uma interface simples e intuitiva, o foco é manter somente no lado client',
-        },
-        {
-          title: 'Praticidade',
-          description:
-            'Com intenção de torna-lo fácil de usar e proporcionar agilidade, foram adicionadas algumas regras para acessibilidade e dicas através de Tooltips deixando o usuário bem informado de como obter melhor proveito possivel da aplicação.',
-        },
-      ],
-    },
-    images: [
-      {
-        src: bannerDark.src,
-        alt: 'Imagem de projeto Renomeador de arquivos',
       },
     ],
   },

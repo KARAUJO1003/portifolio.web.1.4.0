@@ -9,7 +9,7 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowRight } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 
 export const HomeSection = ({ className }: ComponentPropsDefault) => {
   const tl = gsap.timeline()
@@ -90,10 +90,15 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
         </DescriptionTypography>
       </div>
 
-      <Link href={'/#about'} id="button" className="flex items-center gap-3">
+      <Link
+        target="_blank"
+        href={'https://curriculo-dev-liard.vercel.app/'}
+        id="button"
+        className="flex items-center gap-3"
+      >
         <Button className="px-10 gap-2" variant="outline">
-          <span className="text-primary"> CONTINUAR</span>
-          <ArrowRight className="size-4" />
+          <span className="text-primary"> CURRICULUM VITAE</span>
+          <ExternalLink className="size-4" />
         </Button>
       </Link>
     </SectionContainer>
