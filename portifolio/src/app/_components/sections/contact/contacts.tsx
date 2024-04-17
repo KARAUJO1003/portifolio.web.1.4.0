@@ -65,7 +65,7 @@ export const ContactsSection = () => {
               <Card.Container className="mx-4 flex gap-4 items-center p-4 hover:bg-secondary/50">
                 <MessageSquareShare size={18} />
                 <div>
-                  <DescriptionTypography className=" text-left text-muted-foreground max-w-60">
+                  <DescriptionTypography className=" text-left text-primary max-w-60">
                     Fale comigo via Whatsapp.
                   </DescriptionTypography>
                 </div>
