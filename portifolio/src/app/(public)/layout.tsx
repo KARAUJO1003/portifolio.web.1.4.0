@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/app/globals.css'
 import { ThemeProvider } from '@/providers/theme-provider'
+import { Analytics } from '@vercel/analytics/react'
 import { Header } from '../_components/global/header'
 import { Footer } from '../_components/global/footer'
 import { cn } from '@/lib/utils'
@@ -46,6 +47,7 @@ export default function RootLayout({
             </Link>
           </Header>
           <main>{children}</main>
+          <Analytics />
           <Footer />
           <div className="hidden fixed items-center justify-center w-full bottom-0 left-0 right-0 backdrop-blur-lg border-t  max-lg:block py-5">
             <NavMenu className="flex items-center justify-between w-full px-3 gap-0 max-w-[440px] mx-auto" />
