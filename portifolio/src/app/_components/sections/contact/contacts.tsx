@@ -44,20 +44,20 @@ export const ContactsSection = () => {
             </span>
           </Card.Header>
           <Card.Body className="aspect-auto">
-            <Card.Container className="mx-4 flex gap-4 items-center p-4 hover:bg-secondary/50">
-              <MessageSquareShare size={18} />
-              <div>
-                <DescriptionTypography className=" text-left text-muted-foreground max-w-60">
-                  <Link
-                    className="text-primary transition-all cursor-pointer"
-                    href="https://api.whatsapp.com/send?phone=5594991257923&text=Fale%20comigo%20atrav%C3%A9s%20do%20Whatsapp."
-                    target="_blank"
-                  >
+            <Link
+              className="text-primary transition-all cursor-pointer"
+              href="https://api.whatsapp.com/send?phone=5594991257923&text=Fale%20comigo%20atrav%C3%A9s%20do%20Whatsapp."
+              target="_blank"
+            >
+              <Card.Container className="mx-4 flex gap-4 items-center p-4 hover:bg-secondary/50">
+                <MessageSquareShare size={18} />
+                <div>
+                  <DescriptionTypography className=" text-left text-muted-foreground max-w-60">
                     Fale comigo via Whatsapp.
-                  </Link>
-                </DescriptionTypography>
-              </div>
-            </Card.Container>
+                  </DescriptionTypography>
+                </div>
+              </Card.Container>
+            </Link>
             <div className="flex w-full p-4">
               <input
                 placeholder="Digite seu email"
