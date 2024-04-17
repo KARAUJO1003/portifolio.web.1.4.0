@@ -1,5 +1,5 @@
 'use client'
-import { Rocket } from 'lucide-react'
+import { MessageSquareShare } from 'lucide-react'
 import Card from '../../global/cards/card'
 import { SectionContainer } from '../../global/sections/sections-container'
 import { SocialMediasContact } from '../../global/social-medias'
@@ -34,8 +34,8 @@ export const ContactsSection = () => {
             <span className="text-xs text-muted-foreground font-normal">
               Me chama no{' '}
               <Link
-                className="text-violet-400 hover:underline transition-all"
-                href="https://wa.me/qr/IEHEHAUSLZHRG1"
+                className="text-primary hover:underline transition-all"
+                href="https://api.whatsapp.com/send?phone=5594991257923&text=Fale%20comigo%20atrav%C3%A9s%20do%20Whatsapp."
                 target="_blank"
               >
                 whatsapp
@@ -44,11 +44,17 @@ export const ContactsSection = () => {
             </span>
           </Card.Header>
           <Card.Body className="aspect-auto">
-            <Card.Container className="mx-4 flex gap-4 items-center p-4">
-              <Rocket size={18} />
+            <Card.Container className="mx-4 flex gap-4 items-center p-4 hover:bg-secondary/50">
+              <MessageSquareShare size={18} />
               <div>
-                <DescriptionTypography className="text-left text-muted-foreground max-w-60">
-                  Preencha seu e-mail para eu entrar em contato com você.
+                <DescriptionTypography className=" text-left text-muted-foreground max-w-60">
+                  <Link
+                    className="text-primary transition-all cursor-pointer"
+                    href="https://api.whatsapp.com/send?phone=5594991257923&text=Fale%20comigo%20atrav%C3%A9s%20do%20Whatsapp."
+                    target="_blank"
+                  >
+                    Fale comigo via Whatsapp.
+                  </Link>
                 </DescriptionTypography>
               </div>
             </Card.Container>
