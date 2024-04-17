@@ -17,10 +17,10 @@ export const Logo = ({ className }: ComponentPropsDefault) => {
         <path
           d="M14.7266 0.590907L6.28906 31.9375H0.306108L8.74361 0.590907H14.7266ZM17.9034 20.4318V14.2955L36.9261 6.67614V13.1193L24.8068 17.3125L25.0114 17.0057V17.7216L24.8068 17.4148L36.9261 21.608V28.0511L17.9034 20.4318Z"
           fill="none"
-          className="fill-muted-foreground"
+          className="fill-primary"
         />
       </svg>
-      <span className="uppercase text-muted-foreground text-md font-medium tracking-[0.2em] max-sm:hidden">
+      <span className="uppercase text-primary text-md font-medium tracking-[0.2em] max-sm:hidden">
         kaesyo
       </span>
     </Link>

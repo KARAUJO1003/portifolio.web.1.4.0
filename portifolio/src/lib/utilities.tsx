@@ -66,7 +66,7 @@ export const Skills: SkillsProps[] = [
   },
   {
     id: '4',
-    title: 'Shadcn/UI/GSAP',
+    title: 'Shadcn-UI/GSAP',
     description:
       'Detalhes que fazem a diferença. Com Shadcn, UI e GSAP, posso adicionar toques finais e animações deslumbrantes que elevam a experiência do usuário a novos patamares.',
     date: '07/2023',

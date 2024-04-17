@@ -10,6 +10,7 @@ import { useGSAP } from '@gsap/react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ExternalLink } from 'lucide-react'
+import GridPattern from '../../magicui/grid-pattern'
 
 export const HomeSection = ({ className }: ComponentPropsDefault) => {
   const tl = gsap.timeline()
@@ -66,10 +67,20 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
     <SectionContainer
       id="home"
       className={cn(
-        ' flex flex-col w-full items-center md:justify-center gap-10 md:min-h-[510px] max-sm:min-h-[680px]',
+        ' flex relative flex-col w-full items-center md:justify-center gap-10 md:min-h-[510px] max-sm:min-h-[680px]',
         className,
       )}
     >
+      <GridPattern
+        width={40}
+        height={40}
+        x={-1}
+        y={-1}
+        strokeDasharray={'4 2'}
+        className={cn(
+          '[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]',
+        )}
+      />
       <div className="space-y-5 flex flex-col items-center max-sm:mt-20">
         <TitleTypography
           id="title"
