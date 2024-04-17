@@ -7,6 +7,7 @@ import { Footer } from '../_components/global/footer'
 import { cn } from '@/lib/utils'
 import { Toaster } from 'sonner'
 import { HeaderProjectPage } from './project/_components/header-details'
+import { Ban, CheckCircle } from 'lucide-react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,7 +35,14 @@ export default function RootLayout({
           <Analytics />
           <Footer />
 
-          <Toaster position="top-right" theme="dark" />
+          <Toaster
+            position="top-right"
+            theme="dark"
+            icons={{
+              success: <CheckCircle className="size-5 text-violet-500" />,
+              error: <Ban className="size-5 text-violet-500" />,
+            }}
+          />
         </ThemeProvider>
       </body>
     </html>

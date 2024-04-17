@@ -10,7 +10,7 @@ import { NavMenu } from '../_components/global/nav-menu/nav-menu'
 import { Toaster } from 'sonner'
 import Link from 'next/link'
 import { ButtonBorderGradient } from '../_components/global/buttons/gradient-border-button'
-import { CheckCircle } from 'lucide-react'
+import { Ban, CheckCircle } from 'lucide-react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -38,6 +38,7 @@ export default function RootLayout({
             theme="dark"
             icons={{
               success: <CheckCircle className="size-5 text-violet-500" />,
+              error: <Ban className="size-5 text-violet-500" />,
             }}
           />
           <Header>

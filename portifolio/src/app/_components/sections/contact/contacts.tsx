@@ -8,8 +8,21 @@ import { TitleTypography } from '../../global/typography/title'
 import { ButtonBorderGradient } from '../../global/buttons/gradient-border-button'
 import { toast } from 'sonner'
 import Link from 'next/link'
+import { useState } from 'react'
 
 export const ContactsSection = () => {
+  const [value, setValue] = useState('')
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [result, setResult] = useState('')
+  function onEmailSubmit() {
+    if (!value) {
+      toast.error('Digite um e-mail válido.')
+    } else {
+      setResult(value)
+      toast.success('E-mail enviado com sucesso!')
+    }
+  }
+
   return (
     <SectionContainer
       id="contacts-section"
@@ -60,16 +73,16 @@ export const ContactsSection = () => {
             </Link>
             <div className="flex w-full p-4">
               <input
+                type="email"
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
                 placeholder="Digite seu email"
                 className="outline-none w-full h-9 text-xs rounded bg-transparent border border-input px-2"
               />
             </div>
           </Card.Body>
           <Card.Footer>
-            <ButtonBorderGradient
-              onClick={() => toast.success('E-mail enviado com sucesso!')}
-              variant="secondary"
-            >
+            <ButtonBorderGradient onClick={onEmailSubmit} variant="secondary">
               Enviar
             </ButtonBorderGradient>
           </Card.Footer>
