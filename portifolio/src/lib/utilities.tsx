@@ -48,49 +48,77 @@ export const Skills: SkillsProps[] = [
     title: 'Desenvolvimento web avançado no piloto automático. Com Next.js',
     description:
       'Posso criar aplicativos web poderosos e dinâmicos com facilidade, oferecendo uma experiência de usuário incomparável.',
-    date: '21/03/2023',
+    date: '03/2023',
   },
   {
     id: '2',
     title: 'TypeScript',
     description:
       'Ao aprender os primeiros conceitos de typescript, eu me apaixonei e hoje eu amo utilizar nos projetos sempre que possivel, apesar de ainda ter muito a aprender estou sempre tentanto utiliza-lo da melhor forma.',
-    date: '12/05/2023',
+    date: '05/2023',
   },
   {
     id: '3',
     title: 'Tailwind CSS: Estilo sem esforço.',
     description:
       'Com Tailwind CSS, posso estilizar meus projetos de forma rápida e eficiente, garantindo uma aparência elegante e consistente em todos os dispositivos.',
-    date: '12/06/2023',
+    date: '06/2023',
   },
   {
     id: '4',
     title: 'Shadcn/UI/GSAP',
     description:
       'Detalhes que fazem a diferença. Com Shadcn, UI e GSAP, posso adicionar toques finais e animações deslumbrantes que elevam a experiência do usuário a novos patamares.',
-    date: '31/07/2023',
+    date: '07/2023',
   },
   {
     id: '5',
     title: 'React Js',
     description:
       'Ultilizando o conceito de componentes reutilizáveis que o react proporciona, consigo criar interfaces com facilidade.',
-    date: '31/02/2023',
+    date: '02/2023',
   },
   {
     id: '6',
     title: 'Mongo DB',
     description:
       'Desenvolvi o projeto Finance Fire utilizando o mongo db como base de dados, utilizando conceitos de relacionamento entre tabelas.',
-    date: '14/02/2024',
+    date: '02/2024',
   },
   {
     id: '7',
     title: 'PostgreSQL',
     description:
       'Desenvolvi o projeto Buzzy Demarcações, esse foi meu primeiro projeto full-stack, é um projeto ousado, onde utilizei pela primeira vez um banco de dados e criei a propria API dentro do Next JS e o projeto ainda tem muito a ser desenvolvido.',
-    date: '01/01/2024',
+    date: '01/2024',
+  },
+  {
+    id: '8',
+    title: 'React Hook Form & ZOD',
+    description:
+      'Utilizo ZOD e React Hook Form em conjunto para validação de dados de formulários avançado.',
+    date: '01/2024',
+  },
+  {
+    id: '9',
+    title: 'Insomnia/Postman',
+    description:
+      'Para testes em API, gosto de utilizar o Postman ou Insomnia para testar requisições HTTP.',
+    date: '07/2023',
+  },
+  {
+    id: '10',
+    title: 'NextAuth/JWT',
+    description:
+      'Para autenticação de usuários já fiz alguns projetos de teste utilizando tanto o sistema de login que eu mesmo criei toda a interface e sistema de autenticação com JWT e Postgres e também já utilizei NextAuth com o Google Provider para autenticação e Mongo DB.',
+    date: '12/2023',
+  },
+  {
+    id: '11',
+    title: 'Node JS & Express',
+    description:
+      'Estou me aprofundando em conhecimentos de criação de APIs REST utilizando Node e Express e pretendendo partir para algum framwork ou micro-frameork como Fastfy.',
+    date: '01/2024',
   },
 ]
 
