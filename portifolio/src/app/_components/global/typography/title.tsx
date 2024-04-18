@@ -22,7 +22,7 @@ export const TitleTypography = ({
     <h2
       {...props}
       className={cn(
-        `${sizeXl || size2Xl || size4Xl || size8Xl} ${fontWeight} text-opacity-100 from-zinc-100 capitalize to-zinc-600 bg-gradient-to-b bg-clip-text text-transparent`,
+        `${sizeXl || size2Xl || size4Xl || size8Xl} ${fontWeight} text-opacity-100 from-zinc-50 capitalize to-zinc-500 bg-gradient-to-b bg-clip-text text-transparent`,
         className,
       )}
     >

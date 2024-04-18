@@ -243,12 +243,7 @@ export const Projects: ProjectProps[] = [
       { label: 'next-auth' },
     ],
     requiriments: {
-      functionaisRequiriments: [
-        {
-          title: 'Projeto componentizado',
-          description: 'Essa é a descrição explicando o motivo',
-        },
-      ],
+      functionaisRequiriments: [],
       noFunctionalRequiriments: [],
       businessRule: [],
     },
@@ -275,27 +270,9 @@ export const Projects: ProjectProps[] = [
       { label: 'shadcn-ui' },
     ],
     requiriments: {
-      functionaisRequiriments: [
-        {
-          title: 'Tecnologias de ponta',
-          description:
-            'Utilizando as mais recentes tecnologias e bibliotecas, este projeto explora o potencial do Next.js 14, incorporando server actions e route handlers para uma experiência de backend eficiente e dinâmica.',
-        },
-      ],
-      noFunctionalRequiriments: [
-        {
-          title: 'Interface Cativante:',
-          description:
-            'Com uma estética dark mode aprimorada por tons de azul vibrante, a interface é tanto funcional quanto esteticamente agradável, proporcionando uma experiência de usuário imersiva.',
-        },
-      ],
-      businessRule: [
-        {
-          title: 'Gestão Financeira Simplificada:',
-          description:
-            'Projetado para simplificar a gestão de finanças pessoais, o aplicativo oferece recursos abrangentes, desde o acompanhamento de despesas até a geração de relatórios visuais detalhados.',
-        },
-      ],
+      functionaisRequiriments: [],
+      noFunctionalRequiriments: [],
+      businessRule: [],
     },
     images: [
       {
@@ -364,12 +341,7 @@ export const Projects: ProjectProps[] = [
       { label: 'gsap' },
     ],
     requiriments: {
-      functionaisRequiriments: [
-        {
-          title: 'Projeto componentizado',
-          description: 'Essa é a descrição explicando o motivo',
-        },
-      ],
+      functionaisRequiriments: [],
       noFunctionalRequiriments: [],
       businessRule: [],
     },
@@ -395,12 +367,7 @@ export const Projects: ProjectProps[] = [
       { label: 'local storage' },
     ],
     requiriments: {
-      functionaisRequiriments: [
-        {
-          title: 'Lista de tarefas Cliente não pode abrir a tela de produtos',
-          description: 'Essa é a descrição explicando o motivo',
-        },
-      ],
+      functionaisRequiriments: [],
       noFunctionalRequiriments: [],
       businessRule: [],
     },
