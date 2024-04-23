@@ -39,8 +39,8 @@ export default function RootLayout({
             position="top-right"
             theme="dark"
             icons={{
-              success: <CheckCircle className="size-5 text-violet-500" />,
-              error: <Ban className="size-5 text-violet-500" />,
+              success: <CheckCircle className="size-5 text-principalPink" />,
+              error: <Ban className="size-5 text-principalPink" />,
             }}
           />
         </ThemeProvider>
