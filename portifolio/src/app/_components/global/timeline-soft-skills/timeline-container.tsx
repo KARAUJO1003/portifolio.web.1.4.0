@@ -31,35 +31,13 @@ export const TimelineContainer = () => {
         opacity: 1,
         scrollTrigger: {
           trigger: '.odd-item1',
-          start: 'top 900px',
-          end: 'top 900px',
+          start: 'top bottom',
+          end: 'top 600',
           scrub: 1,
+          markers: true,
         },
-        stagger: 0.2,
+        stagger: 0.1,
       },
-    ).fromTo(
-      '.odd-item2',
-      {
-        y: 500,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: '.odd-item2',
-          start: 'bottom 700px',
-          end: '100 600px',
-          scrub: 2,
-        },
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: '.odd-item2',
-          start: 'top 1100px',
-          end: 'top 900px',
-          scrub: 2,
-        },
-      },
-      '-=1',
     )
   }, [])
 
@@ -70,10 +48,10 @@ export const TimelineContainer = () => {
     >
       <div>
         <div className=" space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-[1px] before:bg-gradient-to-b before:from-transparent before:via-pink-900 before:to-transparent before:max-lg:bg-transparent">
-          {Skills.map((item, index) => {
+          {Skills.map((item) => {
             return (
               <TimelineCard
-                className={`${index % 2 === 0 ? 'odd-item1 ' : 'odd-item2'}`}
+                className={'odd-item1 '}
                 id="timelineCard"
                 key={item.id}
                 title={item.title}
