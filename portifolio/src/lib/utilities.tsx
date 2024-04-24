@@ -21,8 +21,8 @@ interface ProjectProps {
   id: string
   title: string
   description: string
-  urlDeploy: string
-  urlRepository: string
+  urlDeploy?: string
+  urlRepository?: string
   tags: Array<{ label: string }>
   requiriments: {
     functionaisRequiriments: ProjectPropsRequiriment[]

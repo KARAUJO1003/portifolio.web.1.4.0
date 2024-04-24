@@ -28,7 +28,7 @@ export const ContactsSection = () => {
       id="contacts-section"
       className="min-h-[810px] flex justify-center gap-40 items-center max-lg:gap-20 max-md:flex-col max-md:justify-start"
     >
-      <div className="contact-section">
+      <div className="contact-section principal-title">
         <TitleTypography size="lg"> Contato</TitleTypography>
         <DescriptionTypography className="text-left mt-5 max-w-80 boxTexts">
           <strong>

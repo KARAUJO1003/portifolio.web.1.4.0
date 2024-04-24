@@ -13,7 +13,7 @@ export const SoftSkillsSection = () => {
   const tl = gsap.timeline()
 
   useGSAP(() => {
-    tl.from('#principle-title', {
+    tl.from('.principal-title', {
       opacity: 0,
       scrollTrigger: {
         trigger: '#principle-title',
@@ -29,7 +29,11 @@ export const SoftSkillsSection = () => {
       id="soft-skills-section"
       className="flex flex-col items-center pt-24"
     >
-      <TitleTypography id="principle-title" size="lg" className="normal-case">
+      <TitleTypography
+        id="principle-title"
+        size="lg"
+        className="normal-case principal-title"
+      >
         Habilidades
       </TitleTypography>
       <TimelineContainer />

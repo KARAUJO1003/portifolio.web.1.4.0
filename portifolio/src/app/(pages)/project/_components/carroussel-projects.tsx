@@ -56,13 +56,21 @@ export const CarrousselProjects = ({ id }: CarrousselProjectsProps) => {
                 />
 
                 <div className="absolute bottom-5 right-5 flex items-center gap-3 z-40">
-                  <Link target="_blank" href={project.urlRepository}>
-                    <button className="border bg-zinc-950/90 backdrop-blur-lg rounded-md h-9 px-6 hover:bg-bg-zinc-900 text-xs uppercase text-muted-foreground hover:text-primary transition-all">
+                  <Link target="_blank" href={project.urlRepository ?? ''}>
+                    <button
+                      disabled={!project.urlRepository}
+                      className="border disabled:cursor-no-drop disabled:text-muted-foreground bg-zinc-950/90 backdrop-blur-lg rounded-md h-9 px-6 hover:bg-bg-zinc-900 text-xs uppercase text-muted-foreground hover:text-primary transition-all"
+                    >
                       Repositorio
                     </button>
                   </Link>
-                  <Link target="_blank" href={project.urlDeploy}>
-                    <ButtonBorderGradient>Deploy</ButtonBorderGradient>
+                  <Link target="_blank" href={project.urlDeploy ?? ''}>
+                    <ButtonBorderGradient
+                      disabled={!project.urlDeploy}
+                      className="disabled:cursor-no-drop"
+                    >
+                      Deploy
+                    </ButtonBorderGradient>
                   </Link>
                 </div>
               </CarouselItem>

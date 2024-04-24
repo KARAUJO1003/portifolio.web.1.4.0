@@ -16,23 +16,15 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
   const tl = gsap.timeline()
 
   useGSAP(() => {
-    tl.fromTo(
-      '.boxTexts',
-      {
-        y: 500,
-        opacity: 0,
+    tl.from('.boxTexts', {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '#principle-title',
+        start: 'top bottom',
+        end: 'bottom 900',
+        scrub: 1,
       },
-      {
-        y: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: '.boxTexts',
-          start: '-200 bottom',
-          end: 'top bottom',
-          scrub: 1,
-        },
-      },
-    ).from('.imagem', {
+    }).from('.imagem', {
       opacity: 0,
       zIndey: 1,
       scrollTrigger: {
