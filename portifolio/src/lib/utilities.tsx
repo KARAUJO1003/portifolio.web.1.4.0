@@ -1,5 +1,6 @@
 import { Github, Instagram, Linkedin } from 'lucide-react'
 import financeFire02 from '../../public/finance-fire01.png'
+import financeBg from '../../public/finance-bg.png'
 import financeFire01 from '../../public/finance-fire02.png'
 import financeFire03 from '../../public/finance-fire03.png'
 import financeFire04 from '../../public/finance-fire04.png'
@@ -9,6 +10,7 @@ import conversorApp01 from '../../public/conversor-app02.png'
 import orion01 from '../../public/orion-tasks01.png'
 import orion02 from '../../public/orion-tasks02.png'
 import portifolioImage from '../../public/portifolio-image.png'
+import portifolioImage01 from '../../public/portifolio-image01.png'
 import bannerBuzzy from '../../public/buzzy/banner-buzzy.jpg'
 import orgBannerLight from '../../public/organograma/org-light.jpeg'
 import orgBannerDark from '../../public/organograma/org-dark.jpeg'
@@ -209,6 +211,10 @@ export const Projects: ProjectProps[] = [
     },
     images: [
       {
+        src: financeBg,
+        alt: 'Imagem de projeto Finance Fire',
+      },
+      {
         src: financeFire01,
         alt: 'Imagem de projeto Finance Fire',
       },
@@ -287,6 +293,35 @@ export const Projects: ProjectProps[] = [
       },
     ],
   },
+  {
+    id: '4',
+    title: 'Portifolio 1.4.0',
+    description:
+      'Essa é a versão mais recente do meu portifolio, site desenvolvido com ituito de mostrar um pouco sobre mim, minhas habilidades e principalmente os projetos que desenvolvi até então.',
+    urlDeploy: 'https://port-web-1-4-0-me9l.vercel.app/',
+    urlRepository: 'https://github.com/KARAUJO1003/port.web.1.4.0',
+    tags: [
+      { label: 'next.js' },
+      { label: 'tailwind.css' },
+      { label: 'shadcn-ui' },
+      { label: 'gsap' },
+    ],
+    requiriments: {
+      functionaisRequiriments: [],
+      noFunctionalRequiriments: [],
+      businessRule: [],
+    },
+    images: [
+      {
+        src: portifolioImage01,
+        alt: 'Imagem de projeto Portifolio',
+      },
+      {
+        src: portifolioImage,
+        alt: 'Imagem de projeto Portifolio',
+      },
+    ],
+  },
 
   {
     id: '2',
@@ -356,32 +391,6 @@ export const Projects: ProjectProps[] = [
       {
         src: bannerDark,
         alt: 'Imagem de projeto Renomeador de arquivos',
-      },
-    ],
-  },
-
-  {
-    id: '4',
-    title: 'Portifolio 1.4.0',
-    description:
-      'Essa é a versão mais recente do meu portifolio, site desenvolvido com ituito de mostrar um pouco sobre mim, minhas habilidades e principalmente os projetos que desenvolvi até então.',
-    urlDeploy: 'https://port-web-1-4-0-me9l.vercel.app/',
-    urlRepository: 'https://github.com/KARAUJO1003/port.web.1.4.0',
-    tags: [
-      { label: 'next.js' },
-      { label: 'tailwind.css' },
-      { label: 'shadcn-ui' },
-      { label: 'gsap' },
-    ],
-    requiriments: {
-      functionaisRequiriments: [],
-      noFunctionalRequiriments: [],
-      businessRule: [],
-    },
-    images: [
-      {
-        src: portifolioImage,
-        alt: 'Imagem de projeto Portifolio',
       },
     ],
   },
