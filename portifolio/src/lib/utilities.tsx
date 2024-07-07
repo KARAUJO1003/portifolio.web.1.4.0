@@ -12,6 +12,11 @@ import orion02 from '../../public/orion-tasks02.png'
 import portifolioImage from '../../public/portifolio-image.png'
 import portifolioImage01 from '../../public/portifolio-image01.png'
 import bannerBuzzy from '../../public/buzzy/banner-buzzy.jpg'
+import firstPageBuzzy from '../../public/buzzy/first-page.jpg'
+import fomr1Buzzy from '../../public/buzzy/fomr1.jpg'
+import form2Buzzy from '../../public/buzzy/form2.jpg'
+import loginBuzzy from '../../public/buzzy/login.jpg'
+import skeletonBuzzy from '../../public/buzzy/skeleton.jpg'
 import orgBannerLight from '../../public/organograma/org-light.jpeg'
 import orgBannerDark from '../../public/organograma/org-dark.jpeg'
 import bannerDark from '../../public/rename-files/bannerLight2.jpeg.png'
@@ -289,6 +294,26 @@ export const Projects: ProjectProps[] = [
     images: [
       {
         src: bannerBuzzy,
+        alt: 'Imagem de projeto Buzzy',
+      },
+      {
+        src: firstPageBuzzy,
+        alt: 'Imagem de projeto Buzzy',
+      },
+      {
+        src: fomr1Buzzy,
+        alt: 'Imagem de projeto Buzzy',
+      },
+      {
+        src: form2Buzzy,
+        alt: 'Imagem de projeto Buzzy',
+      },
+      {
+        src: loginBuzzy,
+        alt: 'Imagem de projeto Buzzy',
+      },
+      {
+        src: skeletonBuzzy,
         alt: 'Imagem de projeto Buzzy',
       },
     ],
