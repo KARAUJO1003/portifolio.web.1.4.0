@@ -21,7 +21,7 @@ export const SocialMediasContact = ({
           target="_blank"
           key={index}
           href={item.url}
-          className="uppercase text-xs text-muted-foreground hover:text-foreground flex gap-2 items-center"
+          className="uppercase text-xs text-muted-foreground transition-all duration-300 hover:text-foreground flex gap-2 items-center"
         >
           {variant === 'label' && <span className="text-xs">{item.label}</span>}
 
