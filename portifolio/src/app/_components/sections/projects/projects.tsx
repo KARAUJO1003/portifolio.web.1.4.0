@@ -10,18 +10,18 @@ import { useGSAP } from '@gsap/react'
 
 export const ProjectsSection = () => {
   gsap.registerPlugin(ScrollTrigger)
-  const tl = gsap.timeline({ delay: 1 })
+  const tl = gsap.timeline()
 
   useGSAP(() => {
     tl.from('.card-project', {
       scale: 0.9,
       scrollTrigger: {
         trigger: '.card-project',
-        start: 'top 500px',
-        end: 'top 700px',
-        scrub: 1,
+        start: 'top 500',
+        end: 'bottom bottom',
+        markers: true,
+        scrub: 0.2,
       },
-      stagger: 0.1,
     })
   }, {})
 
@@ -43,7 +43,7 @@ export const ProjectsSection = () => {
 
           return (
             <CardProject
-              className="card-project"
+              className="card-project "
               title={project.title}
               srcImage={src}
               altImage={alt}

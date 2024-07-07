@@ -23,7 +23,7 @@ export const CarrousselProjects = ({ id }: CarrousselProjectsProps) => {
   const [current, setCurrent] = React.useState(0)
   const [count, setCount] = React.useState(0)
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true }),
+    Autoplay({ delay: 4000, stopOnInteraction: true }),
   )
 
   React.useEffect(() => {

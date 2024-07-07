@@ -17,10 +17,11 @@ export const SoftSkillsSection = () => {
       opacity: 0,
       scrollTrigger: {
         trigger: '#principle-title',
-        start: 'top 600',
-        end: '300 700',
+        start: 'top 300',
+        end: '200 bottom ',
         scrub: 1,
       },
+      delay: 1,
     })
   }, [])
 
