@@ -19,7 +19,6 @@ export const ProjectsSection = () => {
         trigger: '.card-project',
         start: 'top 500',
         end: 'bottom bottom',
-        markers: true,
         scrub: 0.2,
       },
     })
