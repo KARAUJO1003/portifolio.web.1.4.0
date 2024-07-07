@@ -4,7 +4,7 @@ import Card from './card'
 import Link from 'next/link'
 import { ExternalLink, LinkIcon } from 'lucide-react'
 import { DescriptionTypography } from '../typography/description'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { cn } from '@/lib/utils'
 import {
   Tooltip,
@@ -18,7 +18,7 @@ type CardProjectProps<T = unknown> = {
   id: string
   title: string
   description: string
-  srcImage: string
+  srcImage: StaticImageData | string
   altImage: string
   urlDetails: string
 } & T
@@ -40,7 +40,7 @@ export const CardProject = ({
         key={id}
         className={cn(
           [
-            'relative hover:border-muted-foreground/40 hover:border-2 hover:shadow-xl overflow-hidden',
+            'relative hover:ring-2 hover:ring-border ring-offset-4 ring-offset-zinc-50 dark:ring-offset-zinc-900 transition-all duration-800 hover:shadow-xl overflow-hidden',
           ],
           className,
         )}

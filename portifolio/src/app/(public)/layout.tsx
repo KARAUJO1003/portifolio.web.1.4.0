@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ptbr">
-      <body className={cn(['relative dark'], inter.className)}>
+      <body className={cn(['relative dark scroll-smooth'], inter.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -14,16 +14,14 @@ export const ProjectsSection = () => {
 
   useGSAP(() => {
     tl.from('.card-project', {
-      y: 500,
-      opacity: 0,
+      scale: 0.9,
       scrollTrigger: {
         trigger: '.card-project',
-        start: 'top 900px',
-        end: '200 700px',
+        start: 'top 500px',
+        end: 'top 700px',
         scrub: 1,
       },
       stagger: 0.1,
-      delay: 2,
     })
   }, {})
 
@@ -35,7 +33,7 @@ export const ProjectsSection = () => {
       <TitleTypography size="lg" className="mb-14">
         Projetos
       </TitleTypography>
-      <div className="grid grid-cols-2 gap-5 w-full max-[1240px]:grid-cols-1 max-[1240px]:px-5 max-w-5xl">
+      <div className="grid grid-cols-2 p-2 gap-5 w-full max-[1240px]:grid-cols-1 max-[1240px]:px-5 max-w-5xl">
         {Projects.map((project) => {
           const firstImage = project.images.find((_, index) => index === 0)
           const src = firstImage?.src || '' // Defina um valor padrão caso src seja undefined

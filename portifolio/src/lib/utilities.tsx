@@ -8,11 +8,12 @@ import conversorApp02 from '../../public/conversor-app01.png'
 import conversorApp01 from '../../public/conversor-app02.png'
 import orion01 from '../../public/orion-tasks01.png'
 import orion02 from '../../public/orion-tasks02.png'
-import banner02 from '../../public/banner02.jpg'
+import portifolioImage from '../../public/portifolio-image.png'
 import bannerBuzzy from '../../public/buzzy/banner-buzzy.jpg'
 import orgBannerLight from '../../public/organograma/org-light.jpeg'
 import orgBannerDark from '../../public/organograma/org-dark.jpeg'
 import bannerDark from '../../public/rename-files/bannerLight2.jpeg.png'
+import { StaticImageData } from 'next/image'
 
 interface ProjectPropsRequiriment {
   title: string
@@ -32,7 +33,7 @@ interface ProjectProps {
     businessRule: ProjectPropsRequiriment[]
   }
   images: Array<{
-    src: string
+    src: StaticImageData | string
     alt: string
   }>
 }
@@ -208,24 +209,52 @@ export const Projects: ProjectProps[] = [
     },
     images: [
       {
-        src: financeFire01.src,
+        src: financeFire01,
         alt: 'Imagem de projeto Finance Fire',
       },
       {
-        src: financeFire02.src,
+        src: financeFire02,
         alt: 'Imagem de projeto Finance Fire',
       },
       {
-        src: financeFire03.src,
+        src: financeFire03,
         alt: 'Imagem de projeto Finance Fire',
       },
       {
-        src: financeFire04.src,
+        src: financeFire04,
         alt: 'Imagem de projeto Finance Fire',
       },
       {
-        src: financeFire05.src,
+        src: financeFire05,
         alt: 'Imagem de projeto Finance Fire',
+      },
+    ],
+  },
+  {
+    id: '7',
+    title: 'Componente Organograma (OrgChart)',
+    description:
+      'Este projeto foi desenvolvido com o intuito de facilitar a visualização de organogramas de empresas, com um design simples e intuitivo, o usuário pode adicionar, editar e excluir cargos e funcionários, além de visualizar o organograma em tempo real. O projeto foi desenvolvido com Next.js, TailwindCSS,  TypeScript, React-DnD, para possibilitar a reordenação dos cargos e funcionários por meio de arrastar e soltar.',
+    tags: [
+      { label: 'next.js' },
+      { label: 'tailwind.css' },
+      { label: 'typescript' },
+      { label: 'react-dnd' },
+      { label: 'proejto proprio' },
+    ],
+    requiriments: {
+      functionaisRequiriments: [],
+      noFunctionalRequiriments: [],
+      businessRule: [],
+    },
+    images: [
+      {
+        src: orgBannerLight,
+        alt: 'Imagem de projeto orgBanner',
+      },
+      {
+        src: orgBannerDark,
+        alt: 'Imagem de projeto orgBanner',
       },
     ],
   },
@@ -253,7 +282,7 @@ export const Projects: ProjectProps[] = [
     },
     images: [
       {
-        src: bannerBuzzy.src,
+        src: bannerBuzzy,
         alt: 'Imagem de projeto Buzzy',
       },
     ],
@@ -280,11 +309,11 @@ export const Projects: ProjectProps[] = [
     },
     images: [
       {
-        src: conversorApp01.src,
+        src: conversorApp01,
         alt: 'Imagem de projeto ConversorApp',
       },
       {
-        src: conversorApp02.src,
+        src: conversorApp02,
         alt: 'Imagem de projeto ConversorApp',
       },
     ],
@@ -325,7 +354,7 @@ export const Projects: ProjectProps[] = [
     },
     images: [
       {
-        src: bannerDark.src,
+        src: bannerDark,
         alt: 'Imagem de projeto Renomeador de arquivos',
       },
     ],
@@ -351,7 +380,7 @@ export const Projects: ProjectProps[] = [
     },
     images: [
       {
-        src: banner02.src,
+        src: portifolioImage,
         alt: 'Imagem de projeto Portifolio',
       },
     ],
@@ -377,40 +406,12 @@ export const Projects: ProjectProps[] = [
     },
     images: [
       {
-        src: orion01.src,
+        src: orion01,
         alt: 'Imagem de projeto ConversorApp',
       },
       {
-        src: orion02.src,
+        src: orion02,
         alt: 'Imagem de projeto ConversorApp',
-      },
-    ],
-  },
-  {
-    id: '7',
-    title: 'Organograma Drag And Drop',
-    description:
-      'Este projeto foi desenvolvido com o intuito de facilitar a visualização de organogramas de empresas, com um design simples e intuitivo, o usuário pode adicionar, editar e excluir cargos e funcionários, além de visualizar o organograma em tempo real. O projeto foi desenvolvido com Next.js, TailwindCSS,  TypeScript, React-DnD, para possibilitar a reordenação dos cargos e funcionários por meio de arrastar e soltar.',
-    tags: [
-      { label: 'next.js' },
-      { label: 'tailwind.css' },
-      { label: 'typescript' },
-      { label: 'react-dnd' },
-      { label: 'proejto proprio' },
-    ],
-    requiriments: {
-      functionaisRequiriments: [],
-      noFunctionalRequiriments: [],
-      businessRule: [],
-    },
-    images: [
-      {
-        src: orgBannerLight.src,
-        alt: 'Imagem de projeto orgBanner',
-      },
-      {
-        src: orgBannerDark.src,
-        alt: 'Imagem de projeto orgBanner',
       },
     ],
   },

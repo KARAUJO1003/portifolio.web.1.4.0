@@ -14,7 +14,6 @@ import { Projects } from '@/lib/utilities'
 import { CarrousselProjects } from '../_components/carroussel-projects'
 
 export default function Page({ params }: { params: { id: string } }) {
-  console.log(Projects.length)
   const id = params.id
   const project = Projects.find((project) => project.id === id)
 

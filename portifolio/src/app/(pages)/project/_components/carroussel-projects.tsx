@@ -1,4 +1,5 @@
 import { ButtonBorderGradient } from '@/app/_components/global/buttons/gradient-border-button'
+import Autoplay from 'embla-carousel-autoplay'
 import {
   Carousel,
   CarouselApi,
@@ -21,6 +22,9 @@ export const CarrousselProjects = ({ id }: CarrousselProjectsProps) => {
   const [api, setApi] = React.useState<CarouselApi>()
   const [current, setCurrent] = React.useState(0)
   const [count, setCount] = React.useState(0)
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true }),
+  )
 
   React.useEffect(() => {
     if (!api) {
@@ -33,19 +37,24 @@ export const CarrousselProjects = ({ id }: CarrousselProjectsProps) => {
     api.on('select', () => {
       setCurrent(api.selectedScrollSnap() + 1)
     })
-  }, [api])
+  }, [api, current])
 
   return (
     <>
-      <Carousel setApi={setApi}>
-        <CarouselContent className=" border rounded-lg overflow-hidden mt-4 mb-8 mx-0">
+      <Carousel
+        plugins={[plugin.current]}
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+        onMouseOut={plugin.current.play}
+        opts={{ loop: true }}
+        setApi={setApi}
+      >
+        <CarouselContent className="  rounded-lg gap-2 mt-4 mb-8 mx-0">
           {project?.images.map((img) => {
-            console.log(img.src)
-
             return (
               <CarouselItem
-                key={img.src}
-                className="w-full relative aspect-video flex items-center justify-center"
+                key={img.src.toString()}
+                className="w-full relative border rounded-lg overflow-hidden aspect-video flex items-center justify-center"
               >
                 <Image
                   src={img.src}

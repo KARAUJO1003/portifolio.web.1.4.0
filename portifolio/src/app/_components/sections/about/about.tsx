@@ -17,16 +17,15 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
 
   useGSAP(() => {
     tl.from('.boxTexts', {
-      opacity: 0,
+      scale: 0.9,
       scrollTrigger: {
         trigger: '#principle-title',
-        start: 'top bottom',
-        end: 'bottom 900',
+        start: 'bottom 1000',
+        end: '-700 500',
         scrub: 1,
       },
     }).from('.imagem', {
       opacity: 0,
-      zIndey: 1,
       scrollTrigger: {
         trigger: '.imagem',
         start: 'bottom 900',
@@ -55,29 +54,26 @@ export const AboutSection = ({ className }: ComponentPropsDefault) => {
         </TitleTypography>
 
         <div className="imagem ">
-          <div className=" relative inline-flex  overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-1 focus:ring-zinc-400/20 focus:ring-offset-1 focus:ring-offset-zinc-50/20 w-min">
-            <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#263193_0%,#D22A67_50%,#263193_100%)]" />
-            <div className="flex flex-col items-center gap-5 border rounded-xl">
-              <div className=" min-w-80 aspect-square rounded-xl  overflow-hidden">
-                <span
-                  className={cn(
-                    [
-                      'bg-zinc-950 hover:bg-zinc-950/90 inline-flex h-full w-full relative items-center justify-center rounded-xl transition-all duration-200 px-6 py-2 text-xs uppercase font-medium text-muted-foreground hover:text-zinc-50 backdrop-blur-3xl',
-                    ],
-                    className,
-                  )}
-                >
-                  <Image
-                    src={developerPhoto.src}
-                    alt="Foto do desenvolvedor"
-                    style={{ objectFit: 'cover' }}
-                    className="mt-5"
-                    fill
-                    sizes="(max-width: 1024px) 100vw"
-                    priority
-                  />
-                </span>
-              </div>
+          <div className="flex flex-col items-center gap-5 rounded-full bg-zinc-950 -z-20">
+            <div className=" min-w-80 aspect-square rounded-xl  transition-all duration-300 cursor-pointer overflow-hidden">
+              <span
+                className={cn(
+                  [
+                    'bg-zinc-800/10 hover:bg-zinc-800/20 inline-flex h-full w-full relative items-center justify-center rounded-full transition-all duration-200 px-6 py-2 text-xs uppercase font-medium text-muted-foreground hover:text-zinc-50 backdrop-blur-3xl',
+                  ],
+                  className,
+                )}
+              >
+                <Image
+                  src={developerPhoto.src}
+                  alt="Foto do desenvolvedor"
+                  style={{ objectFit: 'cover' }}
+                  className="mt-5 z-20"
+                  fill
+                  sizes="(max-width: 1024px) 100vw"
+                  priority
+                />
+              </span>
             </div>
           </div>
 
