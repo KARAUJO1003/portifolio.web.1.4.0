@@ -331,34 +331,6 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    id: '9',
-    title: 'Componente Organograma (OrgChart)',
-    description:
-      'Este projeto foi desenvolvido com o intuito de facilitar a visualização de organogramas de empresas, com um design simples e intuitivo, o usuário pode adicionar, editar e excluir cargos e funcionários, além de visualizar o organograma em tempo real. O projeto foi desenvolvido com Next.js, TailwindCSS,  TypeScript, React-DnD, para possibilitar a reordenação dos cargos e funcionários por meio de arrastar e soltar.',
-    tags: [
-      { label: 'next.js' },
-      { label: 'tailwind.css' },
-      { label: 'typescript' },
-      { label: 'react-dnd' },
-      { label: 'proejto proprio' },
-    ],
-    requiriments: {
-      functionaisRequiriments: [],
-      noFunctionalRequiriments: [],
-      businessRule: [],
-    },
-    images: [
-      {
-        src: orgBannerLight,
-        alt: 'Imagem de projeto orgBanner',
-      },
-      {
-        src: orgBannerDark,
-        alt: 'Imagem de projeto orgBanner',
-      },
-    ],
-  },
-  {
     id: '5',
     title: 'Buzzy Demarcações',
     description:
