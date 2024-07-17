@@ -19,6 +19,8 @@ import loginBuzzy from '../../public/buzzy/login.jpg'
 import skeletonBuzzy from '../../public/buzzy/skeleton.jpg'
 import orgBannerLight from '../../public/organograma/org-light.jpeg'
 import orgBannerDark from '../../public/organograma/org-dark.jpeg'
+import KanBanLigth from '../../public/kanban/ligth.png'
+import KanBanDark from '../../public/kanban/dark.png'
 import bannerDark from '../../public/rename-files/bannerLight2.jpeg.png'
 import { StaticImageData } from 'next/image'
 
@@ -241,6 +243,65 @@ export const Projects: ProjectProps[] = [
       },
     ],
   },
+
+  {
+    id: '4',
+    title: 'Portifolio 1.4.0',
+    description:
+      'Essa é a versão mais recente do meu portifolio, site desenvolvido com ituito de mostrar um pouco sobre mim, minhas habilidades e principalmente os projetos que desenvolvi até então.',
+    urlDeploy: 'https://port-web-1-4-0-me9l.vercel.app/',
+    urlRepository: 'https://github.com/KARAUJO1003/port.web.1.4.0',
+    tags: [
+      { label: 'next.js' },
+      { label: 'tailwind.css' },
+      { label: 'shadcn-ui' },
+      { label: 'gsap' },
+    ],
+    requiriments: {
+      functionaisRequiriments: [],
+      noFunctionalRequiriments: [],
+      businessRule: [],
+    },
+    images: [
+      {
+        src: portifolioImage01,
+        alt: 'Imagem de projeto Portifolio',
+      },
+      {
+        src: portifolioImage,
+        alt: 'Imagem de projeto Portifolio',
+      },
+    ],
+  },
+  {
+    id: '8',
+    title: 'Kanban Board',
+    description:
+      'Um projeto simples, que foi iniciado a fins de estudo sobre Drag and Drop, e aprimorado com a utilização de Tailwind CSS, Shadcn UI e GSAP para animações.',
+    urlDeploy: 'https://board-kanban-three.vercel.app/',
+    urlRepository: 'https://github.com/KARAUJO1003/board-kanban',
+    tags: [
+      { label: 'next.js' },
+      { label: 'tailwind.css' },
+      { label: 'shadcn-ui' },
+      { label: 'react-dnd' },
+    ],
+    requiriments: {
+      functionaisRequiriments: [],
+      noFunctionalRequiriments: [],
+      businessRule: [],
+    },
+    images: [
+      {
+        src: KanBanLigth,
+        alt: 'Imagem de projeto Kanban',
+      },
+      {
+        src: KanBanDark,
+        alt: 'Imagem de projeto Kanban',
+      },
+    ],
+  },
   {
     id: '7',
     title: 'Componente Organograma (OrgChart)',
@@ -269,7 +330,34 @@ export const Projects: ProjectProps[] = [
       },
     ],
   },
-
+  {
+    id: '9',
+    title: 'Componente Organograma (OrgChart)',
+    description:
+      'Este projeto foi desenvolvido com o intuito de facilitar a visualização de organogramas de empresas, com um design simples e intuitivo, o usuário pode adicionar, editar e excluir cargos e funcionários, além de visualizar o organograma em tempo real. O projeto foi desenvolvido com Next.js, TailwindCSS,  TypeScript, React-DnD, para possibilitar a reordenação dos cargos e funcionários por meio de arrastar e soltar.',
+    tags: [
+      { label: 'next.js' },
+      { label: 'tailwind.css' },
+      { label: 'typescript' },
+      { label: 'react-dnd' },
+      { label: 'proejto proprio' },
+    ],
+    requiriments: {
+      functionaisRequiriments: [],
+      noFunctionalRequiriments: [],
+      businessRule: [],
+    },
+    images: [
+      {
+        src: orgBannerLight,
+        alt: 'Imagem de projeto orgBanner',
+      },
+      {
+        src: orgBannerDark,
+        alt: 'Imagem de projeto orgBanner',
+      },
+    ],
+  },
   {
     id: '5',
     title: 'Buzzy Demarcações',
@@ -315,35 +403,6 @@ export const Projects: ProjectProps[] = [
       {
         src: skeletonBuzzy,
         alt: 'Imagem de projeto Buzzy',
-      },
-    ],
-  },
-  {
-    id: '4',
-    title: 'Portifolio 1.4.0',
-    description:
-      'Essa é a versão mais recente do meu portifolio, site desenvolvido com ituito de mostrar um pouco sobre mim, minhas habilidades e principalmente os projetos que desenvolvi até então.',
-    urlDeploy: 'https://port-web-1-4-0-me9l.vercel.app/',
-    urlRepository: 'https://github.com/KARAUJO1003/port.web.1.4.0',
-    tags: [
-      { label: 'next.js' },
-      { label: 'tailwind.css' },
-      { label: 'shadcn-ui' },
-      { label: 'gsap' },
-    ],
-    requiriments: {
-      functionaisRequiriments: [],
-      noFunctionalRequiriments: [],
-      businessRule: [],
-    },
-    images: [
-      {
-        src: portifolioImage01,
-        alt: 'Imagem de projeto Portifolio',
-      },
-      {
-        src: portifolioImage,
-        alt: 'Imagem de projeto Portifolio',
       },
     ],
   },
