@@ -1,6 +1,6 @@
-import { SocialMedias } from '@/lib/utilities'
+import { SocialMedias } from '@/data'
 import { cn } from '@/lib/utils'
-import { ComponentPropsDefault } from '@/types/page-props-default'
+import { ComponentPropsDefault } from '@/types/component-props'
 import Link from 'next/link'
 
 type SocialMediasContactProps = {

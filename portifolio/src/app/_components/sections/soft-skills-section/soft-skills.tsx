@@ -6,7 +6,7 @@ import { TimelineContainer } from '../../shared/timeline-soft-skills/timeline-co
 import { TitleTypography } from '../../shared/typography/title'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { ComponentPropsDefault } from '@/types/page-props-default'
+import { ComponentPropsDefault } from '@/types/component-props'
 import { cn } from '@/lib/utils'
 
 export const SoftSkillsSection = ({ className }: ComponentPropsDefault) => {

@@ -1,7 +1,6 @@
 'use client'
-import React from 'react'
 import { TimelineCard } from './timeline-card'
-import { Skills } from '@/lib/utilities'
+import { Skills } from '@/data'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import gsap from 'gsap'

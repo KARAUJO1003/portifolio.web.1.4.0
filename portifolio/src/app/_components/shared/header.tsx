@@ -1,4 +1,4 @@
-import { ComponentPropsDefault } from '@/types/page-props-default'
+import { ComponentPropsDefault } from '@/types/component-props'
 import { cn } from '@/lib/utils'
 import { Logo } from '@/assets/logo'
 

@@ -8,7 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import { Projects } from '@/lib/utilities'
+import { Projects } from '@/data'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'

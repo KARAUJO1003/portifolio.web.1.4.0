@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { ComponentPropsDefault } from '@/types/page-props-default'
+import { ComponentPropsDefault } from '@/types/component-props'
 
 export const ButtonPrimaryGradient = ({
   className,

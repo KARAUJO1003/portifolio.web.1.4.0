@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
-import { ComponentPropsDefault } from '@/types/page-props-default'
-import React, { ComponentProps } from 'react'
+import { ComponentPropsDefault } from '@/types/component-props'
+import { ComponentProps } from 'react'
 
 export const DescriptionTypography = ({
   className,

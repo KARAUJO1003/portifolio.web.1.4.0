@@ -10,7 +10,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { Badge } from '@/components/ui/badge'
-import { Projects } from '@/lib/utilities'
+import { Projects } from '@/data'
 import { CarrousselProjects } from '../_components/carroussel-projects'
 
 export default function Page({ params }: { params: { id: string } }) {

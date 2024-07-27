@@ -2,12 +2,12 @@
 import { SectionContainer } from '../../shared/sections/sections-container'
 import { TitleTypography } from '../../shared/typography/title'
 import { CardProject } from '../../shared/cards/card-project'
-import { Projects } from '@/lib/utilities'
+import { Projects } from '@/data'
 import { Badge } from '@/components/ui/badge'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import { ComponentPropsDefault } from '@/types/page-props-default'
+import { ComponentPropsDefault } from '@/types/component-props'
 import { cn } from '@/lib/utils'
 
 export const ProjectsSection = ({ className }: ComponentPropsDefault) => {

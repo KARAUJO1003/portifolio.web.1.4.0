@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { ComponentPropsDefault } from '@/types/page-props-default'
+import { ComponentPropsDefault } from '@/types/component-props'
 import { TitleTypography } from '@/app/_components/shared/typography/title'
 import { DescriptionTypography } from '../../shared/typography/description'
 import { SectionContainer } from '../../shared/sections/sections-container'

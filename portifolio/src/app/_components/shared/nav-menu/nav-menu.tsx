@@ -1,7 +1,7 @@
 'use client'
-import { NavMenuItems } from '@/lib/utilities'
+import { NavMenuItems } from '@/data'
 import Link from 'next/link'
-import { ComponentPropsDefault } from '@/types/page-props-default'
+import { ComponentPropsDefault } from '@/types/component-props'
 import { cn } from '@/lib/utils'
 
 export const NavMenu = ({ className }: ComponentPropsDefault) => {

@@ -10,7 +10,7 @@ import { toast } from 'sonner'
 import Link from 'next/link'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
-import { ComponentPropsDefault } from '@/types/page-props-default'
+import { ComponentPropsDefault } from '@/types/component-props'
 
 export const ContactsSection = ({ className }: ComponentPropsDefault) => {
   const [value, setValue] = useState('')

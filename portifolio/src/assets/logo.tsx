@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils'
-import { ComponentPropsDefault } from '@/types/page-props-default'
+import { ComponentPropsDefault } from '@/types/component-props'
 import Link from 'next/link'
-import React from 'react'
 
 export const Logo = ({ className }: ComponentPropsDefault) => {
   return (
