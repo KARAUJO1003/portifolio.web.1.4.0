@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ptbr" className="scroll-smooth snap-y snap-proximity">
+    <html lang="ptbr" className="scroll-smooth">
       <body className={cn(['relative dark '], inter.className)}>
         <ThemeProvider
           attribute="class"
