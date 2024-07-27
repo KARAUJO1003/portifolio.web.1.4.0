@@ -1,4 +1,4 @@
-import { ButtonBorderGradient } from '@/app/_components/global/buttons/gradient-border-button'
+import { ButtonBorderGradient } from '@/app/_components/shared/buttons/gradient-border-button'
 import Autoplay from 'embla-carousel-autoplay'
 import {
   Carousel,

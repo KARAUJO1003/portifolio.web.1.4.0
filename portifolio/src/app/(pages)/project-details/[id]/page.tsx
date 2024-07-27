@@ -1,8 +1,8 @@
 'use client'
 
-import { SocialMediasContact } from '@/app/_components/global/social-medias'
-import { DescriptionTypography } from '@/app/_components/global/typography/description'
-import { TitleTypography } from '@/app/_components/global/typography/title'
+import { SocialMediasContact } from '@/app/_components/shared/social-medias'
+import { DescriptionTypography } from '@/app/_components/shared/typography/description'
+import { TitleTypography } from '@/app/_components/shared/typography/title'
 import {
   Accordion,
   AccordionContent,

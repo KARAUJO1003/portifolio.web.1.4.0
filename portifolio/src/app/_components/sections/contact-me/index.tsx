@@ -1,16 +1,18 @@
 'use client'
 import { MessageSquareShare } from 'lucide-react'
-import Card from '../../global/cards/card'
-import { SectionContainer } from '../../global/sections/sections-container'
-import { SocialMediasContact } from '../../global/social-medias'
-import { DescriptionTypography } from '../../global/typography/description'
-import { TitleTypography } from '../../global/typography/title'
-import { ButtonBorderGradient } from '../../global/buttons/gradient-border-button'
+import Card from '../../shared/cards/card'
+import { SectionContainer } from '../../shared/sections/sections-container'
+import { SocialMediasContact } from '../../shared/social-medias'
+import { DescriptionTypography } from '../../shared/typography/description'
+import { TitleTypography } from '../../shared/typography/title'
+import { ButtonBorderGradient } from '../../shared/buttons/gradient-border-button'
 import { toast } from 'sonner'
 import Link from 'next/link'
 import { useState } from 'react'
+import { cn } from '@/lib/utils'
+import { ComponentPropsDefault } from '@/types/page-props-default'
 
-export const ContactsSection = () => {
+export const ContactsSection = ({ className }: ComponentPropsDefault) => {
   const [value, setValue] = useState('')
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [result, setResult] = useState('')
@@ -26,7 +28,12 @@ export const ContactsSection = () => {
   return (
     <SectionContainer
       id="contacts-section"
-      className="min-h-[810px] flex justify-center gap-40 items-center max-lg:gap-20 max-md:flex-col max-md:justify-start"
+      className={cn(
+        [
+          'min-h-[810px] flex justify-center gap-40 items-center max-lg:gap-20 max-md:flex-col max-md:justify-start',
+        ],
+        className,
+      )}
     >
       <div className="contact-section principal-title">
         <TitleTypography size="lg"> Contato</TitleTypography>

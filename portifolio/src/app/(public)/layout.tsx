@@ -3,13 +3,13 @@ import { Inter } from 'next/font/google'
 import '@/app/globals.css'
 import { ThemeProvider } from '@/providers/theme-provider'
 import { Analytics } from '@vercel/analytics/react'
-import { Header } from '../_components/global/header'
-import { Footer } from '../_components/global/footer'
+import { Header } from '../_components/shared/header'
+import { Footer } from '../_components/shared/footer'
 import { cn } from '@/lib/utils'
-import { NavMenu } from '../_components/global/nav-menu/nav-menu'
+import { NavMenu } from '../_components/shared/nav-menu/nav-menu'
 import { Toaster } from 'sonner'
 import Link from 'next/link'
-import { ButtonBorderGradient } from '../_components/global/buttons/gradient-border-button'
+import { ButtonBorderGradient } from '../_components/shared/buttons/gradient-border-button'
 import { Ban, CheckCircle } from 'lucide-react'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -25,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ptbr">
-      <body className={cn(['relative dark scroll-smooth'], inter.className)}>
+    <html lang="ptbr" className="scroll-smooth snap-y snap-proximity">
+      <body className={cn(['relative dark '], inter.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -41,18 +41,22 @@ export default function RootLayout({
               error: <Ban className="size-5 text-principalPink" />,
             }}
           />
+
           <Header>
             <NavMenu className="max-lg:hidden" />
             <Link href={'/#projects-section'}>
               <ButtonBorderGradient>projetos</ButtonBorderGradient>
             </Link>
           </Header>
-          <main>{children}</main>
-          <Analytics />
+          {children}
           <Footer />
+
+          {/* Mobile menu */}
           <div className="hidden fixed items-center justify-center w-full bottom-0 left-0 right-0 backdrop-blur-lg border-t  max-lg:block py-5">
             <NavMenu className="flex items-center justify-between w-full px-3 gap-0 max-w-[440px] mx-auto" />
           </div>
+
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

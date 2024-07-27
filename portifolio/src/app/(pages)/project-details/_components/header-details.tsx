@@ -1,8 +1,7 @@
 'use client'
 
-import { ButtonBorderGradient } from '@/app/_components/global/buttons/gradient-border-button'
-import { Header } from '@/app/_components/global/header'
-import React from 'react'
+import { ButtonBorderGradient } from '@/app/_components/shared/buttons/gradient-border-button'
+import { Header } from '@/app/_components/shared/header'
 import { useRouter } from 'next/navigation'
 
 export const HeaderProjectPage = () => {

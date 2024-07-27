@@ -1,5 +1,4 @@
 'use client'
-import React from 'react'
 import { NavMenuItems } from '@/lib/utilities'
 import Link from 'next/link'
 import { ComponentPropsDefault } from '@/types/page-props-default'

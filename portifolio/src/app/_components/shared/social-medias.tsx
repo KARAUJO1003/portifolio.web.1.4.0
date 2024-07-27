@@ -2,7 +2,6 @@ import { SocialMedias } from '@/lib/utilities'
 import { cn } from '@/lib/utils'
 import { ComponentPropsDefault } from '@/types/page-props-default'
 import Link from 'next/link'
-import React from 'react'
 
 type SocialMediasContactProps = {
   variant?: 'icon' | 'label' | 'full'

@@ -1,0 +1,5 @@
+export { HomeSection } from './home-section/home'
+export { AboutSection } from './about-me'
+export { SoftSkillsSection } from './soft-skills-section/soft-skills'
+export { ProjectsSection } from './projects-section'
+export { ContactsSection } from './contact-me'

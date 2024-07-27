@@ -1,14 +1,16 @@
 'use client'
-import { SectionContainer } from '../../global/sections/sections-container'
-import { TitleTypography } from '../../global/typography/title'
-import { CardProject } from '../../global/cards/card-project'
+import { SectionContainer } from '../../shared/sections/sections-container'
+import { TitleTypography } from '../../shared/typography/title'
+import { CardProject } from '../../shared/cards/card-project'
 import { Projects } from '@/lib/utilities'
 import { Badge } from '@/components/ui/badge'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
+import { ComponentPropsDefault } from '@/types/page-props-default'
+import { cn } from '@/lib/utils'
 
-export const ProjectsSection = () => {
+export const ProjectsSection = ({ className }: ComponentPropsDefault) => {
   gsap.registerPlugin(ScrollTrigger)
   const tl = gsap.timeline()
 
@@ -27,7 +29,12 @@ export const ProjectsSection = () => {
   return (
     <SectionContainer
       id="projects-section"
-      className="flex flex-col items-center justify-center min-h-[810px] mb-20 max-sm:mb-0"
+      className={cn(
+        [
+          'flex flex-col items-center justify-center min-h-[810px] mb-20 max-sm:mb-0',
+        ],
+        className,
+      )}
     >
       <TitleTypography size="lg" className="mb-14">
         Projetos

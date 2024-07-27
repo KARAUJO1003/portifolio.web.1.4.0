@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 
 type ButtonBorderGradientProps<T = unknown> = {
   variant?: 'default' | 'secondary'

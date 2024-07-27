@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils'
 import { ComponentPropsDefault } from '@/types/page-props-default'
-import { TitleTypography } from '@/app/_components/global/typography/title'
+import { TitleTypography } from '@/app/_components/shared/typography/title'
 import { DescriptionTypography } from '../../shared/typography/description'
 import { SectionContainer } from '../../shared/sections/sections-container'
 import { gsap } from 'gsap'

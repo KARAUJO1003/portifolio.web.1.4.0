@@ -3,10 +3,10 @@ import { Inter } from 'next/font/google'
 import '@/app/globals.css'
 import { ThemeProvider } from '@/providers/theme-provider'
 import { Analytics } from '@vercel/analytics/react'
-import { Footer } from '../_components/global/footer'
+import { Footer } from '../_components/shared/footer'
 import { cn } from '@/lib/utils'
 import { Toaster } from 'sonner'
-import { HeaderProjectPage } from './project/_components/header-details'
+import { HeaderProjectPage } from './project-details/_components/header-details'
 import { Ban, CheckCircle } from 'lucide-react'
 
 const inter = Inter({ subsets: ['latin'] })

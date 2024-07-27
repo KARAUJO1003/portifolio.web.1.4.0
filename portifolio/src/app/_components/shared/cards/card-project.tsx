@@ -1,5 +1,5 @@
 'use client'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 import Card from './card'
 import Link from 'next/link'
 import { ExternalLink, LinkIcon } from 'lucide-react'
