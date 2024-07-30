@@ -4,7 +4,7 @@ import {
   HomeSection,
   ProjectsSection,
   SoftSkillsSection,
-} from '../_components/sections'
+} from '@/app/_components/sections'
 
 export default function Home() {
   return (

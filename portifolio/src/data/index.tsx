@@ -245,7 +245,7 @@ export const Projects: ProjectProps[] = [
   },
 
   {
-    id: '4',
+    id: '2',
     title: 'Portifolio 1.4.0',
     description:
       'Essa é a versão mais recente do meu portifolio, site desenvolvido com ituito de mostrar um pouco sobre mim, minhas habilidades e principalmente os projetos que desenvolvi até então.',
@@ -274,7 +274,7 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    id: '8',
+    id: '3',
     title: 'Kanban Board',
     description:
       'Um projeto simples, que foi iniciado a fins de estudo sobre Drag and Drop, e aprimorado com a utilização de Tailwind CSS, Shadcn UI e GSAP para animações.',
@@ -303,7 +303,7 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    id: '7',
+    id: '4',
     title: 'Componente Organograma (OrgChart)',
     description:
       'Este projeto foi desenvolvido com o intuito de facilitar a visualização de organogramas de empresas, com um design simples e intuitivo, o usuário pode adicionar, editar e excluir cargos e funcionários, além de visualizar o organograma em tempo real. O projeto foi desenvolvido com Next.js, TailwindCSS,  TypeScript, React-DnD, para possibilitar a reordenação dos cargos e funcionários por meio de arrastar e soltar.',
@@ -380,7 +380,7 @@ export const Projects: ProjectProps[] = [
   },
 
   {
-    id: '2',
+    id: '6',
     title: 'Conversor para extenso.',
     description:
       'Este projeto ReactJS apresenta uma única tela com um design intuitivo, elegante e simplificado, criado para oferecer uma experiência de usuário fluida e eficiente. O foco principal é um conversor de números por extenso, com a capacidade de mascarar inputs nos formatos monetario e normal, além de permitir que o usuário escolha entre diferentes formatos de resultado.',
@@ -411,7 +411,7 @@ export const Projects: ProjectProps[] = [
   },
 
   {
-    id: '6',
+    id: '7',
     title: 'Formatar nome de arquivos',
     description:
       'Esse projeto foi desenvolvido intuito bem específico para resolver um problema na empresa que trabalho, ele facilita manter a nomenclatura em todos os arquivos, seguindo um padrão estabelecido e validado entre a equipe. Os dados possuem diversas validações, uma interface simples intuitiva e funcional, deixando dicas de uso para os usuários conseguirem agilidade.',
@@ -452,7 +452,7 @@ export const Projects: ProjectProps[] = [
   },
 
   {
-    id: '3',
+    id: '8',
     title: 'lista de tarefas',
     description:
       'Todo list responsivo, com modos dark e light, construido com HTML, CSS, e JavaScript.',

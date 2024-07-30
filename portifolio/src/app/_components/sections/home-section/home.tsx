@@ -10,7 +10,7 @@ import { useGSAP } from '@gsap/react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ExternalLink } from 'lucide-react'
-import GridPattern from '../../magicui/grid-pattern'
+import GridPattern from '../../shared/magicui/grid-pattern'
 
 export const HomeSection = ({ className }: ComponentPropsDefault) => {
   const tl = gsap.timeline()
