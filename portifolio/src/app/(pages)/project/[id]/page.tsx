@@ -12,13 +12,27 @@ import {
 import { Badge } from '@/components/ui/badge'
 import { Projects } from '@/data'
 import { CarrousselProjects } from '../_components/carroussel-projects'
+import { buttonVariants } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
+import Link from 'next/link'
 
 export default function Page({ params }: { params: { id: string } }) {
   const id = params.id
   const project = Projects.find((project) => project.id === id)
 
   if (!project) {
-    return <div>Projeto não encontrado</div>
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen w-full bg-zinc-950">
+        <h1 className="text-4xl font-bold text-center">404</h1>
+        <p className="text-lg text-center mt-4">Página não encontrada</p>
+        <Link
+          className={cn(['mt-8'], buttonVariants({ variant: 'secondary' }))}
+          href="/"
+        >
+          Voltar ao inicio
+        </Link>
+      </div>
+    )
   }
 
   return (
