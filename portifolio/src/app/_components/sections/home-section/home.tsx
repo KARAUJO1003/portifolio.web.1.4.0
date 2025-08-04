@@ -1,74 +1,74 @@
-'use client'
+"use client";
 
-import { cn } from '@/lib/utils'
-import { ComponentPropsDefault } from '@/types/component-props'
-import { TitleTypography } from '@/app/_components/shared/typography/title'
-import { DescriptionTypography } from '../../shared/typography/description'
-import { SectionContainer } from '../../shared/sections/sections-container'
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react'
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { ExternalLink } from 'lucide-react'
-import GridPattern from '../../shared/magicui/grid-pattern'
+import { cn } from "@/lib/utils";
+import { ComponentPropsDefault } from "@/types/component-props";
+import { TitleTypography } from "@/app/_components/shared/typography/title";
+import { DescriptionTypography } from "../../shared/typography/description";
+import { SectionContainer } from "../../shared/sections/sections-container";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
+import GridPattern from "../../shared/magicui/grid-pattern";
 
 export const HomeSection = ({ className }: ComponentPropsDefault) => {
-  const tl = gsap.timeline()
+  const tl = gsap.timeline();
 
   useGSAP(() => {
     tl.fromTo(
-      '#title',
+      "#title",
       {
         autoAlpha: 0,
         y: 100,
         duration: 2,
-        ease: 'back.inOut',
+        ease: "back.inOut",
       },
       {
         autoAlpha: 1,
         y: 0,
         duration: 2,
-        ease: 'back.inOut',
-      },
+        ease: "back.inOut",
+      }
     )
       .fromTo(
-        '#descripiton',
+        "#descripiton",
         {
           autoAlpha: 0,
           y: 100,
           duration: 2,
-          ease: 'back.inOut',
+          ease: "back.inOut",
         },
         {
           autoAlpha: 1,
           y: 0,
           duration: 2,
-          ease: 'back.inOut',
+          ease: "back.inOut",
         },
-        '-=1',
+        "-=1"
       )
       .fromTo(
-        '#button',
+        "#button",
         {
           autoAlpha: 0,
           duration: 2,
-          ease: 'back.inOut',
+          ease: "back.inOut",
         },
         {
           autoAlpha: 1,
           duration: 2,
-          ease: 'back.inOut',
+          ease: "back.inOut",
         },
-        '-=1',
-      )
-  })
+        "-=1"
+      );
+  });
 
   return (
     <SectionContainer
       id="home"
       className={cn(
-        ' flex relative flex-col w-full items-center md:justify-center gap-10 md:min-h-[510px] max-sm:min-h-[680px]',
-        className,
+        " flex relative flex-col w-full items-center md:justify-center gap-10 md:min-h-[510px] max-sm:min-h-[680px]",
+        className
       )}
     >
       <GridPattern
@@ -76,9 +76,9 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
         height={40}
         x={-1}
         y={-1}
-        strokeDasharray={'4 2'}
+        strokeDasharray={"4 2"}
         className={cn(
-          '[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]',
+          "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
         )}
       />
       <div className="space-y-5 flex flex-col items-center max-sm:mt-20">
@@ -102,16 +102,19 @@ export const HomeSection = ({ className }: ComponentPropsDefault) => {
       </div>
 
       <Link
-        target="_blank"
-        href={'https://curriculo-dev-liard.vercel.app/'}
         id="button"
+        target="_blank"
+        href={"https://curriculo-dev-liard.vercel.app/"}
         className="flex items-center gap-3"
       >
-        <Button className="px-10 gap-2" variant="outline">
-          <span className="text-primary"> CURRICULUM VITAE</span>
+        <Button
+          className="px-10 gap-2"
+          // variant="secondary"
+        >
+          <span className="">Meu Curriculo</span>
           <ExternalLink className="size-4" />
         </Button>
       </Link>
     </SectionContainer>
-  )
-}
+  );
+};

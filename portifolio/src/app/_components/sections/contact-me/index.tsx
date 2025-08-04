@@ -1,27 +1,26 @@
-'use client'
-import { MessageSquareShare } from 'lucide-react'
-import Card from '../../shared/cards/card'
-import { SectionContainer } from '../../shared/sections/sections-container'
-import { SocialMediasContact } from '../../shared/social-medias'
-import { DescriptionTypography } from '../../shared/typography/description'
-import { TitleTypography } from '../../shared/typography/title'
-import { ButtonBorderGradient } from '../../shared/buttons/gradient-border-button'
-import { toast } from 'sonner'
-import Link from 'next/link'
-import { useState } from 'react'
-import { cn } from '@/lib/utils'
-import { ComponentPropsDefault } from '@/types/component-props'
+"use client";
+import { ArrowUpRight, MessageSquareShare } from "lucide-react";
+import Card from "../../shared/cards/card";
+import { SectionContainer } from "../../shared/sections/sections-container";
+import { SocialMediasContact } from "../../shared/social-medias";
+import { DescriptionTypography } from "../../shared/typography/description";
+import { TitleTypography } from "../../shared/typography/title";
+import { toast } from "sonner";
+import Link from "next/link";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { ComponentPropsDefault } from "@/types/component-props";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export const ContactsSection = ({ className }: ComponentPropsDefault) => {
-  const [value, setValue] = useState('')
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [result, setResult] = useState('')
+  const [value, setValue] = useState("");
+  const [result, setResult] = useState("");
   function onEmailSubmit() {
     if (!value) {
-      toast.error('Digite um e-mail válido.')
+      toast.error("Digite um e-mail válido.");
     } else {
-      setResult(value)
-      toast.success('E-mail enviado com sucesso!')
+      setResult(value);
+      toast.success("E-mail enviado com sucesso!");
     }
   }
 
@@ -30,9 +29,9 @@ export const ContactsSection = ({ className }: ComponentPropsDefault) => {
       id="contacts-section"
       className={cn(
         [
-          'min-h-[810px] flex justify-center gap-40 items-center max-lg:gap-20 max-md:flex-col max-md:justify-start',
+          "min-h-[810px] flex justify-center gap-40  max-lg:gap-20 max-md:flex-col max-md:justify-start",
         ],
-        className,
+        className
       )}
     >
       <div className="contact-section principal-title">
@@ -40,7 +39,7 @@ export const ContactsSection = ({ className }: ComponentPropsDefault) => {
         <DescriptionTypography className="text-left mt-5 max-w-80 boxTexts">
           <strong>
             Pronto para desbloquear o potencial do seu próximo projeto?
-          </strong>{' '}
+          </strong>{" "}
           Vamos nos conectar e dar vida à sua visão. Quer você seja um
           recrutador em busca de talentos ou um cliente ávido por inovação,
           <strong> juntos criaremos algo extraordinário</strong>.
@@ -52,33 +51,39 @@ export const ContactsSection = ({ className }: ComponentPropsDefault) => {
           <Card.Header>
             <strong className="text-sm">Vamos nos conhecer?</strong>
             <span className="text-xs text-muted-foreground font-normal">
-              Me chama no{' '}
+              Me chama no{" "}
               <Link
                 className="text-primary transition-all duration-300 hover:underline "
                 href="https://api.whatsapp.com/send?phone=5594991257923&text=Fale%20comigo%20atrav%C3%A9s%20do%20Whatsapp."
                 target="_blank"
               >
                 whatsapp
-              </Link>{' '}
+              </Link>{" "}
               ou se preferir deixe seu endereço de e-mail logo abaixo.
             </span>
           </Card.Header>
-          <Card.Body className="aspect-auto">
+          <Card.Body className="aspect-auto pb-4">
             <Link
               className="text-primary  duration-300 transition-all cursor-pointer"
               href="https://api.whatsapp.com/send?phone=5594991257923&text=Fale%20comigo%20atrav%C3%A9s%20do%20Whatsapp."
               target="_blank"
             >
-              <Card.Container className="mx-4 flex gap-4 items-center transition-all duration p-4 hover:bg-secondary/50">
-                <MessageSquareShare size={18} />
+              <Card.Container className="mx-4 flex border-none gap-3 bg-violet-500/10 items-center transition-all duration p-4 hover:bg-violet-500/20">
+                <Avatar className="size-8 bg-violet-500/10 p-1">
+                  <AvatarImage src="/whatsapp-icon.svg" />
+                  <AvatarFallback>
+                    <MessageSquareShare className="w-4 h-4 text-violet-400" />
+                  </AvatarFallback>
+                </Avatar>
                 <div>
-                  <DescriptionTypography className=" text-left text-primary -300 max-w-60">
+                  <DescriptionTypography className=" text-left text-violet-400 -300 max-w-60">
                     Fale comigo via Whatsapp.
                   </DescriptionTypography>
                 </div>
+                <ArrowUpRight className="w-4 h-4 ml-auto text-violet-400" />
               </Card.Container>
             </Link>
-            <div className="flex w-full p-4">
+            {/* <div className="flex w-full p-4">
               <input
                 type="email"
                 value={value}
@@ -86,15 +91,18 @@ export const ContactsSection = ({ className }: ComponentPropsDefault) => {
                 placeholder="Digite seu email"
                 className="outline-none w-full h-9 text-xs rounded bg-transparent border border-input px-2"
               />
-            </div>
+            </div> */}
           </Card.Body>
-          <Card.Footer>
-            <ButtonBorderGradient onClick={onEmailSubmit} variant="secondary">
+          {/* <Card.Footer>
+            <ButtonBorderGradient
+              onClick={onEmailSubmit}
+              variant="secondary"
+            >
               Enviar
             </ButtonBorderGradient>
-          </Card.Footer>
+          </Card.Footer> */}
         </Card.Container>
       </div>
     </SectionContainer>
-  )
-}
+  );
+};
