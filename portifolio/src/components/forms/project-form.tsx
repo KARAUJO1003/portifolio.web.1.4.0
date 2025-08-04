@@ -16,12 +16,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { PlusCircle, XCircle } from "lucide-react";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { mockApi } from "@/data";
@@ -180,21 +180,21 @@ export function ProjectForm({ project, onOpenChange, open }: ProjectFormProps) {
     createProjectMutation.isPending || updateProjectMutation.isPending;
 
   return (
-    <Dialog
+    <Sheet
       open={open}
       onOpenChange={onOpenChange}
     >
-      <DialogContent className="sm:max-w-[800px] max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle>
+      <SheetContent className="sm:max-w-md overflow-y-auto">
+        <SheetHeader>
+          <SheetTitle>
             {project ? "Editar Projeto" : "Adicionar Novo Projeto"}
-          </DialogTitle>
-          <DialogDescription>
+          </SheetTitle>
+          <SheetDescription>
             {project
               ? "Edite os detalhes do seu projeto."
               : "Preencha os detalhes para adicionar um novo projeto."}
-          </DialogDescription>
-        </DialogHeader>
+          </SheetDescription>
+        </SheetHeader>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
@@ -313,7 +313,7 @@ export function ProjectForm({ project, onOpenChange, open }: ProjectFormProps) {
                     size="icon"
                     onClick={() => removeTag(index)}
                   >
-                    <XCircle className="h-4 w-4 text-red-500" />
+                    <XCircle className="w-4 h-4 text-red-500" />
                   </Button>
                 </div>
               ))}
@@ -322,7 +322,7 @@ export function ProjectForm({ project, onOpenChange, open }: ProjectFormProps) {
                 variant="outline"
                 onClick={() => appendTag({ label: "" })}
               >
-                <PlusCircle className="mr-2 h-4 w-4" /> Adicionar Tag
+                <PlusCircle className="mr-2 w-4 h-4" /> Adicionar Tag
               </Button>
             </div>
 
@@ -377,7 +377,7 @@ export function ProjectForm({ project, onOpenChange, open }: ProjectFormProps) {
                     size="icon"
                     onClick={() => removeImage(index)}
                   >
-                    <XCircle className="h-4 w-4 text-red-500" />
+                    <XCircle className="w-4 h-4 text-red-500" />
                   </Button>
                 </div>
               ))}
@@ -386,17 +386,17 @@ export function ProjectForm({ project, onOpenChange, open }: ProjectFormProps) {
                 variant="outline"
                 onClick={() => appendImage({ src: "", alt: "" })}
               >
-                <PlusCircle className="mr-2 h-4 w-4" /> Adicionar Imagem
+                <PlusCircle className="mr-2 w-4 h-4" /> Adicionar Imagem
               </Button>
             </div>
 
             {/* Requisitos (simplificado para o mock) */}
             {/* Você pode expandir esta seção para incluir os campos de requisitos funcionais, não funcionais e regras de negócio */}
             <div className="space-y-2">
-              <h3 className="text-lg font-semibold">
+              <h3 className="font-semibold text-lg">
                 Requisitos (Exemplo Simplificado)
               </h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 Para este exemplo estático, os campos de requisitos não são
                 editáveis no formulário. Você pode expandir o schema Zod e o
                 formulário para incluí-los.
@@ -416,7 +416,7 @@ export function ProjectForm({ project, onOpenChange, open }: ProjectFormProps) {
             </Button>
           </form>
         </Form>
-      </DialogContent>
-    </Dialog>
+      </SheetContent>
+    </Sheet>
   );
 }
