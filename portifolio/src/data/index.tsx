@@ -54,7 +54,7 @@ interface SkillsProps {
   date: string;
 }
 
-export const Skills: SkillsProps[] = [
+export let Skills: SkillsProps[] = [
   {
     id: "1",
     title: "Desenvolvimento web avançado no piloto automático. Com Next.js",
@@ -141,7 +141,7 @@ export const Skills: SkillsProps[] = [
   },
 ];
 
-export const SocialMedias = [
+export let SocialMedias = [
   {
     url: "https://www.instagram.com/kaesyo_/",
     label: "Instagram",
@@ -159,7 +159,7 @@ export const SocialMedias = [
   },
 ];
 
-export const NavMenuItems = [
+export let NavMenuItems = [
   {
     url: "/#home",
     label: "Inicio",
@@ -182,7 +182,7 @@ export const NavMenuItems = [
   },
 ];
 
-export const Projects: ProjectProps[] = [
+export let Projects: ProjectProps[] = [
   {
     id: "1",
     title: "Finance Fire",
@@ -488,3 +488,77 @@ export const Projects: ProjectProps[] = [
     ],
   },
 ];
+
+// Mock API functions
+const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
+
+export const mockApi = {
+  projects: {
+    async getAll(): Promise<ProjectProps[]> {
+      await delay(500);
+      return Projects;
+    },
+    async getById(id: string): Promise<ProjectProps | undefined> {
+      await delay(300);
+      return Projects.find((p) => p.id === id);
+    },
+    async create(project: Omit<ProjectProps, "id">): Promise<ProjectProps> {
+      await delay(500);
+      const newProject = { ...project, id: String(Projects.length + 1) };
+      Projects.push(newProject);
+      return newProject;
+    },
+    async update(
+      id: string,
+      updatedProject: Partial<ProjectProps>
+    ): Promise<ProjectProps | undefined> {
+      await delay(500);
+      const index = Projects.findIndex((p) => p.id === id);
+      if (index > -1) {
+        Projects[index] = { ...Projects[index], ...updatedProject };
+        return Projects[index];
+      }
+      return undefined;
+    },
+    async delete(id: string): Promise<boolean> {
+      await delay(500);
+      const initialLength = Projects.length;
+      Projects = Projects.filter((p) => p.id !== id);
+      return Projects.length < initialLength;
+    },
+  },
+  skills: {
+    async getAll(): Promise<SkillsProps[]> {
+      await delay(500);
+      return Skills;
+    },
+    async getById(id: string): Promise<SkillsProps | undefined> {
+      await delay(300);
+      return Skills.find((s) => s.id === id);
+    },
+    async create(skill: Omit<SkillsProps, "id">): Promise<SkillsProps> {
+      await delay(500);
+      const newSkill = { ...skill, id: String(Skills.length + 1) };
+      Skills.push(newSkill);
+      return newSkill;
+    },
+    async update(
+      id: string,
+      updatedSkill: Partial<SkillsProps>
+    ): Promise<SkillsProps | undefined> {
+      await delay(500);
+      const index = Skills.findIndex((s) => s.id === id);
+      if (index > -1) {
+        Skills[index] = { ...Skills[index], ...updatedSkill };
+        return Skills[index];
+      }
+      return undefined;
+    },
+    async delete(id: string): Promise<boolean> {
+      await delay(500);
+      const initialLength = Skills.length;
+      Skills = Skills.filter((s) => s.id !== id);
+      return Skills.length < initialLength;
+    },
+  },
+};
