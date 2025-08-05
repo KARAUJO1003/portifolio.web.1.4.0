@@ -28,6 +28,7 @@ interface ProjectPropsRequiriment {
   title: string;
   description: string;
 }
+// Define the structure of a project
 
 interface ProjectProps {
   id: string;

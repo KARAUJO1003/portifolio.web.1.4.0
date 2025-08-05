@@ -11,21 +11,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, Github, Pencil, Trash2 } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
 import { ProjectForm } from "@/components/forms/project-form";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
 import { mockApi } from "@/data";
 
 export function ProjectCard({ project }: { project: any }) {
@@ -60,11 +49,11 @@ export function ProjectCard({ project }: { project: any }) {
                 alt={project.images[0].alt}
                 layout="fill"
                 objectFit="cover"
-                className="rounded-md"
+                className="rounded-md shadow-md border"
               />
             </div>
           )}
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap gap-2">
             {project.tags.map((tag: any, index: number) => (
               <Badge
                 key={index}
@@ -74,12 +63,13 @@ export function ProjectCard({ project }: { project: any }) {
               </Badge>
             ))}
           </div>
-          <div className="flex flex-col gap-2">
+          {/* <div className="flex  gap-2">
             {project.urlDeploy && (
               <Link
                 href={project.urlDeploy}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-full"
               >
                 <Button
                   variant="outline"
@@ -94,6 +84,7 @@ export function ProjectCard({ project }: { project: any }) {
                 href={project.urlRepository}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-full"
               >
                 <Button
                   variant="outline"
@@ -103,9 +94,41 @@ export function ProjectCard({ project }: { project: any }) {
                 </Button>
               </Link>
             )}
-          </div>
+          </div> */}
         </CardContent>
-        <div className="flex justify-end gap-2 p-4 border-t">
+        <div className="flex p-4 pt-0 gap-2">
+          {project.urlDeploy && (
+            <Link
+              href={project.urlDeploy}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              <Button
+                variant="default"
+                className="w-full  rounded-full"
+              >
+                <ExternalLink className="mr-2 h-4 w-4" /> Ver Deploy
+              </Button>
+            </Link>
+          )}
+          {project.urlRepository && (
+            <Link
+              href={project.urlRepository}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              <Button
+                variant="outline"
+                className="w-full bg-transparent rounded-full"
+              >
+                <Github className="mr-2 h-4 w-4" /> Ver Repositório
+              </Button>
+            </Link>
+          )}
+        </div>
+        {/* <div className="flex justify-end gap-2 p-4 border-t">
           <Button
             variant="outline"
             size="icon"
@@ -142,7 +165,7 @@ export function ProjectCard({ project }: { project: any }) {
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
-        </div>
+        </div> */}
       </Card>
       <ProjectForm
         project={project}
